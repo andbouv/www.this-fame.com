@@ -1,0 +1,203 @@
+html{
+	body.single-artiste{
+		section.top-page{
+			height:75vh;
+			max-height: 600px;
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+			div.contain-top{
+				background: -moz-linear-gradient(top, rgba(15,16,16,0) 0%, rgba(15,16,16,0.99) 99%, rgba(15,16,16,1) 100%); /* FF3.6-15 */
+				background: -webkit-linear-gradient(top, rgba(15,16,16,0) 0%,rgba(15,16,16,0.99) 99%,rgba(15,16,16,1) 100%); /* Chrome10-25,Safari5.1-6 */
+				background: linear-gradient(to bottom, rgba(15,16,16,0) 0%,rgba(15,16,16,0.99) 99%,rgba(15,16,16,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000f1010', endColorstr='#0f1010',GradientType=0 ); /* IE6-9 */
+				display:block;
+				width:100%;
+				height:100%;
+				div.container{
+					position: relative;
+					height:100%;
+				}
+				h1{
+					color:#fff;
+					text-align: left;
+					font-size:100px;
+					text-transform: uppercase;
+					width:80%;
+					bottom:32%;
+					position: absolute;
+				}
+			}
+		}
+		section.bio{
+			background-color: $black;
+			div.container{
+				position: relative;
+				padding-bottom:80px;
+				div.bloc-left{
+					background-color: #fff;
+					box-shadow:4px 4px 18px #000;
+					position: absolute;
+					left:80px;
+					top:-80px;
+					width:370px;
+					height:400px;
+					padding:30px;
+					div.contain-title{
+						@include display-flex();
+						width:100%;
+						padding:0px;
+
+						h2{
+							text-transform: uppercase;
+							margin-bottom: 0px;
+							color:$black;
+							display:inline-block;
+							width:50%;
+							z-index:3;
+						}
+						hr{
+							width:50%;
+							color:$blue;
+							background-color: $blue;
+							border:none;
+							height:2px;
+							float:left;
+							margin-left:-65px;
+							@include transform(rotate(0deg));
+							margin-top:16px;
+						}
+					}
+				}
+				div.biographie{
+					color:#fff;
+					width:100%;
+					overflow:hidden;
+
+					div.contain-txt{
+						width:50%;
+						float:right;
+						padding-left:40px;
+						padding-top:50px;
+						padding-bottom:50px;
+						border-left:1px solid #595556;
+					}
+				}
+				div.titre{
+					width:100%;
+					margin-top:100px;
+					padding-top:100px;
+					border-top:1px solid #595556;
+				}
+				div.videos{
+					width:100%;
+					position: relative;
+					padding-bottom:100px;
+					@include display-flex();
+					p.titre{
+						height:auto;
+						text-align: center;
+						color:#fff;
+					}
+					div.contain-video{
+						width:70%;
+						margin:0 auto;
+						position: relative;
+						button{
+							position: absolute;
+							z-index:300;
+							border:none;
+							background-color: transparent;
+							bottom:-50px;
+							color:#fff;
+							@include transition(0.5s);
+							cursor:pointer;
+						}
+						div.slick-list{
+							height:350px;
+							position: relative;
+							div.slick-track{
+								height:100%;
+								position: relative;
+								div.video{
+									width:100%;
+									height:100%;
+									position: relative;
+									overflow:hidden;
+									span.number-slide{
+										color:#fff;
+										left:50%;
+									}
+									p{
+										height:100%;
+									}
+
+									iframe{
+										width:100%;
+										height:100%;
+										position: relative;
+									}
+									div.contain-txt{
+										position: absolute;
+										top:40px;
+										height: calc(100% - 80px);
+										width:40px;
+										background-color: #0f1010;
+										z-index:30000;
+										width:40%;
+										left:-36%;
+										padding-left: 20px;
+										padding-top:60px;
+										@include transition(0.5s);
+										p.titre{
+											color:#fff;
+											font-size:22px;
+											text-align: left;
+											text-transform: uppercase;
+											width:calc(100% - 40px);
+										}
+										&.show{
+											left:0px;
+										}
+										span.open{
+											position: absolute;
+											right:0px;
+											height:100%;
+											top:0px;
+											width:40px;
+											background-repeat: no-repeat;
+											background-image: url(./img/arrow-left.png);
+											background-position: center;
+											background-size: 11px;
+											@include transition(0.5s);
+											cursor:pointer;
+											&.show{
+												@include transform(rotate(180deg));
+											}
+										}
+									}
+									span.play-video{
+										display: inline-block;
+										position: absolute;
+										background-position: center;
+										background-repeat: no-repeat;
+										background-image: url(./img/play-button.png);
+										background-size: 133px;
+										background-color: rgba(#000,0.5);
+										width:100%;
+										height:100%;
+										top:175px;
+										@include transform(translateY(-50%));
+										&.hide{
+											display:none;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

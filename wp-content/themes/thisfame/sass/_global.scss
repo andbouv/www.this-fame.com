@@ -1,0 +1,116 @@
+/*------------------------------------*\
+	GENERAL
+\*------------------------------------*/
+html{
+	background: #0F1010;
+}
+body {
+	font-family: $font;
+	font-size: 18px;
+	color: $black;
+	font-weight: 300;
+	line-height: 1.5;
+	background: #0F1010;
+}
+
+p, a{
+	font-family: $fontroboto;
+	font-weight: 100;
+}
+
+.container {
+	max-width: $size1;
+	width: 100%;
+	margin: 0 auto;
+}
+
+
+
+.clearfix {
+	&:after {
+	  content: "";
+	  display: table;
+	  clear: both;
+	}
+}
+
+h3, h4, h5, h6 {
+    font-weight: 600;
+}
+
+h1, h2 {
+    font-weight: normal;
+}
+
+button{
+
+	&.slick-next{
+		background-position: center;
+		background-size: 15px;
+		background-repeat: no-repeat;
+		background-image: url(./img/arrow-right.png);
+		text-indent: -9999px;
+		width:20px;
+		height:20px;
+
+	}
+	&.slick-prev{
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-image: url(./img/arrow-left.png);
+		text-indent: -9999px;
+		background-size: 15px;
+		width:20px;
+		height:20px;
+	}
+}
+
+h1 { font-size: 23px; font-family: $font}
+h2 { font-size: 23px; font-family: $font}
+h3 { font-size: 23px; font-family: $font}
+h4 { font-size: 20px; font-family: $font}
+h5 { font-size: 18px; font-family: $font}
+h6 { font-size: 16px; font-family: $font}
+
+a {
+	text-decoration: none;
+	@include transition-duration(.3s);
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+p, ol, ul, h1, h2, h3, h4, h5, h6 {
+	margin-bottom: 10px;
+}
+
+
+div.contain-title{
+	width:40px;
+	padding-right:80px;
+	p.title-vert{
+		font-size: 12px;
+		font-weight: lighter;
+		margin-bottom: 30px;
+		color:#fff;
+		padding-left:10px;
+		letter-spacing: 0.5em;
+    font-family: $fontserif;
+		writing-mode: sideways-lr;
+		text-orientation: sideways-right;
+	}
+	hr{
+		width:40px;
+		@include transform(rotate(90deg));
+		color:#338e97;
+		background-color: #338e97;
+		height:1px;
+		border:none;
+	}
+}
+
+img{
+	max-width: 100%;
+	height: auto;
+}

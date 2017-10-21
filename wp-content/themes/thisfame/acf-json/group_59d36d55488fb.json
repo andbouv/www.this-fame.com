@@ -1,0 +1,51 @@
+{
+    "key": "group_59d36d55488fb",
+    "title": "Artistes",
+    "fields": [
+        {
+            "post_type": [
+                "artiste"
+            ],
+            "taxonomy": [],
+            "min": "",
+            "max": "",
+            "filters": [
+                "search",
+                "post_type",
+                "taxonomy"
+            ],
+            "elements": "",
+            "return_format": "object",
+            "key": "field_59d36d5bbc0f8",
+            "label": "artiste",
+            "name": "artiste",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "playlist"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "Playlists",
+    "modified": 1507028416
+}

@@ -1,0 +1,293 @@
+html{
+	body{
+		background-color: #0F1010;
+		overflow-x   : hidden;
+		height:100vh;
+		header{
+			height:100vh;
+			width:60px;
+			background-color: #121212;
+			position: fixed;
+			z-index:3000000;
+			box-shadow:1px 1px 8px #000;
+			@include transition(0.5s);
+			&.open{
+				box-shadow:none;
+			}
+			@include transition(0.5s);
+			&.hide{
+				left:-45px;
+				@include transition(0.5s);
+			}
+
+			button.search{
+				width:100%;
+				height: 60px;
+				background-position: 42% 50%;
+				background-repeat: no-repeat;
+				background-image: url(./img/search.png);
+				background-size: 15px;
+				cursor: pointer;
+				border:none;
+				background-color: #fff;
+				position: absolute;
+				padding-left:5px;
+				top:0px;
+				left:0px;
+			}
+			.hamburger-menu {
+				position: absolute;
+			  top: 0;
+			  left: 6px;
+			  right: 0;
+			  bottom: 0;
+			  margin: auto;
+			  width: 40px;
+				height: 30px;
+				cursor: pointer;
+				@include transition(0.5s);
+				.bar{
+					width:20px;
+					height:2px;
+					@include transition(0.5s);
+					transform: translateY($bar-spacing);
+					background: rgba( #fff, 1);
+					transition: all 0ms 300ms;
+
+				  &.animate {
+				    background: rgba( #2e2a2b, 0);
+				  }
+				}
+				&:hover{
+					.bar{
+						width:30px;
+						@include transition(0.5s);
+					}
+				}
+			}
+
+
+			.bar:after,
+			.bar:before {
+			  width: $bar-width;
+				height: $bar-height;
+			}
+
+
+			.bar:before {
+				content: "";
+				position: absolute;
+				left: 0;
+				bottom: $bar-spacing;
+				background: rgba(#fff, 1);
+				transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+			}
+
+			.bar:after {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: $bar-spacing;
+				background: rgba(#fff, 1);
+				transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+			}
+
+			.bar.animate:after {
+				top: 0;
+				transform: rotate(45deg);
+				transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);;
+			}
+
+			.bar.animate:before {
+				bottom: 0;
+				transform: rotate(-45deg);
+				transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);;
+			}
+		}
+		div.contain-search{
+			display:none;
+			background-color: rgba(#000,0.95);
+			width:100%;
+			height:100%;
+			position: fixed;
+			z-index:300000000;
+			span.button-close{
+				width:50px;
+				height:50px;
+				position: absolute;
+				top:80px;
+				right:80px;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: 22px;
+				background-image: url(./img/close.png);
+				text-indent: -999999px;
+				cursor:pointer;
+				z-index:30000;
+			}
+			div.container{
+				position: relative;
+				width:100%;
+				height:100%;
+			}
+			form{
+				position: absolute;
+				top:50%;
+				@include transform(translateY(-50%));
+				width:100%;
+				@include display-flex();
+				@include justify-content(center);
+				@include flex-direction(line);
+				input{
+					background-color: transparent;
+					width:50%;
+					color:#fff;
+					font-size:30px;
+					text-transform: uppercase;
+				}
+				::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+				  color: #fff;
+				}
+				::-moz-placeholder { /* Firefox 19+ */
+				  color: #fff;
+				}
+				:-ms-input-placeholder { /* IE 10+ */
+				  color: #fff;
+				}
+				:-moz-placeholder { /* Firefox 18- */
+				  color: #fff;
+				}
+				button{
+					width:50px;
+					background-color: transparent;
+					border:none;
+					background-image: url(./img/search-white.png);
+					background-repeat: no-repeat;
+					background-size: 20px;
+					background-position: center;
+					height:50px;
+					position: relative;
+					cursor: pointer;
+				}
+			}
+		}
+		div.menu{
+			left:-80%;
+			width:0px;
+			background-color: #121212;
+			height:100vh;
+			position: absolute;
+			z-index:30000;
+			top:0px;
+			width:75%;
+			box-shadow: 1px 1px 10px #000;
+			position: fixed;
+			@include transition(0.7s);
+			ul{
+				@include display-flex();
+				position: absolute;
+				height:auto;
+				top:calc(50% - 7px);
+				@include transform(translateY(-50%));
+				li{
+					margin:0px 20px;
+					a{
+						color:#fff;
+						text-transform: uppercase;
+						font-size:30px;
+						font-weight: lighter;
+						opacity: 0;
+						@include transition(5.7s);
+					}
+				}
+			}
+			&.show{
+				left:60px;
+				width:80%;
+				@include transition(0.7s);
+				background-color: rgba(#121212,1);
+				nav{
+					ul{
+						li{
+							a{
+								opacity:1;
+							}
+						}
+					}
+				}
+			}
+		}
+		div.page{
+			width:calc(100%);
+			position: relative;
+			top:0px;
+			left:60px;
+			@include transition(0.5s);
+			&.right{
+				left:140px;
+				@include transition(0.5s);
+			}
+			&.large{
+				left:0px;
+				width:100%;
+			}
+		}
+		footer{
+			height:400px;
+			background-color: #0d0c0c;
+			background-size: cover;
+			background-position: center;
+			width: calc(100% );
+			position: relative;
+			top: 0px;
+			left: 60px;
+			@include transition(0.5s);
+			&.right{
+				left:140px;
+				@include transition(0.5s);
+			}
+			&.large{
+				left:0px;
+				@include transition(0.5s);
+			}
+			div.container{
+				@include display-flex();
+				@include flex-grow(3);
+				padding-top:70px;
+				padding-bottom:40px;
+				div.contain-title{
+					@include display-flex();
+					width:100%;
+					padding:0px;
+
+					h2{
+						text-transform: uppercase;
+						margin-bottom: 0px;
+						color:#fff;
+						display:inline-block;
+						width:auto;
+					}
+					hr{
+						width:100px;
+						color:$blue;
+						background-color: $blue;
+						border:none;
+						height:2px;
+						float:left;
+						margin-left:-30px;
+						@include transform(rotate(0deg));
+						margin-top:16px;
+					}
+				}
+				div.bloc{
+					height:100%;
+					width:calc(100% / 3);
+					&:nth-child(3){
+						border-right: 1px solid #595556;
+						border-left: 1px solid #595556;
+					}
+				}
+			}
+		}
+	}
+}
