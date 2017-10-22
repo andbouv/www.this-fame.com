@@ -6,6 +6,7 @@
 	<link rel="pingback" href="<? bloginfo( 'pingback_url' ); ?>">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 
 	<? if(get_field('ua', 'option')): ?>
 		<script>

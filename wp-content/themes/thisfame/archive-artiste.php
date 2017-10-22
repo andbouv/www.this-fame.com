@@ -46,7 +46,7 @@
 window.sr = ScrollReveal({ reset: true });
 
 // Customizing a reveal set
-sr.reveal('.bloc a', { duration: 1000 });
+sr.reveal('.bloc a', { duration: 2000 });
 
 
 

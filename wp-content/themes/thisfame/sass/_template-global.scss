@@ -190,6 +190,7 @@ html{
 				top:calc(50% - 7px);
 				@include transform(translateY(-50%));
 				li{
+					list-style-type: none;
 					margin:0px 20px;
 					a{
 						color:#fff;

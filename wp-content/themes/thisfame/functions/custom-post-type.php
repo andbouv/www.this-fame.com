@@ -95,7 +95,7 @@ function create_post_type() {
             'menu_icon'             => 'dashicons-video-alt3',
             'taxonomies'            => array('galerie'),
             'supports'              => array( 'title', 'editor', 'thumbnail'),
-            'rewrite'               => array('slug' => 'vidéos', 'with_front' => true)
+            'rewrite'               => array('slug' => 'videos', 'with_front' => true)
         )
     );
 

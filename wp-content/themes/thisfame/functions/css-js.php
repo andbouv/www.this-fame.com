@@ -25,7 +25,7 @@ function theme_scripts() {
 
     wp_enqueue_style( 'styleSlick', get_template_directory_uri() . '/css/slick.css');
 
-
+    wp_enqueue_script('JSinfinite', get_template_directory_uri() . '/js/jquery.jscroll.js');
 
     wp_enqueue_script('JSslide', get_template_directory_uri() . '/js/slick.js');
 

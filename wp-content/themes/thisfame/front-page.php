@@ -155,7 +155,7 @@
 					<p>
 						Découvrez de multiples vidéos de vos artistes préférés, regroupant clips,festivals, promotions...
 					</p>
-					<a href="">Découvrez nos vidéos</a>
+					<a href="<?php bloginfo('url'); ?>/videos/">Découvrez nos vidéos</a>
 				</div>
 			</div>
 		</div>
