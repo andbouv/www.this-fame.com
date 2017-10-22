@@ -102,7 +102,6 @@
 			<hr/>
 		</div>
 		<div class="titre-semaine">
-
 		<?php
 			$posts = get_field('titres_semaine');
 			if($posts):
@@ -213,7 +212,7 @@
 <? get_footer(); ?>
 <script>
 
-jQuery(window).load(function(){ jQuery(".loader").fadeOut("2700"); });
+jQuery(window).load(function(){ jQuery(".loader").fadeToggle("700"); });
 // Changing the defaults
 window.sr = ScrollReveal({ reset: true });
 

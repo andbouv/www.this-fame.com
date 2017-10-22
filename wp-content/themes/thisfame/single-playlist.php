@@ -61,7 +61,7 @@
 	    <? if ( $the_query->have_posts() ) : ?>
 			<div class="contain-playlist">
 	      <? while ( $the_query->have_posts() ) { $the_query->the_post();  ?>
-					<a href="<? the_permalink() ?>" class="bloc" style="background-image:url(<? the_post_thumbnail_url('full') ?>)">
+					<a href="<? the_permalink() ?>" class="bloc" style="background-image:url(<? the_post_thumbnail_url('large') ?>)">
 						<div class="contain-info">
 							<h3><? the_title() ?></h3>
 							<div class="explain">
