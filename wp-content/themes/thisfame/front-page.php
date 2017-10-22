@@ -212,7 +212,7 @@
 <? get_footer(); ?>
 <script>
 
-jQuery(window).load(function(){ jQuery(".loader").fadeToggle("700"); });
+jQuery(window).load(function(){ jQuery(".loader").fadeOut("slow"); });
 // Changing the defaults
 window.sr = ScrollReveal({ reset: true });
 

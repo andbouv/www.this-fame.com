@@ -1,18 +1,22 @@
 html{
 	body.home{
 		.loader{
-		background-image:url(./img/fond-video.jpg);
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: cover;
-		cursor: wait;
-		height: 100%;
-		left: 0;
-		position: fixed;
-		top: 0;
-		width: 100%;
-		z-index: 3000000;
-	}
+			background: -moz-linear-gradient(-45deg, rgba(54,0,51,1) 0%, rgba(54,0,51,1) 0%, rgba(11,135,147,1) 78%, rgba(11,135,147,1) 100%);
+			background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(54,0,51,1)), color-stop(0%, rgba(54,0,51,1)), color-stop(78%, rgba(11,135,147,1)), color-stop(100%, rgba(11,135,147,1)));
+			background: -webkit-linear-gradient(-45deg, rgba(54,0,51,1) 0%, rgba(54,0,51,1) 0%, rgba(11,135,147,1) 78%, rgba(11,135,147,1) 100%);
+			background: -o-linear-gradient(-45deg, rgba(54,0,51,1) 0%, rgba(54,0,51,1) 0%, rgba(11,135,147,1) 78%, rgba(11,135,147,1) 100%);
+			background: -ms-linear-gradient(-45deg, rgba(54,0,51,1) 0%, rgba(54,0,51,1) 0%, rgba(11,135,147,1) 78%, rgba(11,135,147,1) 100%);
+			background: linear-gradient(135deg, rgba(54,0,51,1) 0%, rgba(54,0,51,1) 0%, rgba(11,135,147,1) 78%, rgba(11,135,147,1) 100%);
+			cursor: wait;
+			height: 100%;
+			left: 0;
+			position: fixed;
+			top: 0;
+			width: 100%;
+			z-index: 3000000;
+
+		}
+
 		.loader h1{
 			background: none;
 			border: none;
@@ -24,15 +28,18 @@ html{
 			height: 100vh;
 			line-height: 100vh;
 			letter-spacing: 15px;
+			animation: example 2s;
+			animation-delay:1.5s;
 			margin: 0 0 10px;
 			padding: 0;
 			text-align: center;
-			background: -moz-linear-gradient(-45deg, rgba(54,0,51,1) 0%, rgba(54,0,51,1) 0%, rgba(11,135,147,0.54) 78%, rgba(11,135,147,0.41) 100%);
-			background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(54,0,51,1)), color-stop(0%, rgba(54,0,51,1)), color-stop(78%, rgba(11,135,147,0.54)), color-stop(100%, rgba(11,135,147,0.41)));
-			background: -webkit-linear-gradient(-45deg, rgba(54,0,51,1) 0%, rgba(54,0,51,1) 0%, rgba(11,135,147,0.54) 78%, rgba(11,135,147,0.41) 100%);
-			background: -o-linear-gradient(-45deg, rgba(54,0,51,1) 0%, rgba(54,0,51,1) 0%, rgba(11,135,147,0.54) 78%, rgba(11,135,147,0.41) 100%);
-			background: -ms-linear-gradient(-45deg, rgba(54,0,51,1) 0%, rgba(54,0,51,1) 0%, rgba(11,135,147,0.54) 78%, rgba(11,135,147,0.41) 100%);
-			background: linear-gradient(135deg, rgba(54,0,51,1) 0%, rgba(54,0,51,1) 0%, rgba(11,135,147,0.54) 78%, rgba(11,135,147,0.41) 100%);
+			opacity: 0;
+		}
+		.loader h1 {animation-timing-function: ease-out;}
+
+		@keyframes example {
+				from {opacity: 0;line-height:105vh;}
+				to {opacity: 1;line-height:100vh;}
 		}
 		div.slider{
 			width:100%;
@@ -158,14 +165,14 @@ html{
 							}
 							div.contain-title{
 								bottom:80px;
-								width:50%;
+								width:40%;
 								position: absolute;
 								h2{
-									font-size:55px;
+									font-size:45px;
 									text-transform: uppercase;
 									font-weight: lighter;
 									color:#fff;
-									font-family: $fontroboto;
+									font-family: $font;
 								}
 								a.learn{
 									color:#fff;
@@ -227,6 +234,7 @@ html{
 						width:auto;
 						z-index:3;
 						font-size:35px;
+						font-weight:bold;
 						padding-left:80px;
 					}
 					hr{
@@ -301,6 +309,7 @@ html{
 								@include border-radius(7px);
 								h3{
 									top:35%;
+									font-weight:bold;
 								}
 								div.explain{
 									opacity:1;
