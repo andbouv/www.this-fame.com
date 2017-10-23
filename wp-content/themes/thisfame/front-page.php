@@ -41,6 +41,7 @@
 		</div>
 	</div>
 	<div class="container">
+		<? $i = 0 ?>
 			<? $the_query  = new WP_Query( array('post_type'=> 'playlist','posts_per_page' => 4, 'orderby' => 'date', 'order' => 'desc') );?>
 	    <? if ( $the_query->have_posts() ) : ?>
 			<div class="contain-title">
@@ -48,8 +49,10 @@
 				<hr/>
 			</div>
 			<div class="contain-playlist">
+
 				<? while ( $the_query->have_posts() ) { $the_query->the_post();  ?>
-					<a href="<? the_permalink() ?>" class="bloc bloc-playlist" style="background-image:url(<? the_post_thumbnail_url('large') ?>)">
+					<? $i++ ?>
+					<a href="<? the_permalink() ?>" class="bloc bloc-playlist bloc-<?= $i ?>" style="background-image:url(<? the_post_thumbnail_url('large') ?>)">
 						<div class="contain-info">
 							<h3><? the_title() ?></h3>
 							<div class="explain">
@@ -81,11 +84,13 @@
 
 				</div>
 				<div class="contain-titre">
+
 				<? while ( $the_query->have_posts() ) { $the_query->the_post();  ?>
+
 					<?
 						$posts = get_field('titre');
 						if( $posts ): ?>
-						<div class="bloc bloc-playlist"><p class="nb-titre" style="color:#fff;"><?= count($posts) ?> Titres</p></div>
+						<div class="bloc bloc-playlist "><p class="nb-titre" style="color:#fff;"><?= count($posts) ?> Titres</p></div>
 
 					<? endif; ?>
 					<? } ?>
@@ -217,8 +222,11 @@ jQuery(window).load(function(){ jQuery(".loader").fadeOut("slow"); });
 window.sr = ScrollReveal({ reset: true });
 
 // Customizing a reveal set
-sr.reveal('.contain-playlist', { duration: 1000 });
-sr.reveal('.contain-video', { duration: 1000 });
+sr.reveal('.bloc-1', { duration: 1000 });
+sr.reveal('.bloc-2', { duration: 2000 });
+sr.reveal('.bloc-3', { duration: 3000 });
+sr.reveal('.bloc-4', { duration: 4000 });
+sr.reveal('.contain-video .contain-txt', { duration: 2000 });
 sr.reveal('.bloc-son', { duration: 1000 });
 </script>
 <script>
