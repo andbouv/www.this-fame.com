@@ -26,9 +26,9 @@ html{
 			font-variant: small-caps;
 			font-weight: 700;
 			height: 100vh;
-			line-height: 100vh;
+			line-height: 105vh;
 			letter-spacing: 15px;
-			animation: example 2s;
+			animation: example 7s;
 			animation-delay:1.5s;
 			margin: 0 0 10px;
 			padding: 0;
@@ -181,7 +181,6 @@ html{
 									padding:10px 25px;
 									color: #fff;
 									@include border-radius(7px);
-
 								}
 							}
 							p{
@@ -283,8 +282,8 @@ html{
 							right:40px;
 							top:-90px;
 							text-transform: uppercase;
-							font-family: $fontserif;
-							font-size:16px;
+							font-family: $font;
+							font-size:18px;
 						}
 					}
 				}
@@ -309,7 +308,6 @@ html{
 								@include border-radius(7px);
 								h3{
 									top:35%;
-									font-weight:bold;
 								}
 								div.explain{
 									opacity:1;

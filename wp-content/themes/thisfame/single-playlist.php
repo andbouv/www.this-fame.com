@@ -58,10 +58,12 @@
 	      );
 	    ?>
 	    <? $the_query  = new WP_Query($args);?>
+			<? $i = 0 ?>
 	    <? if ( $the_query->have_posts() ) : ?>
 			<div class="contain-playlist">
 	      <? while ( $the_query->have_posts() ) { $the_query->the_post();  ?>
-					<a href="<? the_permalink() ?>" class="bloc" style="background-image:url(<? the_post_thumbnail_url('large') ?>)">
+					<? $i++ ?>
+					<a href="<? the_permalink() ?>" class="bloc bloc-<?= $i ?>" style="background-image:url(<? the_post_thumbnail_url('large') ?>)">
 						<div class="contain-info">
 							<h3><? the_title() ?></h3>
 							<div class="explain">
@@ -94,7 +96,11 @@
 window.sr = ScrollReveal({ reset: true });
 
 // Customizing a reveal set
-sr.reveal('.bloc', { duration: 2000 });
+sr.reveal('.bloc-1', { duration: 1000 });
+sr.reveal('.bloc-2', { duration: 2000 });
+sr.reveal('.bloc-3', { duration: 3000 });
+sr.reveal('.bloc-4', { duration: 4000 });
+sr.reveal('.contain-artistes .bloc .contain-info', { duration: 1500 });
 sr.reveal('.contain-video', { duration: 2000 });
 </script>
 <script>
