@@ -112,6 +112,12 @@ html{
 							color:#fff;
 							@include transition(0.5s);
 							cursor:pointer;
+							&.slick-prev{
+								left:45%;
+							}
+							&.slick-next{
+								right:45%;
+							}
 						}
 						div.slick-list{
 							height:350px;
