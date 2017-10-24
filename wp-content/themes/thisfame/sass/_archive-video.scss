@@ -30,24 +30,25 @@ html{
 				}
 			}
 		}
-		section.artistes{
+		section.videos{
 			padding:80px 60px;
-			div.contain-artistes{
+			div.contain-videos{
 				@include display-flex();
 				@include flex-grow(4);
 				@include flex-wrap(wrap);
+				padding-top:80px;
 				div.bloc{
-					width:calc(100% / 4);
+					width:calc(100% / 3);
 					text-align: center;
 					display:block;
 					@include transition(0.5s);
 					color:#fff;
 					position: relative;
 					@include transition(0.5s);
-					border-right:1px solid #595556;
-					border-bottom:1px solid #595556;
+					padding:0 20px;
 					&:hover{
 						@include transition(0.5s);
+						z-index:50;
 						div.contain-info{
 							height:100%;
 							@include transform(scale(1.1));
@@ -56,22 +57,20 @@ html{
 							z-index:200;
 							@include transition(0.5s);
 							@include border-radius(7px);
+							z-index:200000;
 						}
 					}
 					div.contain-info{
-						padding-bottom:30px;
+
 						@include transition(0.5s);
 						height:100%;
+						position: relative;
 					}
 					div.video{
 						width:100%;
 						height:100%;
 						position: relative;
-						overflow:hidden;
-						span.number-slide{
-							color:#fff;
-							left:50%;
-						}
+						padding-bottom:60px;
 						iframe{
 							width:100%;
 							height:180px;
@@ -83,6 +82,14 @@ html{
 							font-size:18px;
 							padding:0px 40px;
 							text-align: center;
+						}
+						p.publication{
+							font-size:14px;
+							position: absolute;
+							bottom:20px;
+							width:100%;
+							text-align: center;
+							padding-left: 20px;
 						}
 						span.play-video{
 							display: inline-block;

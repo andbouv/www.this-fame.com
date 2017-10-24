@@ -7,9 +7,9 @@
 			</div>
 		</div>
 	</section>
-	<section class="artistes">
+	<section class="videos">
 		<div class="container">
-			<div class="contain-artistes">
+			<div class="contain-videos">
 			<? $j == 0 ?>
 			<? if (have_posts()) : while (have_posts()) : the_post(); ?>
 			<? $j++ ?>
@@ -19,6 +19,14 @@
 								<? the_field('video') ?>
 								<span class="play-video pv-<?= $j+1 ?>"></span>
 								<h3><? the_title() ?></h3>
+								<? ?>
+								<? $date = get_the_date('Y-m-d') ?>
+								<?php
+								$birth = new DateTime($date);
+								$today = new DateTime();
+								$diff = $birth->diff($today);?>
+								<p class="publication">Publié il y a <?= $diff->format('%d'); ?> jours</p>
+								<?php get_template_part( 'html_includes/partials/social-share' ); ?>
 								<script>
 												$(document).ready(function() {
 														$('.pv-<?= $j+1 ?>').on('click', function(ev) {
@@ -54,7 +62,7 @@
 window.sr = ScrollReveal({ reset: true });
 
 // Customizing a reveal set
-sr.reveal('.bloc a', { duration: 2000 });
+sr.reveal('.bloc', { duration: 2000 });
 
 
 
