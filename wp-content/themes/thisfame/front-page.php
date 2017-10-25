@@ -215,6 +215,12 @@
 	<h1>THIS FAME</h1>
 </div>
 <? get_footer(); ?>
+<script type="text/javascript">
+$('iframe').jSound({
+	mini: true
+});
+
+</script>
 <script>
 
 jQuery(window).load(function(){ jQuery(".loader").fadeOut("slow"); });

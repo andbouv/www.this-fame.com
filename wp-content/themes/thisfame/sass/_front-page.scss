@@ -28,7 +28,7 @@ html{
 			height: 100vh;
 			line-height: 105vh;
 			letter-spacing: 15px;
-			animation: example 7s;
+			animation: example 2s;
 			animation-delay:1.5s;
 			margin: 0 0 10px;
 			padding: 0;
@@ -283,7 +283,7 @@ html{
 							top:-90px;
 							text-transform: uppercase;
 							font-family: $font;
-							font-size:18px;
+							font-size:16px;
 						}
 					}
 				}
@@ -308,6 +308,7 @@ html{
 								@include border-radius(7px);
 								h3{
 									top:35%;
+									font-weight:bold;
 								}
 								div.explain{
 									opacity:1;
@@ -420,8 +421,38 @@ html{
 						padding-right:40px;
 
 						div.bloc{
-							height:180px;
-							width:calc(50% - 10px);
+							width:calc(100%);
+							.jsound__background{
+								background-image: none !important;
+							}
+							.jsound__title{
+								a{
+									font-size:18px;
+									font-family: $font;
+								}
+							}
+							.jsound--mini{
+								background-color: $black;
+							}
+							.jsound__buttons{
+								background-image: url(./img/play-button.png);
+								background-repeat: no-repeat;
+								background-size: 100%;
+								.jsound__play{
+
+
+									&:before, &:after{
+
+									}
+								}
+							}
+							.jsound__artist{
+								a{
+									background-image: none;
+									padding-left: 0px;
+								}
+							}
+
 						}
 					}
 				}
@@ -446,8 +477,37 @@ html{
 						padding-right:40px;
 						border-right:1px solid #595556;
 						div.bloc{
-							height:180px;
-							width:calc(50% - 10px);
+							width:100%;
+							.jsound--mini{
+								background-color: $black;
+							}
+							.jsound__background{
+								background-image: none !important;
+							}
+							.jsound__title{
+								a{
+									font-size:18px;
+									font-family: $font;
+								}
+							}
+							.jsound__buttons{
+								background-image: url(./img/play-button.png);
+								background-repeat: no-repeat;
+								background-size: 100%;
+								.jsound__play{
+
+
+									&:before, &:after{
+
+									}
+								}
+							}
+							.jsound__artist{
+								a{
+									background-image: none;
+									padding-left: 0px;
+								}
+							}
 						}
 					}
 				}

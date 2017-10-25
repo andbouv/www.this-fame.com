@@ -37,43 +37,36 @@ html{
 				padding-bottom:80px;
 				@include display-flex();
 				@include justify-content(space-between);
-				div.bloc-left{
-					background-color: #fff;
-					box-shadow:1px 1px 18px #000;
-					position: absolute;
-					left:80px;
-					top:-80px;
-					width:300px;
-					height:400px;
-					padding:30px;
-					div.contain-title{
-						@include display-flex();
-						width:100%;
-						padding:0px;
-
-						h2{
-							text-transform: uppercase;
-							margin-bottom: 0px;
-							color:$black;
-							display:inline-block;
-							width:50%;
-							z-index:3;
-							font-size:32px;
+				div.contain-song{
+					width:70%;
+					padding-right:80px;
+					iframe{
+						margin-bottom: 40px;
+					}
+					.jsound--mini{
+						background-color: $black;
+						.jsound__background{
+							background-image: none !important;
 						}
-						hr{
-							width:30%;
-							color:$blue;
-							background-color: $blue;
-							border:none;
-							height:2px;
-							float:left;
-							margin-left:-35px;
-							@include transform(rotate(0deg));
-							margin-top:25px;
+						.jsound__title{
+							a{
+								font-size:17px;
+								font-family: $font;
+							}
+						}
+						.jsound__buttons{
+							background-image: url(./img/play-button.png);
+							background-repeat: no-repeat;
+							background-size: 100%;
+						}
+						.jsound__artist{
+							a{
+								background-image: none;
+								padding-left: 0px;
+							}
 						}
 					}
 				}
-
 				div.artiste{
 					width:30%;
 					@include display-flex();
