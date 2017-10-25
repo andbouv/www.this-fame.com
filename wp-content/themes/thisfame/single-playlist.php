@@ -13,6 +13,14 @@
 			<p class="title-vert">TITRES</p>
 			<hr/>
 		</div>
+		<div class="contain-song">
+			<iframe class="jsound-1" width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/194881641&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+
+			<iframe class="jsound-2" width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/73448639&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+
+			<iframe class="jsound-3" width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/128721758&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+
+		</div>
 		<? wp_reset_postdata() ?>
 		<div class="artiste">
 			<div class="titres">
@@ -91,6 +99,18 @@
 </section>
 </div>
 <? get_footer(); ?>
+
+<script type="text/javascript">
+$('.jsound-1').jSound({
+	mini: true
+});
+$('.jsound-2').jSound({
+	theme: 'dark'
+});
+$('.jsound-3').jSound({
+	mini: true
+});
+</script>
 <script>
 // Changing the defaults
 window.sr = ScrollReveal({ reset: true });
