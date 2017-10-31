@@ -43,27 +43,41 @@ html{
 					iframe{
 						margin-bottom: 40px;
 					}
+					.jsound__background{
+						background-image: none !important;
+					}
+					.jsound__title{
+						padding: 2px 20px 10px;
+						a{
+							font-size:18px;
+							font-family: $font;
+						}
+					}
+					.jsound__artist{
+						padding:10px 20px 0;
+					}
+					.jsound__shade {
+						background: transparent;
+					}
 					.jsound--mini{
 						background-color: $black;
-						.jsound__background{
-							background-image: none !important;
-						}
-						.jsound__title{
-							a{
-								font-size:17px;
-								font-family: $font;
+					}
+					.jsound__buttons{
+						background-image: url(./img/play-button.png);
+						background-repeat: no-repeat;
+						background-size: 100%;
+						.jsound__play{
+
+
+							&:before, &:after{
+
 							}
 						}
-						.jsound__buttons{
-							background-image: url(./img/play-button.png);
-							background-repeat: no-repeat;
-							background-size: 100%;
-						}
-						.jsound__artist{
-							a{
-								background-image: none;
-								padding-left: 0px;
-							}
+					}
+					.jsound__artist{
+						a{
+							background-image: none;
+							padding-left: 0px;
 						}
 					}
 				}
