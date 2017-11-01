@@ -223,7 +223,7 @@ $('iframe').jSound({
 </script>
 <script>
 
-jQuery(window).load(function(){ jQuery(".loader").fadeOut("slow"); });
+jQuery(".loader").delay(9000).fadeToggle(600)
 // Changing the defaults
 window.sr = ScrollReveal({ reset: true });
 

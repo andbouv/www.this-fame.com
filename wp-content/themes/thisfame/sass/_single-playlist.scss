@@ -43,11 +43,17 @@ html{
 					iframe{
 						margin-bottom: 40px;
 					}
+					.jSound{
+						background-color: transparent;
+					}
 					.jsound__background{
 						background-image: none !important;
 					}
 					.jsound__title{
 						padding: 2px 20px 10px;
+						width:80%;
+						overflow:hidden;
+						height:38px;
 						a{
 							font-size:18px;
 							font-family: $font;
@@ -56,21 +62,33 @@ html{
 					.jsound__artist{
 						padding:10px 20px 0;
 					}
-					.jsound__shade {
-						background: transparent;
-					}
 					.jsound--mini{
 						background-color: $black;
+						@include border-radius(7px);
 					}
 					.jsound__buttons{
-						background-image: url(./img/play-button.png);
+						background-image: url(./img/play-button-nu.png);
 						background-repeat: no-repeat;
 						background-size: 100%;
+						top:0px;
+						margin-top:0px;
 						.jsound__play{
-
-
+							border:none;
+							height:76px;
+							width:76px;
 							&:before, &:after{
-
+								top:28px;
+								left:31px;
+							}
+						}
+						.jsound--pause{
+							&:after{
+								top:28px;
+								left:31px;
+							}
+							&:before{
+								top:28px;
+								left:41px;
 							}
 						}
 					}
