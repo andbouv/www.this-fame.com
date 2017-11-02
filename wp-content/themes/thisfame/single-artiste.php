@@ -38,17 +38,45 @@
 				$posts = get_field('titre');
 				if($posts):
 			?>
-				<div class="contain-titre">
-					<? foreach( $posts as $post): ?>
-						<?setup_postdata($post); ?>
-							<div class="bloc">
-								<? the_field('titre') ?>
-							</div>
-					<? endforeach ?>
+			<div class="contain">
+				<div class="contain-title">
+					<p class="title-vert">TITRES</p>
+					<hr/>
 				</div>
+				<div class="contain-titre">
+						<? foreach( $posts as $post): ?>
+							<?setup_postdata($post); ?>
+								<div class="bloc">
+									<? the_field('titre') ?>
+								</div>
+						<? endforeach ?>
+				</div>
+			</div>
 			<? endif; ?>
+			<? wp_reset_postdata() ?>
+			<?php
+				$posts = get_field('album');
+				if($posts):
+			?>
+			<div class="contain">
+				<div class="contain-title">
+					<p class="title-vert">ALBUMS</p>
+					<hr/>
+				</div>
+				<div class="contain-album">
+						<? foreach( $posts as $post): ?>
+							<?setup_postdata($post); ?>
+								<div class="bloc" style="background-image:url(<? the_post_thumbnail_url() ?>)">
+									<p><? the_title() ?></p>
+								</div>
+						<? endforeach ?>
+				</div>
+			</div>
+			<? endif; ?>
+			<? wp_reset_postdata() ?>
 		</div>
-		<? wp_reset_postdata() ?>
+
+
 		<?php
 			$posts = get_field('videos');
 			if($posts):
@@ -99,6 +127,12 @@
 </section>
 </div>
 <? get_footer(); ?>
+<script type="text/javascript">
+$('iframe').jSound({
+	mini: true
+});
+
+</script>
 <script>
 $(".contain-video").slick({
 dots: false,
@@ -110,8 +144,8 @@ autoplay: false,
 });
 
 jQuery('#overlay').click(function(){
-      jQuery(this).hide();
-      jQuery('#youtube_id').get(0).playVideo();
+  jQuery(this).hide();
+	jQuery('#youtube_id').get(0).playVideo();
 
 });
 </script>

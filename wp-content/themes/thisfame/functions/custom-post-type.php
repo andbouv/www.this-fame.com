@@ -30,6 +30,28 @@ function create_post_type() {
         )
     );
 
+    register_post_type('album',
+        array(
+            'label'                 => __('Albums'),
+            'singular_label'        => __('Album'),
+            'add_new_item'          => __( 'Ajouter un album' ),
+            'edit_item'             => __( 'Modifier un album' ),
+            'new_item'              => __( 'Nouveaau titre' ),
+            'view_item'             => __( 'Voir l\'album' ),
+            'search_items'          => __( 'Rechercher un titre' ),
+            'not_found'             =>  __( 'Aucun titre trouvé' ),
+            'not_found_in_trash'    => __( 'Aucun titre trouvé' ),
+            'public'                => true,
+            'show_ui'               => true,
+            'capability_type'       => 'post',
+            'has_archive'           => true,
+            'hierarchical'          => true,
+            'menu_icon'             => 'dashicons-album',
+            'supports'              => array( 'title', 'editor', 'thumbnail'),
+            'rewrite'               => array('slug' => 'albums', 'with_front' => true)
+        )
+    );
+
     register_post_type('playlist',
         array(
             'label'                 => __('Playlists'),
