@@ -100,6 +100,28 @@
 			<? endif; ?>
 		</div>
 	</div>
+	<div class="container">
+		<? $the_query  = new WP_Query( array('post_type'=> 'playlist','posts_per_page' => 4, 'orderby' => 'date', 'order' => 'desc') );?>
+		<? if ( $the_query->have_posts() ) : ?>
+
+				<div class="contain-title">
+
+				</div>
+				<div class="contain-titre">
+
+				<? while ( $the_query->have_posts() ) { $the_query->the_post();  ?>
+
+					<?
+						$posts = get_field('titre');
+						if( $posts ): ?>
+						<div class="bloc bloc-playlist "><p class="nb-titre" style="color:#fff;"><?= count($posts) ?> Titres</p></div>
+
+					<? endif; ?>
+					<? } ?>
+				</div>
+
+		<? endif; ?>
+	</div>
 </section>
 </div>
 <? get_footer(); ?>
@@ -116,11 +138,11 @@ window.sr = ScrollReveal({ reset: true });
 
 // Customizing a reveal set
 sr.reveal('.jsound--mini', { duration: 3000 });
+sr.reveal('.artiste .bloc', { duration: 1500 });
 sr.reveal('.bloc-1', { duration: 1000 });
 sr.reveal('.bloc-2', { duration: 2000 });
 sr.reveal('.bloc-3', { duration: 3000 });
 sr.reveal('.bloc-4', { duration: 4000 });
-sr.reveal('.contain-artistes .bloc .contain-info', { duration: 1500 });
 sr.reveal('.contain-video', { duration: 2000 });
 </script>
 <script>
