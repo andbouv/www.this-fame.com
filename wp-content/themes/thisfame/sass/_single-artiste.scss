@@ -26,6 +26,7 @@ html{
 					width:80%;
 					bottom:32%;
 					position: absolute;
+					margin-left:80px;
 				}
 			}
 		}
@@ -175,7 +176,7 @@ html{
 							position: relative;
 							@include transition(0.5s);
 							@include border-radius(7px);
-							
+
 							p{
 								text-align: center;
 								color:$black;

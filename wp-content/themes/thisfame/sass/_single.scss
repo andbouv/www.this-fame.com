@@ -1,0 +1,59 @@
+html{
+	body.single{
+		section.top-page{
+			height:75vh;
+			max-height: 400px;
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+			div.contain-top{
+				background: -moz-linear-gradient(top, rgba(15,16,16,0) 0%, rgba(15,16,16,0.99) 99%, rgba(15,16,16,1) 100%); /* FF3.6-15 */
+				background: -webkit-linear-gradient(top, rgba(15,16,16,0) 0%,rgba(15,16,16,0.99) 99%,rgba(15,16,16,1) 100%); /* Chrome10-25,Safari5.1-6 */
+				background: linear-gradient(to bottom, rgba(15,16,16,0) 0%,rgba(15,16,16,0.99) 99%,rgba(15,16,16,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000f1010', endColorstr='#0f1010',GradientType=0 ); /* IE6-9 */
+				display:block;
+				width:100%;
+				height:100%;
+				div.container{
+					position: relative;
+					height:100%;
+				}
+				h1{
+					color:#fff;
+					text-align: left;
+					font-size:50px;
+					text-transform: uppercase;
+					width:50%;
+					bottom:22%;
+					position: absolute;
+				}
+			}
+		}
+		section.article{
+			background-color: $black;
+			padding-top:100px;
+			padding-bottom:80px;
+			div.container{
+				position: relative;
+				@include display-flex();
+				@include justify-content(space-between);
+				div.blocs{
+
+					margin:0 auto;
+					section.texte{
+						width:80%;
+						p{
+							color:#fff;
+						}
+					}
+					section.image_texte{
+						.layout{
+							width:80%;
+							margin:0 auto;
+						}
+					}
+				}
+			}
+		}
+	}
+}
