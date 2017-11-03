@@ -366,17 +366,20 @@ html{
 			}
 		}
 		section.titre-top{
-			background: rgba(11,135,147,1);
+			/*background: rgba(11,135,147,1);
 			background: -moz-linear-gradient(45deg, rgba(11,135,147,1) 0%, rgba(11,135,147,1) 0%, rgba(54,0,51,0.55) 76%, rgba(54,0,51,0.41) 100%);
 			background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(11,135,147,1)), color-stop(0%, rgba(11,135,147,1)), color-stop(76%, rgba(54,0,51,0.55)), color-stop(100%, rgba(54,0,51,0.41)));
 			background: -webkit-linear-gradient(45deg, rgba(11,135,147,1) 0%, rgba(11,135,147,1) 0%, rgba(54,0,51,0.55) 76%, rgba(54,0,51,0.41) 100%);
 			background: -o-linear-gradient(45deg, rgba(11,135,147,1) 0%, rgba(11,135,147,1) 0%, rgba(54,0,51,0.55) 76%, rgba(54,0,51,0.41) 100%);
 			background: -ms-linear-gradient(45deg, rgba(11,135,147,1) 0%, rgba(11,135,147,1) 0%, rgba(54,0,51,0.55) 76%, rgba(54,0,51,0.41) 100%);
-			background: linear-gradient(45deg, rgba(11,135,147,1) 0%, rgba(11,135,147,1) 0%, rgba(54,0,51,0.55) 76%, rgba(54,0,51,0.41) 100%);
-			padding-top:100px;
-			padding-bottom:90px;
+			background: linear-gradient(45deg, rgba(11,135,147,1) 0%, rgba(11,135,147,1) 0%, rgba(54,0,51,0.55) 76%, rgba(54,0,51,0.41) 100%);*/
+
 			div.container{
 				@include display-flex();
+				border-top:1px solid #595556;
+				border-bottom:1px solid #595556;
+				padding-top:100px;
+				padding-bottom:90px;
 				div.contain-title{
 					width:40px;
 					p.title-vert{
@@ -554,8 +557,6 @@ html{
 		}
 		section.video{
 			padding-top:100px;
-			box-shadow: 0px -19px 31px -18px rgba(0,0,0,0.75);
-
 			div.container{
 				@include display-flex();
 				@include justify-content(space-between);

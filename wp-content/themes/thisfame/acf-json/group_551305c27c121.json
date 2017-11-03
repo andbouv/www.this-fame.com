@@ -3,21 +3,6 @@
     "title": "Blocs",
     "fields": [
         {
-            "key": "field_5535f985004a4",
-            "label": "Blocs",
-            "name": "blocs",
-            "type": "flexible_content",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "button_label": "Ajouter un bloc",
-            "min": "",
-            "max": "",
             "layouts": [
                 {
                     "key": "5535f98b5c060",
@@ -26,6 +11,11 @@
                     "display": "block",
                     "sub_fields": [
                         {
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
                             "key": "field_553fa2f8c1714",
                             "label": "Titre",
                             "name": "titre",
@@ -38,15 +28,15 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": "",
                             "readonly": 0,
                             "disabled": 0
                         },
                         {
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "default_value": "",
+                            "delay": 0,
                             "key": "field_5535f998004a5",
                             "label": "Texte",
                             "name": "texte",
@@ -58,11 +48,7 @@
                                 "width": "",
                                 "class": "",
                                 "id": ""
-                            },
-                            "default_value": "",
-                            "tabs": "all",
-                            "toolbar": "full",
-                            "media_upload": 1
+                            }
                         }
                     ],
                     "min": "",
@@ -75,6 +61,11 @@
                     "display": "block",
                     "sub_fields": [
                         {
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
                             "key": "field_55803ffc78c32",
                             "label": "Titre",
                             "name": "titre",
@@ -87,15 +78,15 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": "",
                             "readonly": 0,
                             "disabled": 0
                         },
                         {
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "default_value": "",
+                            "delay": 0,
                             "key": "field_55803ffc78c33",
                             "label": "Texte 1",
                             "name": "texte_1",
@@ -107,13 +98,14 @@
                                 "width": "",
                                 "class": "",
                                 "id": ""
-                            },
-                            "default_value": "",
-                            "tabs": "all",
-                            "toolbar": "full",
-                            "media_upload": 1
+                            }
                         },
                         {
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "default_value": "",
+                            "delay": 0,
                             "key": "field_5580401a7c5e6",
                             "label": "Texte 2",
                             "name": "texte_2",
@@ -125,11 +117,7 @@
                                 "width": "",
                                 "class": "",
                                 "id": ""
-                            },
-                            "default_value": "",
-                            "tabs": "all",
-                            "toolbar": "full",
-                            "media_upload": 1
+                            }
                         }
                     ],
                     "min": "",
@@ -142,6 +130,11 @@
                     "display": "block",
                     "sub_fields": [
                         {
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
                             "key": "field_558040237c5e8",
                             "label": "Titre",
                             "name": "titre",
@@ -154,15 +147,15 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": "",
                             "readonly": 0,
                             "disabled": 0
                         },
                         {
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "default_value": "",
+                            "delay": 0,
                             "key": "field_558040237c5e9",
                             "label": "Texte 1",
                             "name": "texte_1",
@@ -174,13 +167,14 @@
                                 "width": "",
                                 "class": "",
                                 "id": ""
-                            },
-                            "default_value": "",
-                            "tabs": "all",
-                            "toolbar": "full",
-                            "media_upload": 1
+                            }
                         },
                         {
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "default_value": "",
+                            "delay": 0,
                             "key": "field_558040237c5ea",
                             "label": "Texte 2",
                             "name": "texte_2",
@@ -192,13 +186,14 @@
                                 "width": "",
                                 "class": "",
                                 "id": ""
-                            },
-                            "default_value": "",
-                            "tabs": "all",
-                            "toolbar": "full",
-                            "media_upload": 1
+                            }
                         },
                         {
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "default_value": "",
+                            "delay": 0,
                             "key": "field_5580402b7c5eb",
                             "label": "Texte 3",
                             "name": "texte_3",
@@ -210,11 +205,7 @@
                                 "width": "",
                                 "class": "",
                                 "id": ""
-                            },
-                            "default_value": "",
-                            "tabs": "all",
-                            "toolbar": "full",
-                            "media_upload": 1
+                            }
                         }
                     ],
                     "min": "",
@@ -227,6 +218,11 @@
                     "display": "block",
                     "sub_fields": [
                         {
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
                             "key": "field_558040347c5ed",
                             "label": "Titre",
                             "name": "titre",
@@ -239,15 +235,15 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": "",
                             "readonly": 0,
                             "disabled": 0
                         },
                         {
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "default_value": "",
+                            "delay": 0,
                             "key": "field_558040347c5ee",
                             "label": "Texte 1",
                             "name": "texte_1",
@@ -259,13 +255,14 @@
                                 "width": "",
                                 "class": "",
                                 "id": ""
-                            },
-                            "default_value": "",
-                            "tabs": "all",
-                            "toolbar": "full",
-                            "media_upload": 1
+                            }
                         },
                         {
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "default_value": "",
+                            "delay": 0,
                             "key": "field_558040347c5ef",
                             "label": "Texte 2",
                             "name": "texte_2",
@@ -277,13 +274,14 @@
                                 "width": "",
                                 "class": "",
                                 "id": ""
-                            },
-                            "default_value": "",
-                            "tabs": "all",
-                            "toolbar": "full",
-                            "media_upload": 1
+                            }
                         },
                         {
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "default_value": "",
+                            "delay": 0,
                             "key": "field_558040347c5f0",
                             "label": "Texte 3",
                             "name": "texte_3",
@@ -295,13 +293,14 @@
                                 "width": "",
                                 "class": "",
                                 "id": ""
-                            },
-                            "default_value": "",
-                            "tabs": "all",
-                            "toolbar": "full",
-                            "media_upload": 1
+                            }
                         },
                         {
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "default_value": "",
+                            "delay": 0,
                             "key": "field_5580403e7c5f1",
                             "label": "Texte 4",
                             "name": "texte_4",
@@ -313,11 +312,7 @@
                                 "width": "",
                                 "class": "",
                                 "id": ""
-                            },
-                            "default_value": "",
-                            "tabs": "all",
-                            "toolbar": "full",
-                            "media_upload": 1
+                            }
                         }
                     ],
                     "min": "",
@@ -330,6 +325,16 @@
                     "display": "block",
                     "sub_fields": [
                         {
+                            "return_format": "array",
+                            "preview_size": "thumbnail",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": "",
                             "key": "field_5535f9b2004a8",
                             "label": "Image",
                             "name": "image",
@@ -341,19 +346,14 @@
                                 "width": "",
                                 "class": "",
                                 "id": ""
-                            },
-                            "return_format": "array",
-                            "preview_size": "thumbnail",
-                            "library": "all",
-                            "min_width": "",
-                            "min_height": "",
-                            "min_size": "",
-                            "max_width": "",
-                            "max_height": "",
-                            "max_size": "",
-                            "mime_types": ""
+                            }
                         },
                         {
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
                             "key": "field_553fa309c1715",
                             "label": "Titre",
                             "name": "titre",
@@ -366,15 +366,15 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": "",
                             "readonly": 0,
                             "disabled": 0
                         },
                         {
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "default_value": "",
+                            "delay": 0,
                             "key": "field_5535f9a6004a7",
                             "label": "Texte",
                             "name": "texte",
@@ -386,11 +386,7 @@
                                 "width": "",
                                 "class": "",
                                 "id": ""
-                            },
-                            "default_value": "",
-                            "tabs": "all",
-                            "toolbar": "full",
-                            "media_upload": 1
+                            }
                         }
                     ],
                     "min": "",
@@ -403,6 +399,11 @@
                     "display": "block",
                     "sub_fields": [
                         {
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
                             "key": "field_553fa326c1716",
                             "label": "Titre",
                             "name": "titre",
@@ -415,15 +416,15 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": "",
                             "readonly": 0,
                             "disabled": 0
                         },
                         {
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "default_value": "",
+                            "delay": 0,
                             "key": "field_5535f9c9004ab",
                             "label": "Texte",
                             "name": "texte",
@@ -435,13 +436,19 @@
                                 "width": "",
                                 "class": "",
                                 "id": ""
-                            },
-                            "default_value": "",
-                            "tabs": "all",
-                            "toolbar": "full",
-                            "media_upload": 1
+                            }
                         },
                         {
+                            "return_format": "array",
+                            "preview_size": "thumbnail",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": "",
                             "key": "field_5535f9c9004aa",
                             "label": "Image",
                             "name": "image",
@@ -453,38 +460,43 @@
                                 "width": "",
                                 "class": "",
                                 "id": ""
-                            },
-                            "return_format": "array",
-                            "preview_size": "thumbnail",
-                            "library": "all",
-                            "min_width": "",
-                            "min_height": "",
-                            "min_size": "",
-                            "max_width": "",
-                            "max_height": "",
-                            "max_size": "",
-                            "mime_types": ""
+                            }
                         }
                     ],
                     "min": "",
                     "max": ""
                 }
-            ]
+            ],
+            "min": "",
+            "max": "",
+            "button_label": "Ajouter un bloc",
+            "key": "field_5535f985004a4",
+            "label": "Blocs",
+            "name": "blocs",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
         }
     ],
     "location": [
         [
             {
-                "param": "page_template",
+                "param": "post_type",
                 "operator": "==",
-                "value": "default"
+                "value": "post"
             }
         ],
         [
             {
                 "param": "page_template",
                 "operator": "==",
-                "value": "gabarit-accueil.php"
+                "value": "default"
             }
         ]
     ],
@@ -496,5 +508,7 @@
     "hide_on_screen": [
         "the_content"
     ],
-    "modified": 1436523019
+    "active": 1,
+    "description": "",
+    "modified": 1509731275
 }
