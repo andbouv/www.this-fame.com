@@ -39,8 +39,9 @@ html{
 				@include justify-content(space-between);
 				div.contain-song{
 					width:70%;
-					padding-right:80px;
+					padding-right:40px;
 					padding-bottom:80px;
+					padding-top: 40px;
 					iframe{
 						margin-bottom: 40px;
 					}
@@ -104,6 +105,10 @@ html{
 					width:35%;
 					@include display-flex();
 					margin-bottom:80px;
+					padding-left:30px;
+					border-left:1px solid $grey;
+					padding-bottom: 40px;
+					padding-top: 40px;
 					div.contain-artistes{
 						margin-left:30px;
 						width:100%;

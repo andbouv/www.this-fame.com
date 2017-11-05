@@ -46,6 +46,7 @@ html{
 					@include transition(0.5s);
 					color:#fff;
 					position: relative;
+					
 					&:hover{
 						@include transition(0.5s);
 						div.contain-info{

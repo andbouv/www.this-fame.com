@@ -26,6 +26,7 @@ html{
 					width:80%;
 					bottom:32%;
 					position: absolute;
+					margin-left:80px;
 				}
 			}
 		}
@@ -35,38 +36,81 @@ html{
 				position: relative;
 				padding-bottom:80px;
 				div.bloc-left{
-					background-color: #fff;
+					background-color: #0D0C0C;
 					box-shadow:4px 4px 18px #000;
 					position: absolute;
 					left:80px;
 					top:-80px;
-					width:370px;
+					width:300px;
 					height:400px;
-					padding:30px;
-					div.contain-title{
+					padding:30px 0px;
+					div.social{
 						@include display-flex();
+						@include justify-content(center);
+						margin-top:15px;
 						width:100%;
-						padding:0px;
-
-						h2{
-							text-transform: uppercase;
-							margin-bottom: 0px;
-							color:$black;
-							display:inline-block;
-							width:50%;
-							z-index:3;
+						left:0px;
+						a{
+							text-indent: -99999px;
+							background-position: center;
+							background-repeat: no-repeat;
+							&.fb{
+								background-image: url(./img/facebook-white.png);
+								background-size: 10px;
+								width:35px;
+								height:40px;
+							}
+							&.spotify{
+								background-image: url(./img/spotify-white.png);
+								background-size: 20px;
+								width:40px;
+								height:40px;
+							}
+							&.instagram{
+								background-image: url(./img/instagram-white.png);
+								background-size: 20px;
+								width:40px;
+								height:40px;
+							}
 						}
-						hr{
+					}
+					div.line{
+						width:100%;
+						height:70px;
+						@include display-flex();
+						margin-top: 30px;
+						a{
+							display:block;
 							width:50%;
-							color:$blue;
-							background-color: $blue;
-							border:none;
-							height:2px;
-							float:left;
-							margin-left:-65px;
-							@include transform(rotate(0deg));
-							margin-top:16px;
+							height:100%;
+							background-color: $black;
+							background-repeat: no-repeat;
+							background-size: 13px;
+							&.prev{
+								background-image: url(./img/arrow-left.png);
+								background-position: 30% 50%;
+								border-right:1px solid #595556;
+							}
+							&.next{
+								background-image: url(./img/arrow-right.png);
+								background-position: 70% 50%;
+							}
 						}
+					}
+					div.img-artiste{
+						width:120px;
+						height:120px;
+						background-position: center;
+						background-repeat: no-repeat;
+						background-size: cover;
+						@include border-radius(50%);
+						margin:0 auto;
+					}
+					h3{
+						text-align: center;
+						color:#fff;
+						margin-top: 20px;
+						text-transform: uppercase;
 					}
 				}
 				div.biographie{
@@ -75,7 +119,7 @@ html{
 					overflow:hidden;
 
 					div.contain-txt{
-						width:50%;
+						width:60%;
 						float:right;
 						padding-left:40px;
 						padding-top:50px;
@@ -175,7 +219,7 @@ html{
 							position: relative;
 							@include transition(0.5s);
 							@include border-radius(7px);
-							
+
 							p{
 								text-align: center;
 								color:$black;

@@ -20,6 +20,12 @@
 						<div class="contain">
 							<div class="contain-title">
 								<a href="<? the_permalink() ?>"><h2><? the_title() ?></h2></a>
+								<div class="line">
+									<p class="time"><?= get_the_date('Y/m/d') ?></p>
+									<? foreach((get_the_category()) as $category) {?>
+									 <p class="category"> <?echo $category->cat_name . ' ';?> </p>
+								 	<? } ?>
+							 </div>
 								<a href=""><? the_content( '', TRUE ); ?></a>
 								<a href="<? the_permalink() ?>" class="learn">Lire la suite </a>
 							</div>
@@ -167,6 +173,12 @@
 </section>
 <section class="artiste">
 	<div class="container">
+		<div class="title-artistes">
+			<h2>ARTISTES</h2>
+			<hr/>
+		</div>
+	</div>
+	<div class="container">
 		<div class="contain-title">
 			<p class="title-vert">ARTISTES</p>
 			<hr/>
@@ -219,7 +231,6 @@
 $('iframe').jSound({
 	mini: true
 });
-
 </script>
 <script>
 

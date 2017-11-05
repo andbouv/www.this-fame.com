@@ -1,4 +1,9 @@
 <? get_header(); ?>
+<?
+	$jsps_networks = array( 'twitter', 'facebook' );
+	$show_counters = 1;
+	juiz_sps( $jsps_networks );
+?>
 <div class="page">
 <section class="top-page" style="background-image:url(<? the_post_thumbnail_url('large') ?>)">
 	<div class="contain-top">
@@ -133,7 +138,20 @@ $('iframe').jSound({
 
 </script>
 <script>
-// Changing the defaults
+$(function(){
+ var lastScroll = 0;
+ $(window).scroll(function(event){
+     var st = $(this).scrollTop();
+     if (st > lastScroll){
+       $(".show").removeClass("show", 500);
+     }
+     else {
+       $(".juiz_sps_links").addClass("show", 500)
+     }
+     lastScroll = st;
+   });
+ });
+ 
 window.sr = ScrollReveal({ reset: true });
 
 // Customizing a reveal set

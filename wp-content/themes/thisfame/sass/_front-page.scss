@@ -21,7 +21,7 @@ html{
 			font-variant: small-caps;
 			font-weight: 700;
 			height: 100vh;
-			line-height: 105vh;
+			line-height: 100vh;
 			letter-spacing: 15px;
 			animation: example 7s;
 			animation-delay:1.5s;
@@ -166,6 +166,33 @@ html{
 								bottom:80px;
 								width:40%;
 								position: absolute;
+								div.line{
+									@include display-flex();
+									margin-bottom:30px;
+									p{
+										color:#fff;
+										width:auto;
+										display:inline-block;
+										font-size:15px;
+										text-transform: uppercase;
+										&.time{
+											padding-left:30px;
+											background-position: left;
+											background-size: 18px;
+											background-repeat: no-repeat;
+											background-image: url(./img/time.png);
+
+										}
+										&.category{
+											padding-left:36px;
+											background-position: left;
+											background-size: 24px;
+											margin-left:30px;
+											background-repeat: no-repeat;
+											background-image: url(./img/eye.png);
+										}
+									}
+								}
 								h2{
 									font-size:45px;
 									text-transform: uppercase;
@@ -176,7 +203,7 @@ html{
 								a.learn{
 									color:#fff;
 									font-size:16px;
-									background-color: #338e97;
+									background-color: rgba(#338e97,1);
 									padding:10px 25px;
 									color: #fff;
 									@include border-radius(7px);
@@ -222,7 +249,7 @@ html{
 				div.title-playlist{
 					@include display-flex();
 					width:100%;
-					padding-bottom:20px;
+					padding-bottom:40px;
 					position: relative;
 					h2{
 						text-transform: uppercase;
@@ -231,20 +258,20 @@ html{
 						display:inline-block;
 						width:auto;
 						z-index:3;
-						font-size:35px;
+						font-size:30px;
 						font-weight:normal;
 						padding-left:80px;
 					}
 					hr{
-						width:200px;
+						width:100px;
 						color:$blue;
 						background-color: $blue;
 						border:none;
 						height:2px;
 						float:left;
-						margin-left:-65px;
+						margin-left:-35px;
 						@include transform(rotate(0deg));
-						margin-top:26px;
+						margin-top:23px;
 					}
 				}
 				div.contain-title{
@@ -501,7 +528,6 @@ html{
 						width:100%;
 						padding-left:0px;
 						padding-right:40px;
-						border-right:1px solid #595556;
 						div.bloc{
 							width:100%;
 							.jSound{
@@ -556,7 +582,7 @@ html{
 			}
 		}
 		section.video{
-			padding-top:100px;
+			padding-top:60px;
 			div.container{
 				@include display-flex();
 				@include justify-content(space-between);
@@ -567,7 +593,7 @@ html{
 				}
 				div.contain-video{
 					width:80%;
-					height:450px;
+					height:500px;
 					background-color: #323131;
 					margin:0 auto;
 					margin-top:50px;
@@ -658,6 +684,34 @@ html{
 				padding-top:50px;
 				@include justify-content(center);
 
+			}
+			div.title-artistes{
+				@include display-flex();
+				width:100%;
+				padding-bottom:60px;
+				position: relative;
+				h2{
+					text-transform: uppercase;
+					margin-bottom: 0px;
+					color:#fff;
+					display:inline-block;
+					width:auto;
+					z-index:3;
+					font-size:30px;
+					font-weight:normal;
+					padding-left:80px;
+				}
+				hr{
+					width:100px;
+					color:$blue;
+					background-color: $blue;
+					border:none;
+					height:2px;
+					float:left;
+					margin-left:-35px;
+					@include transform(rotate(0deg));
+					margin-top:23px;
+				}
 			}
 			div.container{
 				color:#fff;
