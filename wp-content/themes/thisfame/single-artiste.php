@@ -105,7 +105,7 @@
 					<? $j++ ?>
 					<div class="video ci-<?= $j+1 ?>">
 						<? the_field('video') ?>
-						<div class="contain-txt show contain-<?= $j ?>">
+						<div class="contain-txt active contain-<?= $j ?>">
 							<p class=titre><? the_title() ?></p>
 							<span class="open"></span>
 						</div>
@@ -117,15 +117,15 @@
 												$('.pv-<?= $j+1 ?>').on('click', function(ev) {
 														$(".ci-<?= $j+1 ?> iframe")[0].src += "&autoplay=1";
 														$('.pv-<?= $j+1 ?>').addClass("hide");
-														$('.contain-<?= $j ?>').removeClass("show");
+														$('.contain-<?= $j ?>').removeClass("active");
 														ev.preventDefault();
 												});
 
 												$('.contain-<?= $j ?>').on('click', function(ev) {
-													$('.contain-<?= $j ?>').toggleClass("show");
+													$('.contain-<?= $j ?>').toggleClass("active");
 												});
 												$('.contain-<?= $j ?> span').on('click', function(ev) {
-													$('.contain-<?= $j ?> span').toggleClass("show");
+													$('.contain-<?= $j ?> span').toggleClass("active");
 												});
 										});
 						</script>

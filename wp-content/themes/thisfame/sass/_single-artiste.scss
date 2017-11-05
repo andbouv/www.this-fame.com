@@ -310,7 +310,7 @@ html{
 											text-transform: uppercase;
 											width:calc(100% - 40px);
 										}
-										&.show{
+										&.active{
 											left:0px;
 										}
 										span.open{
@@ -325,7 +325,7 @@ html{
 											background-size: 11px;
 											@include transition(0.5s);
 											cursor:pointer;
-											&.show{
+											&.active{
 												@include transform(rotate(180deg));
 											}
 										}

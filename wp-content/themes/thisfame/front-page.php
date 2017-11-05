@@ -85,23 +85,14 @@
 	<div class="container">
 		<? $the_query  = new WP_Query( array('post_type'=> 'playlist','posts_per_page' => 4, 'orderby' => 'date', 'order' => 'desc') );?>
 		<? if ( $the_query->have_posts() ) : ?>
-
-				<div class="contain-title">
-
-				</div>
-				<div class="contain-titre">
-
+			<div class="contain-title">
+			</div>
+			<div class="contain-titre">
 				<? while ( $the_query->have_posts() ) { $the_query->the_post();  ?>
-
-					<?
-						$posts = get_field('titre');
-						if( $posts ): ?>
-						<div class="bloc bloc-playlist "><p class="nb-titre" style="color:#fff;"><?= count($posts) ?> Titres</p></div>
-
-					<? endif; ?>
-					<? } ?>
-				</div>
-
+					<? $posts = get_field('titre'); ?>
+					<div class="bloc bloc-playlist "><p class="nb-titre" style="color:#fff;"><?= count($posts) ?> Titres</p></div>
+				<? } ?>
+			</div>
 		<? endif; ?>
 	</div>
 </section>
@@ -187,6 +178,7 @@
         $args = array(
           'post_type'=> 'artiste',
           'posts_per_page' => 8,
+					'orderby'  => 'rand'
         );
     ?>
 		<? $the_query  = new WP_Query($args);?>

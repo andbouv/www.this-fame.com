@@ -19,6 +19,10 @@
 			<hr/>
 		</div>
 		<div class="contain-song">
+			<div class="title">
+				<h2>Titres</h2>
+				<hr/>
+			</div>
 			<?php
 				$posts = get_field('titre');
 				if($posts):
@@ -106,25 +110,15 @@
 		</div>
 	</div>
 	<div class="container">
-		<? $the_query  = new WP_Query( array('post_type'=> 'playlist','posts_per_page' => 4, 'orderby' => 'date', 'order' => 'desc') );?>
 		<? if ( $the_query->have_posts() ) : ?>
-
-				<div class="contain-title">
-
-				</div>
-				<div class="contain-titre">
-
+			<div class="contain-title">
+			</div>
+			<div class="contain-titre">
 				<? while ( $the_query->have_posts() ) { $the_query->the_post();  ?>
-
-					<?
-						$posts = get_field('titre');
-						if( $posts ): ?>
-						<div class="bloc bloc-playlist "><p class="nb-titre" style="color:#fff;"><?= count($posts) ?> Titres</p></div>
-
-					<? endif; ?>
-					<? } ?>
-				</div>
-
+					<? $posts = get_field('titre'); ?>
+					<div class="bloc bloc-playlist "><p class="nb-titre" style="color:#fff;"><?= count($posts) ?> Titres</p></div>
+				<? } ?>
+			</div>
 		<? endif; ?>
 	</div>
 </section>
@@ -151,7 +145,7 @@ $(function(){
      lastScroll = st;
    });
  });
- 
+
 window.sr = ScrollReveal({ reset: true });
 
 // Customizing a reveal set
