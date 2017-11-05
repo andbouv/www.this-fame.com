@@ -431,14 +431,30 @@ html{
 						&.fb{
 							background-image: url(./img/facebook-white.png);
 							background-size: 11px;
+							border-top: 2px solid transparent;
+							border-left: 2px solid transparent;
+							&:hover{
+								border-top: 2px solid #fff;
+								border-left: 2px solid #fff;
+							}
 						}
 						&.instagram{
 							background-image: url(./img/instagram-white.png);
 							background-size: 22px;
+							border-top: 2px solid transparent;
+							&:hover{
+								border-top: 2px solid #fff;
+							}
 						}
 						&.soundcloud{
 							background-image: url(./img/spotify-white.png);
 							background-size: 24px;
+							border-top: 2px solid transparent;
+							border-right: 2px solid transparent;
+							&:hover{
+								border-top: 2px solid #fff;
+								border-right: 2px solid #fff;
+							}
 						}
 					}
 				}
