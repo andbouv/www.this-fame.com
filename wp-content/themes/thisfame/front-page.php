@@ -15,7 +15,7 @@
 					<? $count = $the_query ?>
           <? while ( $the_query->have_posts() ) { $the_query->the_post();  ?>
 						<? $i++ ?>
-				<div class="contain-slide" style="background-image:url(<? the_post_thumbnail_url('large') ?>)">
+				<div class="contain-slide" style="background-image:url(<? the_post_thumbnail_url('full') ?>)">
 					<div class="contain-txt-slide">
 						<div class="contain">
 							<div class="contain-title">
