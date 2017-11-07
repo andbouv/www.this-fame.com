@@ -1,8 +1,8 @@
 <footer>
 	<div class="container">
 		<div class="line">
-			<a href="">Artistes</a>
-			<a href="">Playlist</a>
+			<a href="<?php bloginfo('url'); ?>/artistes/">Artistes</a>
+			<a href="<?php bloginfo('url'); ?>/playlist">Playlist</a>
 			<a href="" class="home">THIS FAME</a>
 			<a href="">Vidéos</a>
 			<a href="">Actualités</a>

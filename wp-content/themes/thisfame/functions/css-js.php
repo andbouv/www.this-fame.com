@@ -22,6 +22,11 @@ function theme_scripts() {
     wp_register_script('infinitescroll','https://unpkg.com/infinite-scroll@3/dist/infinite-scroll.pkgd.min.js');
     wp_enqueue_script('infinitescroll');
 
+    wp_register_script('jquerymasonry','https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js');
+    wp_enqueue_script('jquerymasonry');
+
+    wp_register_script('jqueryisotope','https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js');
+    wp_enqueue_script('jqueryisotope');
 
     wp_enqueue_style( 'styleSlick', get_template_directory_uri() . '/css/slick.css');
 

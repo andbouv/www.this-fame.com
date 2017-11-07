@@ -2,7 +2,7 @@
 	<div class="blocs">
 		<? while ( have_rows('blocs') ) : the_row(); ?>
 			<? if( get_row_layout() == 'bloc_texte' ): ?>
-		
+
 				<section class="texte container">
 					<? if(get_sub_field('titre')) : ?>
 						<h2 class="title"><? the_sub_field('titre'); ?></h2>
@@ -12,7 +12,7 @@
 				</section>
 
 			<? elseif( get_row_layout() == 'bloc_2_textes' ): ?>
-		
+
 				<section class="texte container">
 					<? if(get_sub_field('titre')) : ?>
 						<h2 class="title"><? the_sub_field('titre'); ?></h2>
@@ -25,7 +25,7 @@
 				</section>
 
 			<? elseif( get_row_layout() == 'bloc_3_textes' ): ?>
-		
+
 				<section class="texte container">
 					<? if(get_sub_field('titre')) : ?>
 						<h2 class="title"><? the_sub_field('titre'); ?></h2>
@@ -39,12 +39,12 @@
 				</section>
 
 			<? elseif( get_row_layout() == 'bloc_4_textes' ): ?>
-		
+
 				<section class="texte container">
 					<? if(get_sub_field('titre')) : ?>
 						<h2 class="title"><? the_sub_field('titre'); ?></h2>
 					<? endif; ?>
-					
+
 					<div class="blocs">
 						<div class="bloc_4"><? the_sub_field('texte_1'); ?></div>
 						<div class="bloc_4"><? the_sub_field('texte_2'); ?></div>
@@ -70,6 +70,13 @@
 						</div>
 					</div>
 				</section>
+
+			<? elseif( get_row_layout() == 'bloc_references' ): ?>
+			<section class="references container">
+				<div class="layout">
+					<? the_sub_field('texte'); ?>
+				</div>
+			</section>
 
 			<? elseif( get_row_layout() == 'bloc_texte_image' ): ?>
 
