@@ -51,6 +51,11 @@ input, textarea, select {
 	border-radius: 0;
 	*font-size: 100%
 }
+a{
+	&:focus{
+		outline:none;
+	}
+}
 legend {
 	color: #000
 }

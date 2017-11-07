@@ -1,4 +1,9 @@
 <? get_header(); ?>
+<?
+	$jsps_networks = array( 'twitter', 'facebook' );
+	$show_counters = 1;
+	juiz_sps( $jsps_networks );
+?>
 <div class="page">
 <section class="top-page" style="background-image:url(<? the_post_thumbnail_url('large') ?>)">
 	<div class="contain-top">
@@ -14,6 +19,10 @@
 			<hr/>
 		</div>
 		<div class="contain-song">
+			<div class="title">
+				<h2>Titres</h2>
+				<hr/>
+			</div>
 			<?php
 				$posts = get_field('titre');
 				if($posts):
@@ -101,25 +110,15 @@
 		</div>
 	</div>
 	<div class="container">
-		<? $the_query  = new WP_Query( array('post_type'=> 'playlist','posts_per_page' => 4, 'orderby' => 'date', 'order' => 'desc') );?>
 		<? if ( $the_query->have_posts() ) : ?>
-
-				<div class="contain-title">
-
-				</div>
-				<div class="contain-titre">
-
+			<div class="contain-title">
+			</div>
+			<div class="contain-titre">
 				<? while ( $the_query->have_posts() ) { $the_query->the_post();  ?>
-
-					<?
-						$posts = get_field('titre');
-						if( $posts ): ?>
-						<div class="bloc bloc-playlist "><p class="nb-titre" style="color:#fff;"><?= count($posts) ?> Titres</p></div>
-
-					<? endif; ?>
-					<? } ?>
-				</div>
-
+					<? $posts = get_field('titre'); ?>
+					<div class="bloc bloc-playlist "><p class="nb-titre" style="color:#fff;"><?= count($posts) ?> Titres</p></div>
+				<? } ?>
+			</div>
 		<? endif; ?>
 	</div>
 </section>
@@ -133,7 +132,20 @@ $('iframe').jSound({
 
 </script>
 <script>
-// Changing the defaults
+$(function(){
+ var lastScroll = 0;
+ $(window).scroll(function(event){
+     var st = $(this).scrollTop();
+     if (st > lastScroll){
+       $(".show").removeClass("show", 500);
+     }
+     else {
+       $(".juiz_sps_links").addClass("show", 500)
+     }
+     lastScroll = st;
+   });
+ });
+
 window.sr = ScrollReveal({ reset: true });
 
 // Customizing a reveal set

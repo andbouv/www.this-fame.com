@@ -32,15 +32,44 @@ html{
 		section.playlist{
 			background-color: $black;
 			padding-top:100px;
-			padding-bottom:80px;
 			div.container{
 				position: relative;
 				@include display-flex();
 				@include justify-content(space-between);
+				div.contain-title{
+					padding-top:125px;
+				}
 				div.contain-song{
 					width:70%;
-					padding-right:80px;
+					padding-right:40px;
 					padding-bottom:80px;
+					padding-top: 40px;
+					div.title{
+						@include display-flex();
+						width:100%;
+						padding:0px;
+						margin-bottom:40px;
+						h2{
+							text-transform: uppercase;
+							margin-bottom: 0px;
+							color:#fff;
+							display:inline-block;
+							width:auto;
+							z-index:3;
+							font-size:26px;
+						}
+						hr{
+							width:80px;
+							color:$blue;
+							background-color: $blue;
+							border:none;
+							height:2px;
+							float:left;
+							margin-left:-40px;
+							@include transform(rotate(0deg));
+							margin-top:20px;
+						}
+					}
 					iframe{
 						margin-bottom: 40px;
 					}
@@ -104,6 +133,10 @@ html{
 					width:35%;
 					@include display-flex();
 					margin-bottom:80px;
+					padding-left:30px;
+					border-left:1px solid $grey;
+					padding-bottom: 40px;
+					padding-top: 40px;
 					div.contain-artistes{
 						margin-left:30px;
 						width:100%;
@@ -183,6 +216,9 @@ html{
 				width:100%;
 				border-top:1px solid $grey;
 				padding-top:80px;
+				div.contain-title{
+					padding-top:0px;
+				}
 				div.contain-playlist{
 					@include display-flex();
 					width:100%;

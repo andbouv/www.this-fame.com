@@ -20,6 +20,12 @@
 						<div class="contain">
 							<div class="contain-title">
 								<a href="<? the_permalink() ?>"><h2><? the_title() ?></h2></a>
+								<div class="line">
+									<p class="time"><?= get_the_date('Y/m/d') ?></p>
+									<? foreach((get_the_category()) as $category) {?>
+									 <p class="category"> <?echo $category->cat_name . ' ';?> </p>
+								 	<? } ?>
+							 </div>
 								<a href=""><? the_content( '', TRUE ); ?></a>
 								<a href="<? the_permalink() ?>" class="learn">Lire la suite </a>
 							</div>
@@ -79,23 +85,14 @@
 	<div class="container">
 		<? $the_query  = new WP_Query( array('post_type'=> 'playlist','posts_per_page' => 4, 'orderby' => 'date', 'order' => 'desc') );?>
 		<? if ( $the_query->have_posts() ) : ?>
-
-				<div class="contain-title">
-
-				</div>
-				<div class="contain-titre">
-
+			<div class="contain-title">
+			</div>
+			<div class="contain-titre">
 				<? while ( $the_query->have_posts() ) { $the_query->the_post();  ?>
-
-					<?
-						$posts = get_field('titre');
-						if( $posts ): ?>
-						<div class="bloc bloc-playlist "><p class="nb-titre" style="color:#fff;"><?= count($posts) ?> Titres</p></div>
-
-					<? endif; ?>
-					<? } ?>
-				</div>
-
+					<? $posts = get_field('titre'); ?>
+					<div class="bloc bloc-playlist "><p class="nb-titre" style="color:#fff;"><?= count($posts) ?> Titres</p></div>
+				<? } ?>
+			</div>
 		<? endif; ?>
 	</div>
 </section>
@@ -167,6 +164,12 @@
 </section>
 <section class="artiste">
 	<div class="container">
+		<div class="title-artistes">
+			<h2>ARTISTES</h2>
+			<hr/>
+		</div>
+	</div>
+	<div class="container">
 		<div class="contain-title">
 			<p class="title-vert">ARTISTES</p>
 			<hr/>
@@ -175,6 +178,7 @@
         $args = array(
           'post_type'=> 'artiste',
           'posts_per_page' => 8,
+					'orderby'  => 'rand'
         );
     ?>
 		<? $the_query  = new WP_Query($args);?>
@@ -219,7 +223,6 @@
 $('iframe').jSound({
 	mini: true
 });
-
 </script>
 <script>
 

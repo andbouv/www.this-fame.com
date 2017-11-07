@@ -148,6 +148,7 @@
 							background-position: center;
 							background-size: cover;
 							margin:50px 0px;
+							@include border-radius(7px);
 							@media screen and (max-width: $size4) {
 								display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
 							   display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */

@@ -1,4 +1,9 @@
 <? get_header(); ?>
+<?
+	$jsps_networks = array( 'twitter', 'facebook' );
+	$show_counters = 1;
+	juiz_sps( $jsps_networks );
+?>
 <div class="page">
 <section class="top-page" style="background-image:url(<? the_post_thumbnail_url('full') ?>)">
 	<div class="contain-top">
@@ -10,21 +15,28 @@
 <section class="bio">
 	<div class="container">
 		<div class="contain-title">
-			<p class="title-vert">CONCERTS</p>
+			<p class="title-vert">PROFIL</p>
 			<hr/>
 		</div>
 		<div class="bloc-left">
-			<div class="contain-title">
-				<h2>Concerts</h2>
-				<hr/>
+			<div class="img-artiste" style="background-image:url(<? the_post_thumbnail_url('large') ?>)">
 			</div>
-			<? if( have_rows('concerts') ): ?>
-			<table>
-				<? while ( have_rows('concerts') ) : the_row(); ?>
-					<tr><td><? the_sub_fields('date') ?></td><td><? the_sub_fields('heure') ?></td><td><? the_sub_fields('lieu') ?></td></tr>
-				<? endwhile ?>
-			</table>
-			<?endif;?>
+			<h3><? the_title() ?></h3>
+			<div class="social">
+				<? if(get_field('facebook')): ?>
+					<a href="<? the_field('facebook') ?>" target="_blank" class="fb">fb</a>
+				<? endif; ?>
+				<? if(get_field('spotify')): ?>
+					<a href="<? the_field('spotify') ?>" target="_blank" class="spotify">Spotify</a>
+				<? endif; ?>
+				<? if(get_field('instagram')): ?>
+					<a href="<? the_field('instagram') ?>" target="_blank" class="instagram">Instagram</a>
+				<? endif; ?>
+			</div>
+			<div class="line">
+				<a href="" class="prev"></a>
+				<a href="" class="next"></a>
+			</div>
 		</div>
 		<div class="biographie">
 
@@ -93,7 +105,7 @@
 					<? $j++ ?>
 					<div class="video ci-<?= $j+1 ?>">
 						<? the_field('video') ?>
-						<div class="contain-txt show contain-<?= $j ?>">
+						<div class="contain-txt active contain-<?= $j ?>">
 							<p class=titre><? the_title() ?></p>
 							<span class="open"></span>
 						</div>
@@ -105,15 +117,15 @@
 												$('.pv-<?= $j+1 ?>').on('click', function(ev) {
 														$(".ci-<?= $j+1 ?> iframe")[0].src += "&autoplay=1";
 														$('.pv-<?= $j+1 ?>').addClass("hide");
-														$('.contain-<?= $j ?>').removeClass("show");
+														$('.contain-<?= $j ?>').removeClass("active");
 														ev.preventDefault();
 												});
 
 												$('.contain-<?= $j ?>').on('click', function(ev) {
-													$('.contain-<?= $j ?>').toggleClass("show");
+													$('.contain-<?= $j ?>').toggleClass("active");
 												});
 												$('.contain-<?= $j ?> span').on('click', function(ev) {
-													$('.contain-<?= $j ?> span').toggleClass("show");
+													$('.contain-<?= $j ?> span').toggleClass("active");
 												});
 										});
 						</script>
@@ -132,6 +144,19 @@ $('iframe').jSound({
 	mini: true
 });
 
+$(function(){
+ var lastScroll = 0;
+ $(window).scroll(function(event){
+     var st = $(this).scrollTop();
+     if (st > lastScroll){
+       $(".show").removeClass("show", 500);
+     }
+     else {
+       $(".juiz_sps_links").addClass("show", 500)
+     }
+     lastScroll = st;
+   });
+ });
 </script>
 <script>
 $(".contain-video").slick({

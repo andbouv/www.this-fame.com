@@ -225,6 +225,64 @@ html{
 				}
 			}
 		}
+		div.juiz_sps_links{
+			position: fixed;
+			right:-50px;
+			z-index:6000;
+			top:50%;
+			@include transition(0.5s);
+			&.show{
+				right:0px;
+			}
+			ul{
+				@include display-flex();
+				@include flex-direction(column);
+			}
+			li{
+				width:50px;
+				height:50px;
+				&:nth-child(1){
+					a{
+						background-position: center;
+						background-repeat: no-repeat;
+						background-image: url(./img/fb.png) !important;
+						background-size: 13px;
+						@include transition(0.5s);
+						border-bottom:2px solid $black !important;
+						&:hover{
+							background-color:#595556!important;
+						}
+					}
+				}
+				&:nth-child(2){
+					a{
+						background-position: center;
+						background-repeat: no-repeat;
+						background-image: url(./img/twitter.png) !important;
+						background-size: 24px;
+						@include transition(0.5s);
+						&:hover{
+							background-color: #595556!important;
+						}
+					}
+				}
+				a{
+					border:none!important;
+					@include border-radius(0px);
+					background-image: none !important;
+					height:50px;
+					width:50px;
+					box-shadow:none;
+					background-color: #fff !important;
+					span.juiz_sps_network_name{
+						display:none;
+					}
+					span.juiz_sps_icon{
+						display:none;
+					}
+				}
+			}
+		}
 		div.page{
 			width:calc(100%);
 			position: relative;
@@ -296,14 +354,17 @@ html{
 			}
 		}
 		footer{
-			height:400px;
+			height:auto;
 			background-color: #0d0c0c;
 			background-size: cover;
 			background-position: center;
 			width: calc(100% );
 			position: relative;
-			top: 0px;
+			bottom: 0px;
+			padding-top:80px;
+			padding-bottom:50px;
 			left: 60px;
+			z-index:3000;
 			@include transition(0.5s);
 			&.right{
 				left:140px;
@@ -314,40 +375,87 @@ html{
 				@include transition(0.5s);
 			}
 			div.container{
-				@include display-flex();
-				@include flex-grow(3);
-				padding-top:70px;
-				padding-bottom:40px;
-				div.contain-title{
+				padding:20px 0px;
+				div.line{
+					height:100%;
+					width:calc(100%);
 					@include display-flex();
-					width:100%;
-					padding:0px;
-
-					h2{
-						text-transform: uppercase;
-						margin-bottom: 0px;
+					@include justify-content(center);
+					a{
+						width:calc(100% / 4);
 						color:#fff;
-						display:inline-block;
-						width:auto;
-					}
-					hr{
-						width:100px;
-						color:$blue;
-						background-color: $blue;
-						border:none;
-						height:2px;
-						float:left;
-						margin-left:-30px;
-						@include transform(rotate(0deg));
-						margin-top:16px;
+						font-family: $font;
+						font-size:18px;
+						text-align: center;
+						padding-top:6px;
+						@include transition(0.5s);
+
+						&.home{
+							font-family: $font;
+							font-size:24px;
+							padding-top:0px;
+							letter-spacing: 15px;
+							width:400px;
+							display:inline-block;
+							padding-left:25px;
+						}
 					}
 				}
-				div.bloc{
+				div.line-social{
 					height:100%;
-					width:calc(100% / 3);
-					&:nth-child(3){
-						border-right: 1px solid #595556;
-						border-left: 1px solid #595556;
+					width:calc(100%);
+					@include display-flex();
+					@include justify-content(center);
+					margin-top:70px;
+					a{
+						width:90px;
+						height:50px;
+						display: inline-block;
+						color:#fff;
+						font-family: $fontserif;
+						font-size:15px;
+						text-align: center;
+						background-repeat: no-repeat;
+						background-position: center;
+						padding-top:6px;
+						@include transition(0.5s);
+						text-indent: -9999px;
+						border-bottom: 1px solid transparent;
+						&:hover{
+							border-bottom: 1px solid #fff;
+						}
+						&:nth-child(2){
+							border-left: 1px solid $grey;
+							border-right: 1px solid $grey;
+						}
+						&.fb{
+							background-image: url(./img/facebook-white.png);
+							background-size: 11px;
+							border-top: 1px solid transparent;
+							border-left: 1px solid transparent;
+							&:hover{
+								border-top: 1px solid #fff;
+								border-left: 1px solid #fff;
+							}
+						}
+						&.instagram{
+							background-image: url(./img/instagram-white.png);
+							background-size: 22px;
+							border-top: 1px solid transparent;
+							&:hover{
+								border-top: 1px solid #fff;
+							}
+						}
+						&.soundcloud{
+							background-image: url(./img/spotify-white.png);
+							background-size: 24px;
+							border-top: 1px solid transparent;
+							border-right: 1px solid transparent;
+							&:hover{
+								border-top: 1px solid #fff;
+								border-right: 1px solid #fff;
+							}
+						}
 					}
 				}
 			}

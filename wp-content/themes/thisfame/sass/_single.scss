@@ -1,8 +1,8 @@
 html{
-	body.single{
+	body.single-post{
 		section.top-page{
 			height:75vh;
-			max-height: 400px;
+			max-height: 600px;
 			background-position: center;
 			background-size: cover;
 			background-repeat: no-repeat;
@@ -18,15 +18,42 @@ html{
 					position: relative;
 					height:100%;
 				}
-				h1{
-					color:#fff;
-					text-align: left;
-					font-size:50px;
-					text-transform: uppercase;
-					width:50%;
-					bottom:22%;
+				div.contain-title{
 					position: absolute;
-					margin-left:110px;
+					width:80%;
+					bottom:22%;
+					h1{
+						color:#fff;
+						text-align: left;
+						font-size:48px;
+						text-transform: uppercase;
+						margin-left:110px;
+					}
+					div.line{
+						@include display-flex();
+						p{
+							color:#fff;
+							margin-left:110px;
+							width:auto;
+							display:inline-block;
+							&.time{
+								padding-left:30px;
+								background-position: left;
+								background-size: 20px;
+								background-repeat: no-repeat;
+								background-image: url(./img/time.png);
+
+							}
+							&.category{
+								padding-left:41px;
+								background-position: left;
+								background-size: 32px;
+								margin-left:30px;
+								background-repeat: no-repeat;
+								background-image: url(./img/eye.png);
+							}
+						}
+					}
 				}
 			}
 		}
@@ -38,8 +65,8 @@ html{
 				position: relative;
 				@include display-flex();
 				@include justify-content(space-between);
-				div.blocs{
 
+				div.blocs{
 					margin:0 auto;
 					section.texte{
 						width:80%;
