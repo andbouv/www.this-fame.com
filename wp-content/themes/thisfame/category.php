@@ -3,7 +3,8 @@
 	<section class="top-page" >
 		<div class="contain-top">
 			<div class="container">
-				<h1>Actualites</h1>
+				<? $title = single_term_title( "", false ); ?>
+      	<h1><?= $title ?></h1>
 			</div>
 		</div>
 	</section>
@@ -16,7 +17,7 @@
           foreach ($terms as $term) {
             $term_link = get_term_link( $term );
         ?>
-          <a href="<?= $term_link ?>"><?= $term->name ?></a>
+          <a href="<?= $term_link ?>"<?if($title == $term->name):?>class="actif"<?endif?>><?= $term->name ?></a>
         <? } ?>
       </div>
 			<div class="contain-articles">

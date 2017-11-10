@@ -1,5 +1,5 @@
 html{
-	body.blog{
+	body.blog, body.category{
 		section.top-page{
 			height:75vh;
 			max-height: 500px;
@@ -37,6 +37,11 @@ html{
 				padding:40px 0px;
 				text-align: center;
 				background-color: #0D0C0C;
+				box-shadow:1px 1px 3px #000;				
+				@include transition(0.5s);
+				&:hover{
+					box-shadow:1px 1px 3px #000;
+				}
 				a{
 					color:#fff;
 					padding:0px 20px;
@@ -53,6 +58,9 @@ html{
 							border-bottom:1px solid #fff;
 							border-left:1px solid #fff;
 						}
+					}
+					&.actif{
+						border-bottom:1px solid #fff;
 					}
 					&:last-child{
 						border-right:1px solid transparent;
@@ -81,7 +89,7 @@ html{
 					color:#fff;
 					position: relative;
 					margin-bottom:30px;
-
+					@include border-radius(7px);
 					&:hover{
 						@include transition(0.5s);
 						div.contain-info{
@@ -136,6 +144,7 @@ html{
 						background-size: cover;
 						background-position: center;
 						margin-bottom:15px;
+						@include border-top-radius(7px);
 					}
 					h3{
 						text-transform: uppercase;
