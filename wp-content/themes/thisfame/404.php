@@ -9,7 +9,6 @@
 	</section>
 	<section class="contain-error">
 		<div class="contain-info">
-
 			<p>Le contenu que vous recherchez ne se trouve pas à cette adresse.</p>
 			<a href="">Accueil</a>
 		</div>

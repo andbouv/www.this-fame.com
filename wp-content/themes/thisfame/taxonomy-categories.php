@@ -36,7 +36,7 @@
 								$birth = new DateTime($date);
 								$today = new DateTime();
 								$diff = $birth->diff($today);?>
-								<p class="publication">Publié il y a <?= $diff->format('%a'); ?> jours</p>
+								<p class="publication">Publié il y a <?= $diff->format('%d'); ?> jours</p>
 								<?php get_template_part( 'html_includes/partials/social-share' ); ?>
 								<script>
 												$(document).ready(function() {

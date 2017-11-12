@@ -138,5 +138,19 @@ function themes_taxonomy() {
             )
         )
     );
+
+    register_taxonomy(
+        'categories',
+        'video',
+        array(
+            'hierarchical' => true,
+            'label' => 'Catégories',
+            'query_var' => true,
+            'rewrite' => array(
+                'slug' => 'categories',
+                'with_front' => false
+            )
+        )
+    );
 }
 add_action( 'init', 'themes_taxonomy');

@@ -220,6 +220,13 @@ html{
 									color:$black;
 								}
 							}
+							&.current_page_item{
+								a{
+									background-color: #fff;
+									color:$black;
+								}
+
+							}
 						}
 					}
 				}

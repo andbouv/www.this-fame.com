@@ -37,10 +37,16 @@ html{
 				padding:40px 0px;
 				text-align: center;
 				background-color: #0D0C0C;
-				box-shadow:1px 1px 3px #000;				
+				box-shadow:1px 1px 3px #000;
 				@include transition(0.5s);
-				&:hover{
-					box-shadow:1px 1px 3px #000;
+				margin-top: 0px;
+				&.fixe{
+					position: fixed;
+					width:100%;
+					max-width:1180px;
+					top:0px;
+					z-index:2000;
+					padding:20px 0px;
 				}
 				a{
 					color:#fff;

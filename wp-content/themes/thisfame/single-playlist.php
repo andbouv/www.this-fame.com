@@ -71,11 +71,13 @@
 				<p class="title-vert">AUTRES PLAYLIST</p>
 				<hr/>
 			</div>
+			<? $Posts = $post->ID;?>
 			<?
 	      $args = array(
 	        'post_type'		=> 'playlist',
 	        'posts_per_page' => 4,
 					'orderby' 				=> 'rand',
+					'post__not_in' => array($Posts),
 	      );
 	    ?>
 	    <? $the_query  = new WP_Query($args);?>

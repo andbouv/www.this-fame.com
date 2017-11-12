@@ -44,13 +44,43 @@
 			</div>
 			<?  wp_pagenavi(); ?>
 		</div>
+		
 	</section>
 </div>
+
 <script>
 $('.contain-articles').masonry({
   // options
   itemSelector: '.bloc',
-  gutter: 20
+  gutter: 30
+});
+
+var fixmeTop = $('.contain-filtre').offset().top;       // get initial position of the element
+
+$(window).scroll(function() {                  // assign scroll event listener
+
+    var currentScroll = $(window).scrollTop(); // get current position
+
+    if (currentScroll >= fixmeTop) {           // apply position: fixed if you
+        $('.contain-filtre').addClass('fixe');
+    } else {                                   // apply position: static
+      	$('.contain-filtre').removeClass('fixe');
+    }
+
+});
+</script>
+<script>
+// Changing the defaults
+window.sr = ScrollReveal({ reset: true });
+
+// Customizing a reveal set
+sr.reveal('.bloc', { duration: 2000 });
+$('.contain-artistes').infiniteScroll({
+// options
+path: '.wp-pagenavi .page',
+append: '.bloc',
+history: false,
+hide:'.wp-pagenavi',
 });
 </script>
 <? get_footer(); ?>

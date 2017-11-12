@@ -25,6 +25,37 @@
 		<? the_content() ?>
 		<? get_template_part("template/blocs"); ?>
 	</div>
+	<div class="container">
+		<div class="other-actualites">
+			<div class="contain-title">
+				<p class="title-vert">AUTRES ACTUALITÉS</p>
+				<hr/>
+			</div>
+			<?= $Posts =  get_the_ID()?>
+			<?
+				$args = array(
+					'post_type'		=> 'post',
+					'posts_per_page' => 4,
+					'orderby' 				=> 'rand',
+					'post__not_in' => array($Posts),
+				);
+			?>
+			<? $the_query  = new WP_Query($args);?>
+			<? $i = 0 ?>
+			<? if ( $the_query->have_posts() ) : ?>
+			<div class="contain-actualites">
+				<? while ( $the_query->have_posts() ) { $the_query->the_post();  ?>
+					<? $i++ ?>
+					<a href="<? the_permalink() ?>" class="bloc bloc-<?= $i ?>" style="background-image:url(<? the_post_thumbnail_url('large') ?>)">
+						<div class="contain-info">
+							<h3><? the_title() ?></h3>
+						</div>
+					</a>
+				<? }; ?>
+			</div>
+			<? endif; ?>
+		</div>
+	</div>
 </section>
 </div>
 <? get_footer(); ?>

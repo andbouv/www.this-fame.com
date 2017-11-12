@@ -135,6 +135,37 @@
 
 		</div>
 		<? endif; ?>
+		<div class="container">
+			<div class="other-artistes">
+				<div class="contain-title">
+					<p class="title-vert">AUTRES ARTISTES</p>
+					<hr/>
+				</div>
+				<?= $Posts =  get_the_ID()?>
+				<?
+					$args = array(
+						'post_type'		=> 'artiste',
+						'posts_per_page' => 4,
+						'orderby' 				=> 'rand',
+						'post__not_in' => array($Posts),
+					);
+				?>
+				<? $the_query  = new WP_Query($args);?>
+				<? $i = 0 ?>
+				<? if ( $the_query->have_posts() ) : ?>
+				<div class="contain-artistes">
+					<? while ( $the_query->have_posts() ) { $the_query->the_post();  ?>
+						<? $i++ ?>
+						<a href="<? the_permalink() ?>" class="bloc bloc-<?= $i ?>" style="background-image:url(<? the_post_thumbnail_url('large') ?>)">
+							<div class="contain-info">
+								<h3><? the_title() ?></h3>
+							</div>
+						</a>
+					<? }; ?>
+				</div>
+				<? endif; ?>
+			</div>
+		</div>
 	</div>
 </section>
 </div>
