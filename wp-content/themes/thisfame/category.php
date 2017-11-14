@@ -22,11 +22,11 @@
       </div>
 			<div class="contain-articles">
 			<? if (have_posts()) : while (have_posts()) : the_post(); ?>
-				<div href="<? the_permalink() ?>" class="bloc">
-					<a href="<? the_permalink() ?>">
-						<div class="contain-info">
-							<div class="contain-img" style="background-image:url(<? the_post_thumbnail_url('large') ?>)">
-							</div>
+				<a href="<? the_permalink() ?>" class="bloc">
+					<div class="contain-info">
+						<div class="contain-img" style="background-image:url(<? the_post_thumbnail_url('large') ?>)">
+						</div>
+						<div>
 							<h3><? the_title() ?></h3>
 							<div class="line">
 								<p class="time"><?= get_the_date('Y/m/d') ?></p>
@@ -34,12 +34,10 @@
 								 <p class="category"> <?echo $category->cat_name . ' ';?> </p>
 								<? } ?>
 						 </div>
-							<? the_excerpt() ?>
-
-						</div>
-					</a>
-				</div>
-
+						<? the_excerpt() ?>
+					</div>
+					</div>
+				</a>
 			<? endwhile; endif; ?>
 
 			</div>

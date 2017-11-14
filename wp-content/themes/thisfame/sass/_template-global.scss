@@ -204,7 +204,7 @@ html{
 					}
 				}
 			}
-			&.show{
+			&.activate{
 				left:60px;
 				width:200px;
 				@include transition(0.7s);

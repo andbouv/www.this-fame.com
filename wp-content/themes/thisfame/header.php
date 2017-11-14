@@ -62,7 +62,7 @@
 (function () {
 	$('.hamburger-menu').on('click', function() {
 		$('.bar').toggleClass('animate');
-		$('.menu').toggleClass('show');
+		$('.menu').toggleClass('activate');
 		$('.page').toggleClass('right');
 		$('footer').toggleClass('right');
 		$('header').toggleClass('open');
@@ -81,7 +81,7 @@ $( ".search" ).click(function() {
 	$('.bar').removeClass('animate');
 	$('.page').removeClass('right');
 	$('footer').removeClass('right');
-	$('.menu').removeClass('show');
+	$('.menu').removeClass('activate');
 });
 
 $( ".button-close" ).click(function() {

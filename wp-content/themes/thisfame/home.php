@@ -4,6 +4,7 @@
 		<div class="contain-top">
 			<div class="container">
 				<h1>Actualites</h1>
+				<p>Retrouvez toutes nos actualités du monde électro. <br/>En essayant de vous tenir au courant sur les news du moment.</p>
 			</div>
 		</div>
 	</section>
@@ -21,24 +22,22 @@
       </div>
 			<div class="contain-articles">
 			<? if (have_posts()) : while (have_posts()) : the_post(); ?>
-				<div href="<? the_permalink() ?>" class="bloc">
-					<a href="<? the_permalink() ?>">
+				<a href="<? the_permalink() ?>" class="bloc">
 						<div class="contain-info">
 							<div class="contain-img" style="background-image:url(<? the_post_thumbnail_url('large') ?>)">
 							</div>
-							<h3><? the_title() ?></h3>
-							<div class="line">
-								<p class="time"><?= get_the_date('Y/m/d') ?></p>
-								<? foreach((get_the_category()) as $category) {?>
-								 <p class="category"> <?echo $category->cat_name . ' ';?> </p>
-								<? } ?>
-						 </div>
-							<? the_excerpt() ?>
-
+							<div>
+								<h3><? the_title() ?></h3>
+								<div class="line">
+									<p class="time"><?= get_the_date('Y/m/d') ?></p>
+									<? foreach((get_the_category()) as $category) {?>
+									 <p class="category"> <?echo $category->cat_name . ' ';?> </p>
+									<? } ?>
+							 </div>
+								<? the_excerpt() ?>
+						</div>
 						</div>
 					</a>
-				</div>
-
 			<? endwhile; endif; ?>
 
 			</div>

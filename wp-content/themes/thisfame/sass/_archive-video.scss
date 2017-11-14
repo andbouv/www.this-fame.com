@@ -28,13 +28,21 @@ html{
 					bottom:32%;
 					position: absolute;
 				}
+				p{
+					bottom:20%;
+					position: absolute;
+					font-size: 20px;
+					color:#fff;
+					text-align: center;
+					width:100%;
+				}
 			}
 		}
 		section.videos{
 			padding:80px 60px;
 			div.contain-filtre{
 				margin:40px 0px;
-				padding:40px 0px;
+				padding:20px 0px;
 				text-align: center;
 				background-color: #0D0C0C;
 				box-shadow:1px 1px 3px #000;
@@ -45,7 +53,7 @@ html{
 					max-width:1180px;
 					top:0px;
 					z-index:2000;
-					padding:20px 0px;
+					padding:15px 0px;
 				}
 				&:hover{
 					box-shadow:1px 1px 3px #000;
