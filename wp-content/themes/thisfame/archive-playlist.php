@@ -3,66 +3,45 @@
 	<section class="top-page" >
 		<div class="contain-top">
 			<div class="container">
-				<h1>Actualites</h1>
+				<h1>PLAYLISTS</h1>
 			</div>
 		</div>
 	</section>
-	<section class="articles">
+
+	<section class="playlists">
 		<div class="container">
-			<? $terms = get_terms('category',array( 'parent' => 0,'hide_empty=1'));?>
-      <div class="contain-filtre">
-        <a href="<?php bloginfo('url'); ?>/articles/"><? _e('Tous les articles', $_GLOBAL['theme']) ?></a>
-        <?
-          foreach ($terms as $term) {
-            $term_link = get_term_link( $term );
-        ?>
-          <a href="<?= $term_link ?>"><?= $term->name ?></a>
-        <? } ?>
-      </div>
-			<div class="contain-articles">
+			<div class="contain-playlists">
 			<? if (have_posts()) : while (have_posts()) : the_post(); ?>
-				<div href="<? the_permalink() ?>" class="bloc">
-					<a href="<? the_permalink() ?>">
-						<div class="contain-info">
-							<div class="contain-img" style="background-image:url(<? the_post_thumbnail_url('large') ?>)">
-							</div>
-							<h3><? the_title() ?></h3>
-							<div class="line">
-								<p class="time"><?= get_the_date('Y/m/d') ?></p>
-								<? foreach((get_the_category()) as $category) {?>
-								 <p class="category"> <?echo $category->cat_name . ' ';?> </p>
-								<? } ?>
-						 </div>
-							<? the_excerpt() ?>
-
-						</div>
-					</a>
+			<a href="<? the_permalink() ?>" class="bloc" style="background-image:url(<? the_post_thumbnail_url('large') ?>)">
+				<div class="contain-info">
+					<h3><? the_title() ?></h3>
 				</div>
-
+			</a>
 			<? endwhile; endif; ?>
-
 			</div>
 			<?  wp_pagenavi(); ?>
 		</div>
-
 	</section>
 </div>
-
 <script>
-$('.contain-articles').masonry({
+$('.contain-videos').masonry({
   // options
   itemSelector: '.bloc',
   gutter: 30
 });
 
 var fixmeTop = $('.contain-filtre').offset().top;       // get initial position of the element
+
 $(window).scroll(function() {                  // assign scroll event listener
+
     var currentScroll = $(window).scrollTop(); // get current position
+
     if (currentScroll >= fixmeTop) {           // apply position: fixed if you
         $('.contain-filtre').addClass('fixe');
     } else {                                   // apply position: static
       	$('.contain-filtre').removeClass('fixe');
     }
+
 });
 </script>
 <script>

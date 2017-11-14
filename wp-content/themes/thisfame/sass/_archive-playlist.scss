@@ -1,5 +1,5 @@
 html{
-	body.post-type-archive-video,body.category{
+	body.post-type-archive-playlist{
 		section.top-page{
 			height:75vh;
 			max-height: 500px;
@@ -30,7 +30,7 @@ html{
 				}
 			}
 		}
-		section.videos{
+		section.playlists{
 			padding:80px 60px;
 			div.contain-filtre{
 				margin:40px 0px;
@@ -59,6 +59,7 @@ html{
 					border-bottom:1px solid transparent;
 					border-right:1px solid #595556;
 					@include transition(0.5s);
+					margin-bottom:30px;
 					&:first-child{
 						border-left:1px solid transparent;
 						&:hover{
@@ -84,93 +85,81 @@ html{
 					}
 				}
 			}
-			div.contain-videos{
+			div.contain-playlists{
 				@include display-flex();
 				@include flex-grow(3);
 				@include flex-wrap(wrap);
-				div.bloc{
-					width:calc(100% / 3 - 20px);
-					text-align: center;
-					display:block;
-					background-color: #0D0C0C;
-					@include border-radius(7px);
+				a.bloc{
+					width:calc(25% - 20px);
+					background-size: cover;
+					background-position: center;
+					background-repeat: no-repeat;
+					height:300px;
+					margin:10px;
 					@include transition(0.5s);
-					color:#fff;
-					position: relative;
-					@include transition(0.5s);
-					margin-bottom:30px;
 					@include border-radius(7px);
 					&:hover{
-						@include transition(0.5s);
-						z-index:50;
-						div.contain-info{
-							height:100%;
-							@include transform(scale(1.04));
-							background-color: #030303;
-							box-shadow: 0px 44px 47px -29px rgba(0,0,0,0.75);
-							z-index:200;
-							@include transition(0.5s);
-							@include border-radius(7px);
-							z-index:200000;
-						}
-					}
-					div.contain-info{
 
-						@include transition(0.5s);
-						height:100%;
-						position: relative;
-					}
-					div.video{
-						width:100%;
-						height:100%;
-						position: relative;
-						padding-bottom:60px;
-						@include border-top-radius(7px);
-						overflow:hidden;
-						iframe{
-							width:100%;
-							height:180px;
-							position: relative;
-							@include border-top-radius(7px);
-						}
-						h3{
-							text-transform: uppercase;
-							font-weight: lighter;
-							font-size:18px;
-							padding:0px 40px;
-							text-align: center;
-						}
-						p.publication{
-							font-size:14px;
-							position: absolute;
-							bottom:20px;
-							width:100%;
-							text-align: center;
-							padding-left: 0px;
-						}
-						span.play-video{
-							display: inline-block;
-							position: absolute;
-							background-position: center;
-							background-repeat: no-repeat;
-							background-image: url(./img/play-button.png);
-							background-size: 133px;
-							background-color: rgba(#000,0.5);
-							width:100%;
-							height:180px;
-							top:90px;
-							left:0px;
-							cursor: pointer;
-							@include transform(translateY(-50%));
-							&.hide{
-								display:none;
+						div.contain-info{
+							background-color: rgba(#000, 0.3);
+							box-shadow: 0px 44px 47px -29px rgba(0,0,0,1);
+							@include border-radius(7px);
+							h3{
+								top:42%;
+								font-weight:lighter;
+							}
+							div.explain{
+								opacity:1;
+								top:40%;
 							}
 						}
 					}
-
-
-					&:nth-child(4n),&:nth-child(8n){
-						border-right:none;
+					div.contain-info{
+						width:100%;
+						height:100%;
+						background-repeat: no-repeat;
+						background-image: url(./img/play-button.png);
+						background-size: 70px;
+						background-color: rgba(#000, 0.5);
+						background-image: url(./img/play-button.png);
+						background-repeat: no-repeat;
+						background-position: 20px 93%;
+						background-size: 80px;
+						@include border-radius(7px);
+						@include transition(0.5s);
+						position: relative;
+						h3{
+							color:#fff;
+							font-weight: lighter;
+							font-size: 28px;
+							text-align: center;
+							position: absolute;
+							text-transform: uppercase;
+							left:0px;
+							width:100%;
+							top:45%;
+							@include transform(translateY(-50%));
+							opacity:1;
+							@include transition(0.5s);
+						}
+						div.explain{
+							color:#fff;
+							position: absolute;
+							top:50%;
+							left:40px;
+							width:60%;
+							opacity:0;
+							@include transition(0.5s);
+							span.time{
+								font-size:14px;
+								margin-top:20px;
+								display:block;
+							}
+							span.artiste{
+								font-size:14px;
+								display:block;
+							}
+						}
 					}
 				}
 			}

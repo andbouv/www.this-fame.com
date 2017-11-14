@@ -34,8 +34,40 @@
 				<? endif; ?>
 			</div>
 			<div class="line">
-				<a href="" class="prev"></a>
-				<a href="" class="next"></a>
+				<? $Posts = $post->ID;?>
+				<?
+		      $args = array(
+		        'post_type'		=> 'artiste',
+		        'posts_per_page' => 1,
+						'orderby' 				=> 'rand',
+						'post__not_in' => array($Posts),
+		      );
+		    ?>
+		    <? $the_query  = new WP_Query($args);?>
+				<? $the_query  = new WP_Query($args);?>
+				<? $i = 0 ?>
+		    <? if ( $the_query->have_posts() ) : ?>
+				  <? while ( $the_query->have_posts() ) { $the_query->the_post();  ?>
+						<a href="<? the_permalink() ?>" class="prev"></a>
+					<? } ?>
+				<? endif ?>
+				<? $Posts = $post->ID;?>
+				<?
+		      $args = array(
+		        'post_type'		=> 'artiste',
+		        'posts_per_page' => 1,
+						'orderby' 				=> 'rand',
+						'post__not_in' => array($Posts),
+		      );
+		    ?>
+		    <? $the_query  = new WP_Query($args);?>
+				<? $the_query  = new WP_Query($args);?>
+				<? $i = 0 ?>
+		    <? if ( $the_query->have_posts() ) : ?>
+				  <? while ( $the_query->have_posts() ) { $the_query->the_post();  ?>
+						<a href="<? the_permalink() ?>" class="next"></a>
+					<? } ?>
+				<? endif ?>
 			</div>
 		</div>
 		<div class="biographie">

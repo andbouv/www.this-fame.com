@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="line">
 			<a href="<?php bloginfo('url'); ?>/artistes/">Artistes</a>
-			<a href="<?php bloginfo('url'); ?>/playlist/">Playlist</a>
+			<a href="<?php bloginfo('url'); ?>/playlists/">Playlist</a>
 			<a href="" class="home">THIS FAME</a>
 			<a href="<?php bloginfo('url'); ?>/videos/">Vidéos</a>
 			<a href="<?php bloginfo('url'); ?>/actualites/">Actualités</a>
