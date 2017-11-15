@@ -7,6 +7,9 @@ html{
 			background-size: cover;
 			background-repeat: no-repeat;
 			background-image: url(./img/fond-articles.jpg);
+			@media(max-height:$size5){
+				max-height:260px;
+			}
 			div.contain-top{
 				background: -moz-linear-gradient(top, rgba(15,16,16,0) 0%, rgba(15,16,16,0.99) 99%, rgba(15,16,16,1) 100%); /* FF3.6-15 */
 				background: -webkit-linear-gradient(top, rgba(15,16,16,0) 0%,rgba(15,16,16,0.99) 99%,rgba(15,16,16,1) 100%); /* Chrome10-25,Safari5.1-6 */
@@ -27,6 +30,10 @@ html{
 					width:100%;
 					bottom:32%;
 					position: absolute;
+					@media(max-width:700px){
+						font-size:40px;
+						bottom:50%;
+					}
 				}
 				p{
 					bottom:20%;
@@ -35,14 +42,25 @@ html{
 					color:#fff;
 					text-align: center;
 					width:100%;
+					@media(max-width:700px){
+						font-size:18px;
+						padding:0px 20px;
+						bottom:10%;
+					}
 				}
 			}
 		}
 		section.articles{
 			padding:80px 60px;
+			@media(max-width:700px){
+				padding:80px 20px;
+			}
+			div.container{
+				position: relative;
+			}
 			div.contain-filtre{
 				margin:40px 0px;
-				padding:20px 0px;
+				padding:15px 0px;
 				text-align: center;
 				background-color: #0D0C0C;
 				box-shadow:1px 1px 3px #000;
@@ -54,7 +72,43 @@ html{
 					max-width:1180px;
 					top:0px;
 					z-index:2000;
-					padding:15px 0px;
+					background-color: #fff;
+					@media(max-width:700px){
+						position: relative;
+					}
+					a{
+						color:$black;
+						padding:0px 20px;
+						font-size:20px;
+						text-transform: uppercase;
+						border-top:1px solid transparent;
+						border-bottom:1px solid transparent;
+						border-right:1px solid #595556;
+						@include transition(0.5s);
+						&:first-child{
+							border-left:1px solid transparent;
+							&:hover{
+								border-top:1px solid $black;
+								border-bottom:1px solid $black;
+								border-left:1px solid $black;
+							}
+						}
+						&.actif{
+							border-bottom:1px solid $black;
+						}
+						&:last-child{
+							border-right:1px solid transparent;
+							&:hover{
+								border-top:1px solid $black;
+								border-bottom:1px solid $black;
+								border-right:1px solid $black;
+							}
+						}
+						&:hover{
+							border-top:1px solid $black;
+							border-bottom:1px solid $black;
+						}
+					}
 				}
 				a{
 					color:#fff;
@@ -92,10 +146,14 @@ html{
 			}
 			div.contain-articles{
 				@include display-flex();
-				@include flex-grow(4);
+				@include flex-grow(3);
 				@include flex-wrap(wrap);
+				@media(max-width:700px){
+					@include flex-grow(1);
+					@include flex-direction(column);
+				}
 				a.bloc{
-					width:calc(100% / 2 - 15px);
+					width:calc(100% / 3 - 20px);
 					text-align: center;
 					background-color: #0D0C0C;
 					display:block;
@@ -105,16 +163,24 @@ html{
 					margin-bottom:30px;
 					@include display-flex();
 					@include border-radius(7px);
+					background-position: center;
+					background-repeat: no-repeat;
+					background-size: cover;
+					@media(max-width:700px){
+						width:100%;
+					}
 					&:hover{
 						@include transition(0.5s);
+						@include transform(scale(1.04));
+						box-shadow: 0px 44px 47px -29px rgba(0,0,0,0.75);
+						z-index:200;
 						div.contain-info{
-							@include transform(scale(1.04));
 							@include display-flex();
-							background-color: #030303;
-							box-shadow: 0px 44px 47px -29px rgba(0,0,0,0.75);
-							z-index:200;
+							background-color: rgba($black,0.7);
 							@include transition(0.5s);
-							@include border-radius(7px);
+							p{
+								opacity:1;
+							}
 						}
 					}
 					div.contain-info{
@@ -123,20 +189,26 @@ html{
 						text-align: left;
 						width:100%;
 						@include display-flex();
-						@include border-radius(7px);
-						div{
-							padding-bottom:20px;
+						@include flex-direction(column);
+						padding:30px;
+						background-color: rgba($black,0.5);
+
+						p{
+							font-size:17px;
+							opacity: 0;
+							@include transition(0.5s);
 						}
 						div.line{
 							@include display-flex();
 							margin-bottom:0px;
-							padding-left:20px;
 							p{
 								color:#fff;
 								width:auto;
 								display:inline-block;
 								font-size:15px;
 								text-transform: uppercase;
+								opacity:1;
+								margin-top:0px;
 								&.time{
 									padding-left:30px;
 									background-position: left;
@@ -170,16 +242,15 @@ html{
 						text-transform: uppercase;
 						font-weight: lighter;
 						margin:10px 0px;
+						padding-bottom:20px;
 						margin-bottom:0px;
 						font-size:22px;
-						padding:20px 30px;
 					}
 					a{
 						color:#fff;
 					}
 					p{
 						font-size:16px;
-						padding:0px 20px;
 					}
 
 					&:nth-child(4n),&:nth-child(8n){

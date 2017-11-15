@@ -5,7 +5,7 @@
 	juiz_sps( $jsps_networks );
 ?>
 <div class="page">
-<section class="top-page" style="background-image:url(<? the_post_thumbnail_url('large') ?>)">
+<section class="top-page" style="background-image:url(<? the_post_thumbnail_url('full') ?>)">
 	<div class="contain-top">
 		<div class="container">
 			<h1><? the_title() ?></h1>

@@ -15,6 +15,7 @@
 			<a href="<? the_permalink() ?>" class="bloc" style="background-image:url(<? the_post_thumbnail_url('large') ?>)">
 				<div class="contain-info">
 					<h3><? the_title() ?></h3>
+					<p><? the_field('temps') ?><p>
 				</div>
 			</a>
 			<? endwhile; endif; ?>

@@ -21,25 +21,22 @@
         <? } ?>
       </div>
 			<div class="contain-articles">
-			<? if (have_posts()) : while (have_posts()) : the_post(); ?>
-				<a href="<? the_permalink() ?>" class="bloc">
-					<div class="contain-info">
-						<div class="contain-img" style="background-image:url(<? the_post_thumbnail_url('large') ?>)">
-						</div>
-						<div>
-							<h3><? the_title() ?></h3>
-							<div class="line">
-								<p class="time"><?= get_the_date('Y/m/d') ?></p>
-								<? foreach((get_the_category()) as $category) {?>
-								 <p class="category"> <?echo $category->cat_name . ' ';?> </p>
-								<? } ?>
-						 </div>
-						<? the_excerpt() ?>
-					</div>
-					</div>
-				</a>
-			<? endwhile; endif; ?>
-
+				<? if (have_posts()) : while (have_posts()) : the_post(); ?>
+					<a href="<? the_permalink() ?>" class="bloc" style="background-image:url(<? the_post_thumbnail_url('large') ?>)">
+							<div class="contain-info">
+								<? the_excerpt() ?>
+								<div>
+									<h3><? the_title() ?></h3>
+									<div class="line">
+										<p class="time"><?= get_the_date('Y/m/d') ?></p>
+										<? foreach((get_the_category()) as $category) {?>
+										 <p class="category"> <?echo $category->cat_name . ' ';?> </p>
+										<? } ?>
+								 </div>
+							 </div>
+							</div>
+						</a>
+				<? endwhile; endif; ?>
 			</div>
 			<?  wp_pagenavi(); ?>
 		</div>

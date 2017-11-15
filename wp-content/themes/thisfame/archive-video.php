@@ -18,7 +18,7 @@
 					foreach ($terms as $term) {
 						$term_link = get_term_link( $term );
 				?>
-					<a href="<?= $term_link ?>"><?= $term->name ?></a>
+					<a href="<?= $term_link ?>"><?= $term->name ?></a>&nbsp;
 				<? } ?>
 			</div>
 			<div class="contain-videos">

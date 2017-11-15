@@ -91,6 +91,12 @@ p, ol, ul, h1, h2, h3, h4, h5, h6 {
 div.contain-title{
 	width:40px;
 	padding-right:80px;
+	@media(max-width:700px){
+		@include display-flex();
+		padding-left:20px;
+		width:100%;
+		padding:0px;
+	}
 	p.title-vert{
 		font-size: 12px;
 		font-weight: lighter;
@@ -101,6 +107,17 @@ div.contain-title{
     font-family: $fontserif;
 		writing-mode: sideways-lr;
 		text-orientation: sideways-right;
+		@media(max-width:700px){
+			text-orientation:mixed;
+			writing-mode: horizontal-tb;
+			text-align: center;
+			font-size:28px;
+			margin-bottom:15px;
+			letter-spacing: normal;
+			width:100%;
+			padding:0px 20px;
+			font-family: $font;
+		}
 	}
 	hr{
 		width:40px;
@@ -109,6 +126,10 @@ div.contain-title{
 		background-color: #338e97;
 		height:1px;
 		border:none;
+		@media(max-width:700px){
+			@include transform(rotate(0deg));
+			display:none;
+		}
 	}
 }
 

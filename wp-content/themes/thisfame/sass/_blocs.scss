@@ -122,6 +122,9 @@
 
 					.references{
 						padding:40px 0px;
+						@media(max-width:700px){
+							padding:40px 0px;
+						}
 						div.layout{
 							border-left: 1px solid $grey;
 							padding:30px 40px;
@@ -129,6 +132,10 @@
 							margin:0 auto;
 							color:#fff;
 							font-size:50px;
+							@media(max-width:700px){
+								width:85%;
+								padding:30px 20px;
+							}
 							p{
 								font-size:22px;
 								color:#fff;
@@ -171,7 +178,8 @@
 							   display: flex;
 								flex: 1 1 auto;
 								order: 1;
-								width: 100%;
+								width: 90%;
+								margin:0 auto;
 								float: none;
 								height: 300px;
 							}
@@ -212,7 +220,7 @@
 								min-height: 320px;
 								display: block;
 								margin: 0;
-								padding: 0 20px;
+								padding: 0px;
 							}
 							img{
 								display: inline-block;

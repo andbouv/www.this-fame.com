@@ -12,20 +12,19 @@
 		<div class="container">
 			<? $terms = get_terms('category',array( 'parent' => 0,'hide_empty=1'));?>
       <div class="contain-filtre">
-        <a href="<?php bloginfo('url'); ?>/articles/"><? _e('Tous les articles', $_GLOBAL['theme']) ?></a>
-        <?
+        <a href="<?php bloginfo('url'); ?>/articles/"><? _e('Tous les articles', $_GLOBAL['theme']) ?></a>&nbsp;<?
           foreach ($terms as $term) {
             $term_link = get_term_link( $term );
         ?>
-          <a href="<?= $term_link ?>"><?= $term->name ?></a>
+          <a href="<?= $term_link ?>"><?= $term->name ?></a>&nbsp;
         <? } ?>
+
       </div>
 			<div class="contain-articles">
 			<? if (have_posts()) : while (have_posts()) : the_post(); ?>
-				<a href="<? the_permalink() ?>" class="bloc">
+				<a href="<? the_permalink() ?>" class="bloc" style="background-image:url(<? the_post_thumbnail_url('large') ?>)">
 						<div class="contain-info">
-							<div class="contain-img" style="background-image:url(<? the_post_thumbnail_url('large') ?>)">
-							</div>
+							<? the_excerpt() ?>
 							<div>
 								<h3><? the_title() ?></h3>
 								<div class="line">
@@ -34,8 +33,7 @@
 									 <p class="category"> <?echo $category->cat_name . ' ';?> </p>
 									<? } ?>
 							 </div>
-								<? the_excerpt() ?>
-						</div>
+						 </div>
 						</div>
 					</a>
 			<? endwhile; endif; ?>

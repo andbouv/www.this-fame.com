@@ -42,10 +42,11 @@ html{
 			padding:80px 60px;
 			div.contain-filtre{
 				margin:40px 0px;
-				padding:20px 0px;
+				padding:15px 0px;
 				text-align: center;
 				background-color: #0D0C0C;
 				box-shadow:1px 1px 3px #000;
+				@include transition(0.5s);
 				margin-top: 0px;
 				&.fixe{
 					position: fixed;
@@ -53,10 +54,40 @@ html{
 					max-width:1180px;
 					top:0px;
 					z-index:2000;
-					padding:15px 0px;
-				}
-				&:hover{
-					box-shadow:1px 1px 3px #000;
+					background-color: #fff;
+					a{
+						color:$black;
+						padding:0px 20px;
+						font-size:20px;
+						text-transform: uppercase;
+						border-top:1px solid transparent;
+						border-bottom:1px solid transparent;
+						border-right:1px solid #595556;
+						@include transition(0.5s);
+						&:first-child{
+							border-left:1px solid transparent;
+							&:hover{
+								border-top:1px solid $black;
+								border-bottom:1px solid $black;
+								border-left:1px solid $black;
+							}
+						}
+						&.actif{
+							border-bottom:1px solid $black;
+						}
+						&:last-child{
+							border-right:1px solid transparent;
+							&:hover{
+								border-top:1px solid $black;
+								border-bottom:1px solid $black;
+								border-right:1px solid $black;
+							}
+						}
+						&:hover{
+							border-top:1px solid $black;
+							border-bottom:1px solid $black;
+						}
+					}
 				}
 				a{
 					color:#fff;
