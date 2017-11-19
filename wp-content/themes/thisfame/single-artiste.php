@@ -203,6 +203,11 @@
 </div>
 <? get_footer(); ?>
 <script type="text/javascript">
+window.sr = ScrollReveal({ reset: true });
+
+// Customizing a reveal set
+sr.reveal('.bloc', { duration: 3000 });
+
 $('iframe').jSound({
 	mini: true
 });

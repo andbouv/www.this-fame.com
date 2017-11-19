@@ -22,36 +22,28 @@
             }
         },
         {
-            "sub_fields": [
-                {
-                    "tabs": "all",
-                    "toolbar": "full",
-                    "media_upload": 1,
-                    "default_value": "",
-                    "delay": 0,
-                    "key": "field_59cccca83cbdc",
-                    "label": "Remix",
-                    "name": "remix",
-                    "type": "wysiwyg",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    }
-                }
-            ],
-            "min": 0,
-            "max": 0,
-            "layout": "table",
-            "button_label": "",
-            "collapsed": "",
-            "key": "field_59cccc9c3cbdb",
-            "label": "Remixes",
-            "name": "remixes",
-            "type": "repeater",
+            "default_value": "",
+            "placeholder": "",
+            "key": "field_5a11cbb343f96",
+            "label": "Lien soundcloud",
+            "name": "lien_soundcloud",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "default_value": "",
+            "placeholder": "",
+            "key": "field_5a11cbd343f97",
+            "label": "Lien spotify",
+            "name": "lien_spotify",
+            "type": "url",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -76,8 +68,10 @@
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
-    "hide_on_screen": "",
+    "hide_on_screen": [
+        "the_content"
+    ],
     "active": 1,
     "description": "Titres",
-    "modified": 1507718462
+    "modified": 1511115773
 }

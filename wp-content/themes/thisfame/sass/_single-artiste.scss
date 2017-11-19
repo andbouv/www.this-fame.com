@@ -227,18 +227,28 @@ html{
 							position: relative;
 							@include transition(0.5s);
 							@include border-radius(7px);
-
+							&:hover{
+								p{
+									opacity:1;
+									padding-top:calc(50% - 20px);
+									background-color:#0D0C0C;
+								}
+							}
 							p{
 								text-align: center;
-								color:$black;
+								color:#fff;
 								position: absolute;
-								top:calc(50% - 20px);
+								height:100%;
+								padding-top:calc(50% - 0px);
 								display:block;
 								text-transform: uppercase;
-								padding:0px 30px;
 								font-weight: bold;
 								font-size: 20px;
 								width:100%;
+								opacity:0;
+								@include transition(0.5s);
+								background-color:$black;
+								@include border-radius(7px);
 							}
 						}
 					}

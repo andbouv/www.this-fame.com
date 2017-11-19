@@ -40,13 +40,16 @@
 </section>
 <? wp_reset_postdata() ?>
 <section class="playlist">
+	<!--
 	<div class="container">
 		<div class="title-playlist">
 			<h2>Playlist</h2>
 			<hr/>
 		</div>
 	</div>
+	-->
 	<div class="container">
+
 		<? $i = 0 ?>
 			<? $the_query  = new WP_Query( array('post_type'=> 'playlist','posts_per_page' => 4, 'orderby' => 'date', 'order' => 'desc') );?>
 	    <? if ( $the_query->have_posts() ) : ?>
@@ -113,6 +116,17 @@
 				<?setup_postdata($post); ?>
 					<div class="bloc bloc-son">
 						<? the_field('titre') ?>
+						<?if(get_field('lien_soundcloud') || get_field('lien_spotify')):?>
+							<div class="contain-link">
+								<p>Retrouvez ce titre sur : </p>
+								<?if(get_field('lien_soundcloud')):?>
+									<a href="<? the_field('lien_soundcloud') ?>" target="_blank" class="soundcloud">lien soundcloud</a>
+								<? endif; ?>
+								<?if(get_field('lien_spotify')):?>
+									<a href="<? the_field('lien_soundcloud') ?>" target="_blank" class="spotify">lien spotify</a>
+								<? endif; ?>
+							</div>
+						<? endif; ?>
 					</div>
 			<? endforeach ?>
 		</div>
@@ -163,12 +177,14 @@
 	</div>
 </section>
 <section class="artiste">
+	<!--
 	<div class="container">
 		<div class="title-artistes">
 			<h2>ARTISTES</h2>
 			<hr/>
 		</div>
 	</div>
+-->
 	<div class="container">
 		<div class="contain-title">
 			<p class="title-vert">ARTISTES</p>
