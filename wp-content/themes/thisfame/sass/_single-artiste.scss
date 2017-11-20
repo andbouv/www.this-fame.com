@@ -54,6 +54,7 @@ html{
 							text-indent: -99999px;
 							background-position: center;
 							background-repeat: no-repeat;
+							margin:0px 4px;
 							&.fb{
 								background-image: url(./img/facebook-white.png);
 								background-size: 10px;
@@ -69,6 +70,12 @@ html{
 							&.instagram{
 								background-image: url(./img/instagram-white.png);
 								background-size: 20px;
+								width:40px;
+								height:40px;
+							}
+							&.soundcloud{
+								background-image: url(./img/soundcloud-white.png);
+								background-size: 32px;
 								width:40px;
 								height:40px;
 							}

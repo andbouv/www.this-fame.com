@@ -26,11 +26,14 @@
 				<? if(get_field('facebook')): ?>
 					<a href="<? the_field('facebook') ?>" target="_blank" class="fb">fb</a>
 				<? endif; ?>
+				<? if(get_field('instagram')): ?>
+					<a href="<? the_field('instagram') ?>" target="_blank" class="instagram">Instagram</a>
+				<? endif; ?>
 				<? if(get_field('spotify')): ?>
 					<a href="<? the_field('spotify') ?>" target="_blank" class="spotify">Spotify</a>
 				<? endif; ?>
-				<? if(get_field('instagram')): ?>
-					<a href="<? the_field('instagram') ?>" target="_blank" class="instagram">Instagram</a>
+				<? if(get_field('soundcloud')): ?>
+					<a href="<? the_field('soundcloud') ?>" target="_blank" class="soundcloud">Soundcloud</a>
 				<? endif; ?>
 			</div>
 			<div class="line">
@@ -150,6 +153,7 @@
 														$(".ci-<?= $j+1 ?> iframe")[0].src += "&autoplay=1";
 														$('.pv-<?= $j+1 ?>').addClass("hide");
 														$('.contain-<?= $j ?>').removeClass("active");
+														$('.contain-<?= $j ?> span').addClass("active");
 														ev.preventDefault();
 												});
 

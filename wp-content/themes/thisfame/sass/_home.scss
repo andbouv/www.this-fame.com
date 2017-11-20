@@ -62,8 +62,7 @@ html{
 				margin:40px 0px;
 				padding:15px 0px;
 				text-align: center;
-				background-color: #0D0C0C;
-				box-shadow:1px 1px 3px #000;
+
 				@include transition(0.5s);
 				margin-top: 0px;
 				&.fixe{

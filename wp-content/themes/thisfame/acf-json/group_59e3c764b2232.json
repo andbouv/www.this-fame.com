@@ -21,6 +21,22 @@
         {
             "default_value": "",
             "placeholder": "",
+            "key": "field_59e3c7b15a631",
+            "label": "Instagram",
+            "name": "instagram",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        },
+        {
+            "default_value": "",
+            "placeholder": "",
             "key": "field_59e3c7a35a630",
             "label": "Spotify",
             "name": "spotify",
@@ -37,9 +53,9 @@
         {
             "default_value": "",
             "placeholder": "",
-            "key": "field_59e3c7b15a631",
-            "label": "Instagram",
-            "name": "instagram",
+            "key": "field_5a1319d019d5a",
+            "label": "Soundcloud",
+            "name": "soundcloud",
             "type": "url",
             "instructions": "",
             "required": 0,
@@ -68,5 +84,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "Artistes",
-    "modified": 1508100887
+    "modified": 1511201492
 }
