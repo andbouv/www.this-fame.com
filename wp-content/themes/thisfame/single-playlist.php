@@ -19,10 +19,7 @@
 			<hr/>
 		</div>
 		<div class="contain-song">
-			<div class="title">
-				<h2>Titres</h2>
-				<hr/>
-			</div>
+			
 			<?php
 				$posts = get_field('titre');
 				if($posts):
@@ -30,7 +27,20 @@
 			<? endif; ?>
 			<? foreach( $posts as $post): ?>
 				<?setup_postdata($post); ?>
+				<div class="bloc">
 				<? the_field('titre') ?>
+				<?if(get_field('lien_soundcloud') || get_field('lien_spotify')):?>
+					<div class="contain-link">
+						<p>Retrouvez ce titre sur : </p>
+						<?if(get_field('lien_soundcloud')):?>
+							<a href="<? the_field('lien_soundcloud') ?>" target="_blank" class="soundcloud">lien soundcloud</a>
+						<? endif; ?>
+						<?if(get_field('lien_spotify')):?>
+							<a href="<? the_field('lien_soundcloud') ?>" target="_blank" class="spotify">lien spotify</a>
+						<? endif; ?>
+					</div>
+				<? endif; ?>
+			</div>
 			<? endforeach; ?>
 
 		</div>

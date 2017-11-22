@@ -140,15 +140,15 @@ function themes_taxonomy() {
     );
 
     register_taxonomy(
-        'categories',
+        'category-videos',
         'video',
         array(
             'hierarchical' => true,
             'label' => 'Catégories',
             'query_var' => true,
             'rewrite' => array(
-                'slug' => 'categories',
-                'with_front' => false
+                'slug' => 'category-videos',
+                'with_front' => true
             )
         )
     );

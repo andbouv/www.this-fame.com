@@ -132,7 +132,17 @@ div.contain-title{
 		}
 	}
 }
-
+.jsound__wave{
+	background-color: #fff!important;
+	height:5px!important;
+	bottom:0px!important;
+	z-index:3000000!important;
+	top:95%!important;
+	opacity:1!important;
+}
+.jsound__artist,.jsound__buttons,.jsound__title,.jsound__background{
+	background-color: #060606;
+}
 img{
 	max-width: 100%;
 	height: auto;

@@ -51,14 +51,14 @@ html{
 					@include flex-direction(column);
 				}
 				div.contain-title{
-					padding-top:125px;
+					padding-top:37px;
 					@media(max-width:700px){
 						padding-top:0px;
 						display:none;
 					}
 				}
 				div.contain-song{
-					width:70%;
+					width:60%;
 					padding-right:70px;
 					padding-bottom:80px;
 					padding-top: 40px;
@@ -93,6 +93,54 @@ html{
 							margin-left:-40px;
 							@include transform(rotate(0deg));
 							margin-top:20px;
+						}
+					}
+					div.bloc{
+						width:calc(100%);
+						position: relative;
+						@include transition(0.5s);
+						overflow:hidden;
+						&:hover{
+							div.contain-link{
+								left:0px;
+							}
+						}
+					}
+					div.contain-link{
+						background-color: #fff;
+						position: absolute;
+						height:72px;
+						width:75%;
+						left:-75%;
+						top:0px;
+						z-index:20000;
+						@include border-left-radius(7px);
+						text-align: center;
+						@include transition(0.5s);
+						@include display-flex();
+						@include justify-content(center);
+						p{
+							height:100%;
+							padding-top:23px;
+							margin-bottom:0px;
+							margin-right:10px;
+							font-weight:bold;
+						}
+						a{
+							width:40px;
+							height:72px;
+							text-indent: -99999px;
+							background-repeat: no-repeat;
+							background-position: center;
+							margin:0px 8px;
+							&.spotify{
+								background-image: url(./img/spotify.png);
+								background-size: 24px;
+							}
+							&.soundcloud{
+								background-image: url(./img/soundcloud.png);
+								background-size: 34px;
+							}
 						}
 					}
 					iframe{
@@ -155,7 +203,7 @@ html{
 					}
 				}
 				div.artiste{
-					width:35%;
+					width:40%;
 					@include display-flex();
 					margin-bottom:80px;
 					padding-left:30px;

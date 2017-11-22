@@ -11,7 +11,7 @@
 
 	<section class="videos">
 		<div class="container">
-			<? $terms = get_terms('categories',array( 'parent' => 0,'hide_empty=1'));?>
+			<? $terms = get_terms('category-videos',array( 'parent' => 0,'hide_empty=1'));?>
 			<div class="contain-filtre">
 				<a href="<?php bloginfo('url'); ?>/videos/"><? _e('Toutes les vidéos', $_GLOBAL['theme']) ?></a>
 				<?
