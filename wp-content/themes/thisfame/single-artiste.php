@@ -142,11 +142,11 @@
 						<? the_field('video') ?>
 						<div class="contain-txt active contain-<?= $j ?>">
 							<p class=titre><? the_title() ?></p>
+							<? the_excerpt() ?>
 							<span class="open"></span>
 						</div>
 						<span class="play-video pv-<?= $j+1 ?>"></span>
 						<span class="number-slide"><?= $j ?> sur <?= count( $posts ); ?></span>
-
 						<script>
 										$(document).ready(function() {
 												$('.pv-<?= $j+1 ?>').on('click', function(ev) {

@@ -283,13 +283,18 @@ html{
 							background-color: transparent;
 							bottom:-50px;
 							color:#fff;
+							width:40px;
+							height:40px;
 							@include transition(0.5s);
 							cursor:pointer;
+							background-color: #0D0C0C;
 							&.slick-prev{
-								left:45%;
+								right:51%;
+								background-size: 11px;
 							}
 							&.slick-next{
-								right:45%;
+								left:51%;
+								background-size: 11px;
 							}
 						}
 						div.slick-list{
