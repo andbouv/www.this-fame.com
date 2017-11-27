@@ -218,7 +218,12 @@
 								<div class="contain-img" style="background-image:url(<? the_post_thumbnail_url('large') ?>)">
 								</div>
 								<h3><? the_title() ?></h3>
-								<p>Nombre de titres : <?  ?></p>
+								<?php
+									$posts = get_field('titre');
+									if($posts):
+								?>
+								<p>Nombre de titres : <?= count($posts) ?></p>
+								<? endif; ?>
 								<div class="social">
 									<? if(get_field('facebook')): ?>
 										<a href="<? the_field('facebook') ?>" target="_blank" class="fb">fb</a>
