@@ -163,12 +163,14 @@
 							position: relative;
 							display: table-cell;
 							overflow: hidden;
-							width: 100%;
+							width: 90%;
 							height:500px;
 							background-repeat: no-repeat;
 							background-position: center;
 							background-size: cover;
-							margin:50px 0px;
+							margin:0 auto;
+							margin-bottom:50px;
+							margin-top:50px;
 							@include border-radius(7px);
 							@media screen and (max-width: $size4) {
 								display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */

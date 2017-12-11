@@ -33,7 +33,6 @@ html{
 			background-color: $black;
 			div.container{
 				position: relative;
-				padding-bottom:80px;
 				div.bloc-left{
 					background-color: #0D0C0C;
 					box-shadow:4px 4px 18px #000;
@@ -389,6 +388,7 @@ html{
 					border-top:1px solid $grey;
 					padding-top:80px;
 					margin-top:40px;
+					padding-bottom:80px;
 					div.contain-title{
 						padding-top:0px;
 					}

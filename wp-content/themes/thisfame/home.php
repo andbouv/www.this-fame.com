@@ -22,9 +22,10 @@
       </div>
 			<div class="contain-articles">
 			<? if (have_posts()) : while (have_posts()) : the_post(); ?>
-				<a href="<? the_permalink() ?>" class="bloc" style="background-image:url(<? the_post_thumbnail_url('large') ?>)">
+				<a href="<? the_permalink() ?>" class="bloc" >
+					<div class="contain-img"style="background-image:url(<? the_post_thumbnail_url('large') ?>)">
+					</div>
 						<div class="contain-info">
-							<? the_excerpt() ?>
 							<div>
 								<h3><? the_title() ?></h3>
 								<div class="line">
@@ -34,6 +35,8 @@
 									<? } ?>
 							 </div>
 						 </div>
+							<? the_excerpt() ?>
+
 						</div>
 					</a>
 			<? endwhile; endif; ?>

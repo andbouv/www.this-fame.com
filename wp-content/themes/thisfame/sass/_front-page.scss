@@ -2,21 +2,19 @@ html{
 	body.home{
 		section.top-page{
 			h1{
-				font-size: 20px;
+				font-size: 24px;
 				font-family: $fontroboto;
 				font-variant: small-caps;
-				font-weight: 700;
+				font-weight: 400;
 				letter-spacing: 8px;
-				background-color: #0D0C0C;
 				position: absolute;
-				top:0px;
+				top:15px;
 				left:50%;
 				@include transform(translateX(-50%));
 				z-index:2000;
 				color:#fff;
 				padding:5px 0px;
-				padding-left:30px;
-				padding-right:23px;
+				padding-left:40px;
 			}
 		}
 		.loader{
@@ -38,7 +36,7 @@ html{
 			font-size: 40px;
 			font-family: $fontroboto;
 			font-variant: small-caps;
-			font-weight: 700;
+			font-weight: 400;
 			height: 100vh;
 			line-height: 100vh;
 			letter-spacing: 15px;
@@ -68,6 +66,16 @@ html{
 			position: relative;
 			max-height:1000px;
 			@include transition(0.5s);
+			&:hover{
+				button{
+					&.slick-next{
+						right:60px;
+					}
+					&.slick-prev{
+						left:0px;
+					}
+				}
+			}
 			button{
 				position: absolute;
 				z-index:300000;
@@ -75,8 +83,8 @@ html{
 				background-color: #0D0C0C;
 				bottom:80px;
 				color:#fff;
-				width:50px;
-				height:50px;
+				width:30px;
+				height:120px;
 				@include transition(0.5s);
 				cursor:pointer;
 				&.slick-next{
@@ -86,7 +94,7 @@ html{
 					background-image: url(./img/arrow-right.png);
 					text-indent: -9999px;
 					top:46%;
-					right:60px;
+					right:0px;
 				}
 				&.slick-prev{
 					background-position: center;
@@ -96,7 +104,7 @@ html{
 					text-indent: -9999px;
 					background-size: 12px;
 					top:46%;
-					left:0px;
+					left:-60px;
 				}
 			}
 
@@ -183,14 +191,14 @@ html{
 								height:100%;
 								max-width:1180px;
 								margin:0 auto;
-
+								position: relative;
 								@media(max-width:700px){
 									padding:0px 30px;
 									position: relative;
 								}
 							}
 							div.contain-title{
-								bottom:80px;
+								bottom:14%;
 								width:43%;
 								position: absolute;
 								padding-right: 0px;
@@ -225,9 +233,9 @@ html{
 									}
 								}
 								h2{
-									font-size:45px;
+									font-size:30px;
 									text-transform: uppercase;
-									font-weight: lighter;
+									font-weight: 400;
 									color:#fff;
 									font-family: $font;
 									@media(max-width:700px){
@@ -236,7 +244,7 @@ html{
 								}
 								a.learn{
 									text-transform:none;
-									font-size:18px;
+									font-size:16px;
 									background-color: transparent;
 									padding:7px 20px;
 									border: 2px solid #fff;
@@ -250,7 +258,7 @@ html{
 								}
 							}
 							p{
-								font-size:20px;
+								font-size:16px;
 								color:#fff;
 								text-transform: none;
 								@media(max-width:700px){
@@ -260,11 +268,10 @@ html{
 							p.number-slide{
 								font-size:14px;
 								position: absolute;
-								top:-71px;
-								left:80px;
+								left:-40px;
 								font-family:$fontserif;
 								opacity:0.08;
-								font-size:320px;
+								font-size:270px;
 							}
 
 						}

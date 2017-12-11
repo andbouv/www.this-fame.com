@@ -10,6 +10,7 @@ html{
 			position: fixed;
 			z-index:3000000;
 			@include transition(0.5s);
+
 			@media(max-width:700px){
 				height:60px;
 				width:100%;
@@ -24,21 +25,79 @@ html{
 				left:-45px;
 				@include transition(0.5s);
 			}
-
-			button.search{
+			div.line-social{
+				@include display-flex();
+				@include flex-direction(column);
+				position: absolute;
+				bottom:20px;
 				width:100%;
+				left:0px;
+				padding:0px 8px;
+				a{
+					width:100%;
+					height:50px;
+					display: inline-block;
+					color:#fff;
+					font-family: $fontserif;
+					font-size:15px;
+					text-align: center;
+					background-repeat: no-repeat;
+					background-position: center;
+					padding-top:6px;
+					@include transition(0.5s);
+					text-indent: -9999px;
+					border-bottom: 1px solid transparent;
+					&:hover{
+						border-bottom: 1px solid #fff;
+					}
+					&:nth-child(2){
+						border-top: 1px solid $grey;
+						border-bottom: 1px solid $grey;
+					}
+					&.fb{
+						background-image: url(./img/facebook-white.png);
+						background-size: 8px;
+						border-top: 1px solid transparent;
+						border-left: 1px solid transparent;
+						&:hover{
+							border-top: 1px solid #fff;
+							border-left: 1px solid #fff;
+						}
+					}
+					&.instagram{
+						background-image: url(./img/instagram-white.png);
+						background-size: 16px;
+						&:hover{
+							border-top: 1px solid #fff;
+						}
+					}
+					&.soundcloud{
+						background-image: url(./img/spotify-white.png);
+						background-size: 18px;
+						border-top: 1px solid transparent;
+						border-right: 1px solid transparent;
+						&:hover{
+							border-top: 1px solid #fff;
+							border-right: 1px solid #fff;
+						}
+					}
+				}
+			}
+			button.search{
+				width:44px;
 				height: 60px;
 				background-position: 42% 50%;
 				background-repeat: no-repeat;
-				background-image: url(./img/search.png);
-				background-size: 15px;
+				background-image: url(./img/search-white.png);
+				background-size: 16px;
 				cursor: pointer;
 				border:none;
-				background-color: #fff;
+				background-color: #0D0C0C;
 				position: absolute;
-				padding-left:5px;
+				padding-left:8px;
 				top:0px;
-				left:0px;
+				left:8px;
+				border-bottom: 1px solid $grey;
 				@media(max-width:700px){
 					width:60px;
 				}
@@ -120,7 +179,7 @@ html{
 		}
 		div.contain-search{
 			display:none;
-			background-color: rgba(#000,0.95);
+			background-color: rgba(#000,1);
 			width:100%;
 			height:100%;
 			position: fixed;
@@ -133,7 +192,7 @@ html{
 				right:80px;
 				background-position: center;
 				background-repeat: no-repeat;
-				background-size: 22px;
+				background-size: 28px;
 				background-image: url(./img/close.png);
 				text-indent: -999999px;
 				cursor:pointer;
@@ -156,7 +215,7 @@ html{
 					background-color: transparent;
 					width:50%;
 					color:#fff;
-					font-size:30px;
+					font-size:45px;
 					text-transform: uppercase;
 				}
 				::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -172,14 +231,14 @@ html{
 				  color: #fff;
 				}
 				button{
-					width:50px;
+					width:68px;
 					background-color: transparent;
 					border:none;
 					background-image: url(./img/search-white.png);
 					background-repeat: no-repeat;
-					background-size: 20px;
+					background-size: 30px;
 					background-position: center;
-					height:50px;
+					height:68px;
 					position: relative;
 					cursor: pointer;
 				}

@@ -45,6 +45,11 @@
 		</div>
 		<button class="search">
 		</button>
+		<div class="line-social">
+			<a href="" class="fb">fb</a>
+			<a href="" class="instagram">instagram</a>
+			<a href="" class="soundcloud">soundcloud</a>
+		</div>
 	</header>
 	<div class="menu">
 		<? wp_nav_menu(array( 'theme_location' => 'menu-principal', 'container' => 'nav')); ?>

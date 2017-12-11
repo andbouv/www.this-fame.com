@@ -157,30 +157,39 @@ html{
 					background-color: #0D0C0C;
 					display:block;
 					@include transition(0.5s);
-					color:#fff;
+					color:$black;
 					position: relative;
 					margin-bottom:30px;
-					@include display-flex();
+
 					@include border-radius(7px);
 					background-position: center;
 					background-repeat: no-repeat;
 					background-size: cover;
+					overflow:hidden;
+					position: relative;
+					height:400px;
 					@media(max-width:700px){
 						width:100%;
 					}
 					&:hover{
 						@include transition(0.5s);
-						@include transform(scale(1.04));
 						box-shadow: 0px 44px 47px -29px rgba(0,0,0,0.75);
 						z-index:200;
 						div.contain-info{
-							@include display-flex();
-							background-color: rgba($black,0.7);
-							@include transition(0.5s);
-							p{
-								opacity:1;
-							}
+							margin-top:-42%;
 						}
+						div.contain-img{
+							margin-top:-10%;
+						}
+					}
+					div.contain-img{
+						height:260px;
+						width:100%;
+						display:block;
+						background-position: center;
+						background-repeat: no-repeat;
+						background-size: cover;
+						@include transition(0.5s);
 					}
 					div.contain-info{
 						height:100%;
@@ -189,19 +198,18 @@ html{
 						width:100%;
 						@include display-flex();
 						@include flex-direction(column);
-						padding:30px;
-						background-color: rgba($black,0.5);
-
+						padding:20px;
+						background-color: #fff;
 						p{
 							font-size:17px;
-							opacity: 0;
+							opacity: 1;
 							@include transition(0.5s);
 						}
 						div.line{
 							@include display-flex();
 							margin-bottom:0px;
 							p{
-								color:#fff;
+								color:$black;
 								width:auto;
 								display:inline-block;
 								font-size:15px;
@@ -240,13 +248,14 @@ html{
 					h3{
 						text-transform: uppercase;
 						font-weight: lighter;
-						margin:10px 0px;
+						margin:0px 0px;
 						padding-bottom:20px;
 						margin-bottom:0px;
-						font-size:22px;
+						font-size:20px;
+						min-height:86px;
 					}
 					a{
-						color:#fff;
+						color:$black;
 					}
 					p{
 						font-size:16px;
