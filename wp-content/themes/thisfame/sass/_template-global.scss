@@ -393,16 +393,21 @@ html{
 			}
 		}
 		.jSound{
-			background-color: transparent;
+			background-color: #0D0C0C;
 		}
 		.jsound__background{
 			background-image: none !important;
+			background-color: #0D0C0C
+		}
+		.jsound__shade{
+			background-color: #0D0C0C
 		}
 		.jsound__title{
 			padding: 2px 20px 10px;
 			width:80%;
 			overflow:hidden;
 			height:38px;
+			background-color: #0D0C0C;
 			a{
 				font-size:18px;
 				font-family: $font;
@@ -410,9 +415,10 @@ html{
 		}
 		.jsound__artist{
 			padding:10px 20px 0;
+			background-color: #0D0C0C;
 		}
 		.jsound--mini{
-			background-color: $black;
+			background-color: #0D0C0C;
 			@include border-radius(7px);
 		}
 		.jsound__buttons{
@@ -421,6 +427,7 @@ html{
 			background-size: 100%;
 			top:0px;
 			margin-top:0px;
+			background-color: #0D0C0C;
 			.jsound__play{
 				border:none;
 				height:76px;
