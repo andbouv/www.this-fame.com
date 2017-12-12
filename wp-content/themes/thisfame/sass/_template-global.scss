@@ -85,11 +85,11 @@ html{
 			}
 			button.search{
 				width:44px;
-				height: 60px;
+				height: 50px;
 				background-position: 42% 50%;
 				background-repeat: no-repeat;
 				background-image: url(./img/search-white.png);
-				background-size: 16px;
+				background-size: 14px;
 				cursor: pointer;
 				border:none;
 				background-color: #0D0C0C;
@@ -404,7 +404,7 @@ html{
 			overflow:hidden;
 			height:38px;
 			a{
-				font-size:18px;
+				font-size:14px !important;
 				font-family: $font;
 			}
 		}
@@ -418,7 +418,8 @@ html{
 		.jsound__buttons{
 			background-image: url(./img/play-button-nu.png);
 			background-repeat: no-repeat;
-			background-size: 100%;
+			background-size: 65px !important;
+			background-position: center;
 			top:0px;
 			margin-top:0px;
 			.jsound__play{

@@ -294,7 +294,7 @@ html{
 		}
 		section.playlist{
 			background-color: $black;
-			padding-top:210px;
+			padding-top:120px;
 			overflow:hidden;
 			div.container{
 				@include display-flex();
@@ -564,7 +564,6 @@ html{
 								overflow:hidden;
 								height:38px;
 								a{
-									font-size:18px;
 									font-family: $font;
 								}
 							}
@@ -689,7 +688,6 @@ html{
 								overflow:hidden;
 								height:38px;
 								a{
-									font-size:18px;
 									font-family: $font;
 								}
 							}
