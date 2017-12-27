@@ -189,27 +189,28 @@ html{
 						background-position: center;
 						background-repeat: no-repeat;
 						background-size: cover;
-						@include transition(0.5s);
+						@include transition(0.8s);
 					}
 					div.contain-info{
 						height:100%;
-						@include transition(0.5s);
+						@include transition(0.8s);
 						text-align: left;
 						width:100%;
 						@include display-flex();
 						@include flex-direction(column);
 						padding:20px;
-						background-color: #fff;
+						background-color: #0D0C0C;
 						p{
 							font-size:17px;
 							opacity: 1;
 							@include transition(0.5s);
+							color:#fff;
 						}
 						div.line{
 							@include display-flex();
 							margin-bottom:0px;
 							p{
-								color:$black;
+								color:#fff;
 								width:auto;
 								display:inline-block;
 								font-size:15px;
@@ -253,9 +254,10 @@ html{
 						margin-bottom:0px;
 						font-size:20px;
 						min-height:86px;
+						color:#fff;
 					}
 					a{
-						color:$black;
+						color:#fff;
 					}
 					p{
 						font-size:16px;

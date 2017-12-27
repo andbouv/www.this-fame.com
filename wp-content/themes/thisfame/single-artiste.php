@@ -177,7 +177,7 @@
 					<p class="title-vert">AUTRES ARTISTES</p>
 					<hr/>
 				</div>
-				<?= $Posts =  get_the_ID()?>
+				<? $Posts =  get_the_ID()?>
 				<?
 					$args = array(
 						'post_type'		=> 'artiste',
@@ -195,6 +195,7 @@
 						<a href="<? the_permalink() ?>" class="bloc bloc-<?= $i ?>" style="background-image:url(<? the_post_thumbnail_url('large') ?>)">
 							<div class="contain-info">
 								<h3><? the_title() ?></h3>
+
 							</div>
 						</a>
 					<? }; ?>
