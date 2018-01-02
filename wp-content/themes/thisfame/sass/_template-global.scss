@@ -267,14 +267,17 @@ html{
 				@include transform(translateY(-50%));
 				li{
 					list-style-type: none;
-					margin:7px 20px;
+					margin:14px 20px;
+					opacity:0;
+					@include transition(5.5s);
 					a{
 						color:#fff;
 						text-transform: uppercase;
-						font-size:24px;
+						font-size:18px;
 						font-weight: lighter;
 						opacity: 0;
-						@include transition(5.7s);
+						margin-top:10px;
+						@include transition(3.5s);
 					}
 				}
 			}
@@ -290,9 +293,13 @@ html{
 				nav{
 					ul{
 						li{
+							margin:3px 20px;
+							opacity:1;
+							@include transition(5.5s);
 							a{
 								opacity:1;
-								@include transition(0.5s);
+								@include transition(3.5s);
+								margin-top:0px;
 								&:hover{
 									background-color: #fff;
 									color:$black;
