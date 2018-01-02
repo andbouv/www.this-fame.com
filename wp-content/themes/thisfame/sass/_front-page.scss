@@ -2,7 +2,7 @@ html{
 	body.home{
 		section.top-page{
 			h1{
-				font-size: 24px;
+				font-size: 20px;
 				font-family: $fontroboto;
 				font-variant: small-caps;
 				font-weight: 400;
@@ -26,26 +26,42 @@ html{
 			top: 0;
 			width: 100%;
 			z-index: 3000000;
-
+			hr{
+				margin-top:55vh;
+				animation: line 4s;
+				animation-delay:2.5s;
+				animation-timing-function: ease-out;
+				background-color: #338E97;
+				border:none;
+				height:0px;
+				width:00%;
+			}
+			@keyframes line {
+				0%   {opacity: 0;width:0%;height:0px;}
+				50% {opacity: 1;width:50%;height:0.3px;}
+				100%   {opacity: 0;width:100%;height:0.3px;}
+			}
 		}
 
 		.loader h1{
 			background: none;
 			border: none;
 			color: #fff;
-			font-size: 40px;
+			font-size: 18px;
 			font-family: $fontroboto;
 			font-variant: small-caps;
 			font-weight: 400;
-			height: 100vh;
-			line-height: 100vh;
+			margin-top:30vh;
 			letter-spacing: 15px;
 			animation: example 7s;
-			animation-delay:1.5s;
+			animation-delay:1s;
 			margin: 0 0 10px;
 			padding: 0;
 			text-align: center;
 			opacity: 0;
+			position: absolute;
+			left:50%;
+			@include transform(translateX(-50%));
 			@media(max-width:700px){
 				font-size:25px;
 			}
@@ -53,12 +69,10 @@ html{
 		.loader h1 {animation-timing-function: ease-out;}
 
 		@keyframes example {
-				0%   {opacity: 0;}
-		    20%  {opacity: 1;}
-		    40%  {opacity: 0;}
-				60%  {opacity: 1;}
-				80%  {opacity: 0;}
-		    100% {opacity: 1;}
+				0%   {opacity: 0;top:53vh;}
+		    25%  {opacity: 1;top:50vh;}
+				75%  {opacity: 1;top:50vh;}
+				100%  {opacity: 0;top:47vh;}
 		}
 		div.slider{
 			width:100%;

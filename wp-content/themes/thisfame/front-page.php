@@ -250,6 +250,7 @@
 </div>
 <div class="loader">
 	<h1>THIS FAME</h1>
+	<hr/>
 </div>
 <? get_footer(); ?>
 <script type="text/javascript">
