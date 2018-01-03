@@ -251,7 +251,6 @@
 <div class="loader">
 	<h1>THIS FAME</h1>
 	<hr/>
-	<hr class="line"/>
 </div>
 <? get_footer(); ?>
 <script type="text/javascript">

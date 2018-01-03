@@ -30,23 +30,23 @@ html{
 			width: 100%;
 			z-index: 30000000000000;
 			hr{
-				margin-top:55vh;
+				margin-top:53vh;
 				animation: line 4.2s;
-				animation-delay:3.5s;
+				animation-delay:4.5s;
 				animation-timing-function: ease-out;
 				background-color: #338E97;
 				border:none;
 				height:0.3px;
 				width:0%;
-				@include transform(rotate(90deg));
+				@include transform(rotate(0deg));
 				&.line{
-					@include transform(rotate(0deg));
+					@include transform(rotate(90deg));
 				}
 			}
 			@keyframes line {
 				0%   {opacity: 0;width:0%;height:1px;}
 				50% {opacity: 1;width:50%;height:1px;}
-				100%   {opacity: 0;width:75%;height:1px;}
+				100%   {opacity: 0;width:90%;height:1px;}
 			}
 		}
 
@@ -67,8 +67,9 @@ html{
 			text-align: center;
 			opacity: 0;
 			position: absolute;
-			padding:15px 0px;
-			left:calc(50% + 10px);
+			padding:15px 10px;
+			padding-left: 24px;
+			left:calc(50%);
 			background-color: $black;
 			filter: blur(5px);
 			@include transform(translateX(-50%));
