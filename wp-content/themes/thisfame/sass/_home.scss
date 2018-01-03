@@ -243,8 +243,7 @@ html{
 						background-size: cover;
 						background-position: center;
 						padding-bottom:0px;
-						@include border-top-left-radius(7px);
-						@include border-bottom-left-radius(7px);
+
 					}
 					h3{
 						text-transform: uppercase;

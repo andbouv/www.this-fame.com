@@ -27,6 +27,10 @@ html{
 					width:100%;
 					bottom:32%;
 					position: absolute;
+					@media(max-width:700px){
+						bottom:57%;
+						font-size:40px;
+					}
 				}
 				p{
 					bottom:20%;
@@ -35,11 +39,18 @@ html{
 					color:#fff;
 					text-align: center;
 					width:100%;
+					@media(max-width:700px){
+						padding:0px 20px;
+					}
 				}
 			}
 		}
 		section.videos{
 			padding:80px 60px;
+			@media(max-width:700px){
+				padding:80px 20px;
+				padding-top:20px;
+			}
 			div.contain-filtre{
 				margin:40px 0px;
 				padding:15px 0px;
@@ -125,6 +136,10 @@ html{
 				@include display-flex();
 				@include flex-grow(3);
 				@include flex-wrap(wrap);
+				@media(max-width:700px){
+					@include flex-grow(1);
+					@include flex-direction(column);
+				}
 				div.bloc{
 					width:calc(100% / 3 - 20px);
 					text-align: center;
@@ -137,6 +152,9 @@ html{
 					@include transition(0.5s);
 					margin-bottom:30px;
 					@include border-radius(7px);
+					@media(max-width:700px){
+						width:100%;
+					}
 					&:hover{
 						@include transition(0.5s);
 						z-index:50;

@@ -33,6 +33,9 @@ html{
 				width:100%;
 				left:0px;
 				padding:0px 8px;
+				@media(max-width:700px){
+					display:none;
+				}
 				a{
 					width:100%;
 					height:50px;
@@ -100,6 +103,9 @@ html{
 				border-bottom: 1px solid $grey;
 				@media(max-width:700px){
 					width:60px;
+					height:100%;
+					border:none;
+					order:2;
 				}
 			}
 			.hamburger-menu {
@@ -525,6 +531,7 @@ html{
 					margin-top:70px;
 					@media(max-width:700px){
 						margin-top:30px;
+
 					}
 					a{
 						width:90px;
@@ -549,7 +556,7 @@ html{
 						}
 						&.fb{
 							background-image: url(./img/facebook-white.png);
-							background-size: 11px;
+							background-size: 8px;
 							border-top: 1px solid transparent;
 							border-left: 1px solid transparent;
 							&:hover{
@@ -559,7 +566,7 @@ html{
 						}
 						&.instagram{
 							background-image: url(./img/instagram-white.png);
-							background-size: 22px;
+							background-size: 18px;
 							border-top: 1px solid transparent;
 							&:hover{
 								border-top: 1px solid #fff;
@@ -567,7 +574,7 @@ html{
 						}
 						&.soundcloud{
 							background-image: url(./img/spotify-white.png);
-							background-size: 24px;
+							background-size: 20px;
 							border-top: 1px solid transparent;
 							border-right: 1px solid transparent;
 							&:hover{
