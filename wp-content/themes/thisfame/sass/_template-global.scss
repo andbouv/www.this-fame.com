@@ -8,7 +8,7 @@ html{
 			width:60px;
 			background-color: #0d0c0c;
 			position: fixed;
-			z-index:3000000;
+			z-index:30000000000;
 			@include transition(0.5s);
 
 			@media(max-width:700px){
@@ -256,7 +256,7 @@ html{
 			background-color: $black;
 			height:100vh;
 			position: absolute;
-			z-index:30000;
+			z-index:3000000;
 			top:0px;
 			width:75%;
 			box-shadow: 1px 1px 10px #000;
@@ -273,14 +273,17 @@ html{
 				@include transform(translateY(-50%));
 				li{
 					list-style-type: none;
-					margin:7px 20px;
+					margin:14px 20px;
+					opacity:0;
+					@include transition(5.5s);
 					a{
 						color:#fff;
 						text-transform: uppercase;
-						font-size:24px;
+						font-size:18px;
 						font-weight: lighter;
 						opacity: 0;
-						@include transition(5.7s);
+						margin-top:10px;
+						@include transition(3.5s);
 					}
 				}
 			}
@@ -296,9 +299,13 @@ html{
 				nav{
 					ul{
 						li{
+							margin:3px 20px;
+							opacity:1;
+							@include transition(5.5s);
 							a{
 								opacity:1;
-								@include transition(0.5s);
+								@include transition(3.5s);
+								margin-top:0px;
 								&:hover{
 									background-color: #fff;
 									color:$black;
@@ -519,6 +526,8 @@ html{
 							@media(max-width:700px){
 								display:block;
 								width:100%;
+								padding-left: 0px;
+								font-size:20px;
 							}
 						}
 					}

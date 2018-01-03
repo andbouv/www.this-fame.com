@@ -250,6 +250,8 @@
 </div>
 <div class="loader">
 	<h1>THIS FAME</h1>
+	<hr/>
+	<hr class="line"/>
 </div>
 <? get_footer(); ?>
 <script type="text/javascript">
@@ -259,7 +261,7 @@ $('iframe').jSound({
 </script>
 <script>
 
-jQuery(".loader").delay(9000).fadeToggle(600)
+jQuery(".loader").delay(10500).fadeToggle(600)
 // Changing the defaults
 window.sr = ScrollReveal({ reset: true });
 

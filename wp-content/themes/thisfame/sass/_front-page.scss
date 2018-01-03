@@ -2,7 +2,7 @@ html{
 	body.home{
 		section.top-page{
 			h1{
-				font-size: 24px;
+				font-size: 20px;
 				font-family: $fontroboto;
 				font-variant: small-caps;
 				font-weight: 400;
@@ -15,6 +15,9 @@ html{
 				color:#fff;
 				padding:5px 0px;
 				padding-left:40px;
+				@media(max-width:$size4){
+					padding-left:0px;
+				}
 			}
 		}
 		.loader{
@@ -25,27 +28,51 @@ html{
 			position: fixed;
 			top: 0;
 			width: 100%;
-			z-index: 3000000;
-
+			z-index: 30000000000000;
+			hr{
+				margin-top:55vh;
+				animation: line 4.2s;
+				animation-delay:3.5s;
+				animation-timing-function: ease-out;
+				background-color: #338E97;
+				border:none;
+				height:0.3px;
+				width:0%;
+				@include transform(rotate(90deg));
+				&.line{
+					@include transform(rotate(0deg));
+				}
+			}
+			@keyframes line {
+				0%   {opacity: 0;width:0%;height:1px;}
+				50% {opacity: 1;width:50%;height:1px;}
+				100%   {opacity: 0;width:75%;height:1px;}
+			}
 		}
 
 		.loader h1{
 			background: none;
 			border: none;
 			color: #fff;
-			font-size: 40px;
+			font-size: 20px;
 			font-family: $fontroboto;
 			font-variant: small-caps;
 			font-weight: 400;
-			height: 100vh;
-			line-height: 100vh;
+			margin-top:30vh;
 			letter-spacing: 15px;
-			animation: example 7s;
-			animation-delay:1.5s;
+			animation: example 9s;
+			animation-delay:1s;
 			margin: 0 0 10px;
 			padding: 0;
 			text-align: center;
 			opacity: 0;
+			position: absolute;
+			padding:15px 0px;
+			left:calc(50% + 10px);
+			background-color: $black;
+			filter: blur(5px);
+			@include transform(translateX(-50%));
+			z-index:20;
 			@media(max-width:700px){
 				font-size:25px;
 			}
@@ -53,12 +80,13 @@ html{
 		.loader h1 {animation-timing-function: ease-out;}
 
 		@keyframes example {
-				0%   {opacity: 0;}
-		    20%  {opacity: 1;}
-		    40%  {opacity: 0;}
-				60%  {opacity: 1;}
-				80%  {opacity: 0;}
-		    100% {opacity: 1;}
+				0%   {opacity: 0;top:53vh; filter: blur(5px);}
+				10%   {filter: blur(0px);}
+				20%   {filter: blur(5px);}
+		    35%  {opacity: 1;top:50vh; filter: blur(0px);}
+
+				69%  {opacity: 1;top:50vh; filter: blur(0px);}
+				100%  {opacity: 0;top:47vh; filter: blur(5px);}
 		}
 		div.slider{
 			width:100%;
@@ -87,6 +115,9 @@ html{
 				height:120px;
 				@include transition(0.5s);
 				cursor:pointer;
+				@media(max-width:700px){
+					display:none !important;
+				}
 				&.slick-next{
 					background-position: center;
 					background-size: 12px;
@@ -95,6 +126,9 @@ html{
 					text-indent: -9999px;
 					top:46%;
 					right:0px;
+					@media(max-width:700px){
+						display:none;
+					}
 				}
 				&.slick-prev{
 					background-position: center;
@@ -105,6 +139,9 @@ html{
 					background-size: 12px;
 					top:46%;
 					left:-60px;
+					@media(max-width:700px){
+						display:none;
+					}
 				}
 			}
 
@@ -193,7 +230,7 @@ html{
 								margin:0 auto;
 								position: relative;
 								@media(max-width:700px){
-									padding:0px 30px;
+									padding:0px 0px;
 									position: relative;
 								}
 							}
@@ -204,6 +241,9 @@ html{
 								padding-right: 0px;
 								@media(max-width:700px){
 									width:100%;
+									@include display-flex();
+									@include flex-direction(column);
+									padding:0px 15px;
 								}
 								div.line{
 									@include display-flex();
@@ -251,6 +291,9 @@ html{
 									color: #fff;
 									@include border-radius(7px);
 									@include transition(0.5s);
+									@media(max-width:700px){
+										width:120px;
+									}
 									&:hover{
 										background-color: #fff;
 										color:$black;
@@ -299,6 +342,9 @@ html{
 			div.container{
 				@include display-flex();
 				padding-bottom:40px;
+				@media(max-width:700px){
+					@include flex-direction(column);
+				}
 				div.title-playlist{
 					@include display-flex();
 					width:100%;
@@ -352,6 +398,9 @@ html{
 				div.contain-titre{
 					@include display-flex();
 					width:100%;
+					@media(max-width:700px){
+						display:none;
+					}
 					div.bloc{
 						width:calc(25% - 20px);
 						position: relative;
@@ -371,7 +420,10 @@ html{
 				div.contain-playlist{
 					@include display-flex();
 					width:100%;
-
+					@media(max-width:700px){
+						@include flex-direction(column);
+						padding:0px 15px;
+					}
 					a.bloc{
 						width:calc(25% - 20px);
 						background-size: cover;
@@ -381,7 +433,11 @@ html{
 						margin:10px;
 						@include transition(0.5s);
 						@include border-radius(7px);
-
+						@media(max-width:700px){
+							width:100%;
+							margin:0px;
+							margin-bottom:25px;
+						}
 						&:hover{
 
 							div.contain-info{
@@ -919,6 +975,9 @@ html{
 					@include display-flex();
 					@include flex-grow(4);
 					@include flex-wrap(wrap);
+					@media(max-width:$size4){
+						@include flex-direction(column);
+					}
 					div.bloc{
 						width:calc(100% / 4);
 						text-align: center;
@@ -929,6 +988,9 @@ html{
 						@include transition(0.5s);
 						color:#fff;
 						position: relative;
+						@media(max-width:$size4){
+							width:100%;
+						}
 						&:nth-child(n+5){
 							border-bottom:0px;
 						}
