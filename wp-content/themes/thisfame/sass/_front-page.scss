@@ -86,7 +86,7 @@ html{
 				20%   {filter: blur(5px);}
 		    35%  {opacity: 1;top:50vh; filter: blur(0px);}
 
-				69%  {opacity: 1;top:50vh; filter: blur(0px);}
+				75%  {opacity: 1;top:50vh; filter: blur(0px);}
 				100%  {opacity: 0;top:47vh; filter: blur(5px);}
 		}
 		div.slider{
@@ -520,6 +520,9 @@ html{
 				border-bottom:1px solid #595556;
 				padding-top:100px;
 				padding-bottom:90px;
+				@media(max-width:$size4){
+					@include flex-direction(column);
+				}
 				div.contain-title{
 					width:40px;
 					p.title-vert{
@@ -544,6 +547,9 @@ html{
 					@include display-flex();
 					@include flex-direction(column);
 					border-right:1px solid #595556;
+					@media(max-width:$size4){
+						width:100%;
+					}
 					p.description{
 						color:#fff;
 						padding-right: 60px;
@@ -561,7 +567,10 @@ html{
 						width:100%;
 						padding-left:0px;
 						padding-right:40px;
-
+						@media(max-width:$size4){
+							padding-left:15px;
+							padding-right:15px;
+						}
 						div.bloc{
 							width:calc(100%);
 							position: relative;
@@ -670,6 +679,12 @@ html{
 					width:50%;
 					padding-left:40px;
 					@include display-flex();
+					@media(max-width:$size4){
+						width:100%;
+						@include flex-direction(column);
+						margin-top:40px;
+						padding-left:0px;
+					}
 					p.title-vert{
 						font-weight: lighter;
 						margin-bottom: 30px;
@@ -685,6 +700,11 @@ html{
 						width:100%;
 						padding-left:0px;
 						padding-right:40px;
+						@media(max-width:$size4){
+							width:100%;
+							padding-left:15px;
+							padding-right:15px;
+						}
 						div.bloc{
 							position: relative;
 							@include transition(0.5s);
@@ -795,13 +815,22 @@ html{
 		}
 		section.video{
 			padding-top:60px;
+			@media(max-width:$size4){
+				padding-top:0px;
+			}
 			div.container{
 				@include display-flex();
 				@include justify-content(space-between);
 				border-bottom:1px solid $grey;
 				padding-bottom:100px;
+				@media(max-width:$size4){
+					padding-bottom:40px;
+				}
 				div.contain-title{
 					padding-top:180px;
+					@media(max-width:$size4){
+						display:none
+					}
 				}
 				div.contain-video{
 					width:80%;
@@ -815,6 +844,9 @@ html{
 					background-size:cover;
 					@include transition(0.5s);
 					@include border-radius(7px);
+					@media(max-width:$size4){
+						height:380px;
+					}
 					&:hover{
 						@include transition(0.5s);
 						div.contain-info{
@@ -842,11 +874,18 @@ html{
 							height:100%;
 							position: relative;
 							padding:120px 50px;
+							@media(max-width:$size4){
+								padding:60px 20px;
+							}
 						}
 						p{
 							color:#fff;
 							margin-top:50px;
 							width:50%;
+							@media(max-width:$size4){
+								left:0px;
+								width:100%;
+							}
 						}
 						a{
 							color:#fff;
@@ -872,6 +911,9 @@ html{
 							position: absolute;
 							top:50px;
 							left:-60px;
+							@media(max-width:$size4){
+								left:0px;
+							}
 							h3{
 								text-transform: uppercase;
 								margin-bottom: 0px;
@@ -880,6 +922,9 @@ html{
 								width:auto;
 								font-size:70px;
 								z-index:3;
+								@media(max-width:$size4){
+									font-size: 30px;
+								}
 							}
 							hr{
 								width:170px;
@@ -904,7 +949,9 @@ html{
 				text-align: center;
 				padding-top:50px;
 				@include justify-content(center);
-
+				@media(max-width:$size4){
+					@include flex-direction(column);
+				}
 			}
 			div.title-artistes{
 				@include display-flex();
@@ -937,6 +984,9 @@ html{
 			div.container{
 				color:#fff;
 				@include display-flex();
+				@media(max-width: $size4){
+					@include flex-direction(column);
+				}
 				a.other-artistes{
 					text-align: center;
 					color:#fff;
