@@ -108,6 +108,20 @@ html{
 					order:2;
 				}
 			}
+			h1{
+				font-size: 16px;
+				font-family: "Abel",sans-serif;
+				font-variant: small-caps;
+				font-weight: 400;
+				letter-spacing: 8px;
+				z-index: 2000;
+				color: #fff;
+				padding: 16px 0px;
+				display:none;
+				@media(max-width:$size4){
+					display:block;
+				}
+			}
 			.hamburger-menu {
 				position: absolute;
 			  top: 0;

@@ -17,6 +17,7 @@ html{
 				padding-left:40px;
 				@media(max-width:$size4){
 					padding-left:0px;
+					display:none;
 				}
 			}
 		}
@@ -75,7 +76,11 @@ html{
 			@include transform(translateX(-50%));
 			z-index:20;
 			@media(max-width:700px){
-				font-size:25px;
+				font-size:18px;
+				margin:0px;
+				margin-top:0vh;
+				padding:0px;
+				width:100%;
 			}
 		}
 		.loader h1 {animation-timing-function: ease-out;}
@@ -340,6 +345,9 @@ html{
 			background-color: $black;
 			padding-top:120px;
 			overflow:hidden;
+			@media(max-width: $size4){
+				padding-top: 60px;
+			}
 			div.container{
 				@include display-flex();
 				padding-bottom:40px;
@@ -438,6 +446,7 @@ html{
 							width:100%;
 							margin:0px;
 							margin-bottom:25px;
+							height:320px;
 						}
 						&:hover{
 
@@ -513,7 +522,9 @@ html{
 			background: -o-linear-gradient(45deg, rgba(11,135,147,1) 0%, rgba(11,135,147,1) 0%, rgba(54,0,51,0.55) 76%, rgba(54,0,51,0.41) 100%);
 			background: -ms-linear-gradient(45deg, rgba(11,135,147,1) 0%, rgba(11,135,147,1) 0%, rgba(54,0,51,0.55) 76%, rgba(54,0,51,0.41) 100%);
 			background: linear-gradient(45deg, rgba(11,135,147,1) 0%, rgba(11,135,147,1) 0%, rgba(54,0,51,0.55) 76%, rgba(54,0,51,0.41) 100%);*/
-
+			@media(max-width: $size4){
+				padding:0px 15px;
+			}
 			div.container{
 				@include display-flex();
 				border-top:1px solid #595556;
@@ -522,6 +533,7 @@ html{
 				padding-bottom:90px;
 				@media(max-width:$size4){
 					@include flex-direction(column);
+					padding-top:50px;
 				}
 				div.contain-title{
 					width:40px;
@@ -549,6 +561,8 @@ html{
 					border-right:1px solid #595556;
 					@media(max-width:$size4){
 						width:100%;
+						border-right: none;
+						border-right: none;
 					}
 					p.description{
 						color:#fff;
@@ -568,8 +582,7 @@ html{
 						padding-left:0px;
 						padding-right:40px;
 						@media(max-width:$size4){
-							padding-left:15px;
-							padding-right:15px;
+							padding-right:0px;
 						}
 						div.bloc{
 							width:calc(100%);
@@ -702,8 +715,7 @@ html{
 						padding-right:40px;
 						@media(max-width:$size4){
 							width:100%;
-							padding-left:15px;
-							padding-right:15px;
+							padding-right:0px;
 						}
 						div.bloc{
 							position: relative;
@@ -817,6 +829,7 @@ html{
 			padding-top:60px;
 			@media(max-width:$size4){
 				padding-top:0px;
+				padding:0px 15px;
 			}
 			div.container{
 				@include display-flex();
@@ -846,6 +859,7 @@ html{
 					@include border-radius(7px);
 					@media(max-width:$size4){
 						height:380px;
+						width:95%;
 					}
 					&:hover{
 						@include transition(0.5s);
@@ -876,6 +890,8 @@ html{
 							padding:120px 50px;
 							@media(max-width:$size4){
 								padding:60px 20px;
+								background-size: 90px;
+								background-position: 50% 62%;
 							}
 						}
 						p{
@@ -885,6 +901,7 @@ html{
 							@media(max-width:$size4){
 								left:0px;
 								width:100%;
+								text-align: center;
 							}
 						}
 						a{
@@ -924,6 +941,8 @@ html{
 								z-index:3;
 								@media(max-width:$size4){
 									font-size: 30px;
+									width:100%;
+									text-align: center;
 								}
 							}
 							hr{
@@ -945,6 +964,9 @@ html{
 		section.artiste{
 			background-color: $black;
 			padding:100px 0px;
+			@media(max-width: $size4){
+				padding:0px 15px;
+			}
 			div.other{
 				text-align: center;
 				padding-top:50px;
@@ -998,6 +1020,10 @@ html{
 					@include border-radius(7px);
 					margin-left:80px;
 					@include transition(0.5s);
+					@media(max-width: $size4){
+						margin:0 auto;
+						width:200px;
+					}
 					&:hover{
 						background-color: #fff;
 						color:$black;
@@ -1041,6 +1067,8 @@ html{
 						position: relative;
 						@media(max-width:$size4){
 							width:100%;
+							border:1px solid #595556;
+							height:310px;
 						}
 						&:nth-child(n+5){
 							border-bottom:0px;
@@ -1117,6 +1145,9 @@ html{
 						}
 						&:nth-child(4),&:nth-child(8){
 							border-right:none;
+							@media(max-width:$size4){
+								border-right:1px solid #595556;
+							}
 						}
 					}
 				}

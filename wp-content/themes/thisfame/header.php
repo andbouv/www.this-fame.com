@@ -43,6 +43,7 @@
 		<div class="hamburger-menu">
 		  <div class="bar"></div>
 		</div>
+		<h1>THIS FAME</h1>
 		<button class="search">
 		</button>
 		<div class="line-social">

@@ -108,7 +108,7 @@ div.contain-title{
 	@media(max-width:700px){
 		@include display-flex();
 		padding-left:20px;
-		width:100%;
+		width:100% !important;
 		padding:0px;
 	}
 	p.title-vert{
@@ -122,13 +122,13 @@ div.contain-title{
 		writing-mode: sideways-lr;
 		text-orientation: sideways-right;
 		@media(max-width:700px){
-			text-orientation:mixed;
-			writing-mode: horizontal-tb;
-			text-align: center;
-			font-size:28px;
+			text-orientation:mixed !important;
+			writing-mode: horizontal-tb !important;
+			text-align: center !important;
+			font-size:28px !important;
 			margin-bottom:15px;
 			letter-spacing: normal;
-			width:100%;
+			width:100% !important;
 			padding:0px 20px;
 			font-family: $font;
 		}
