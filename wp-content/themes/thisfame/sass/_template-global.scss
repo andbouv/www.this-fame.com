@@ -120,6 +120,7 @@ html{
 				display:none;
 				@media(max-width:$size4){
 					display:block;
+					margin:0 auto;
 				}
 			}
 			.hamburger-menu {
@@ -463,6 +464,7 @@ html{
 				&:before, &:after{
 					top:28px;
 					left:31px;
+					border-width: 10px 0 10px 16px !important;
 				}
 			}
 			.jsound--pause{
