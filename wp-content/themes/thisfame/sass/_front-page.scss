@@ -14,7 +14,11 @@ html{
 				z-index:2000;
 				color:#fff;
 				padding:5px 0px;
-				padding-left:40px;
+				padding-left:52px;
+				background-image: url(./img/logo-tf.png);
+				background-size: 34px;
+				background-repeat: no-repeat;
+				background-position: left;
 				@media(max-width:$size4){
 					padding-left:0px;
 					display:none;
@@ -49,13 +53,34 @@ html{
 				50% {opacity: 1;width:50%;height:1px;}
 				100%   {opacity: 0;width:90%;height:1px;}
 			}
+			span{
+				width:50px;
+				height:50px;
+				background-repeat: no-repeat;
+				background-position: center;
+				display:inline-block;
+				background-image: url(./img/logo-tf.png);
+				background-size: 50px;
+				margin:0 auto;
+				margin-top:44vh;
+				margin-left:calc(50% - 25px);
+				animation: logo 4.2s;
+				animation-delay:4.5s;
+				animation-timing-function: ease-out;
+				opacity:0;
+			}
+			@keyframes logo {
+				0%   {opacity: 0;}
+				50% {opacity: 1;}
+				100%   {opacity: 0;}
+			}
 		}
 
 		.loader h1{
 			background: none;
 			border: none;
 			color: #fff;
-			font-size: 20px;
+			font-size: 24px;
 			font-family: $fontroboto;
 			font-variant: small-caps;
 			font-weight: 400;
@@ -68,7 +93,7 @@ html{
 			text-align: center;
 			opacity: 0;
 			position: absolute;
-			padding:15px 10px;
+			padding:0px 10px;
 			padding-left: 24px;
 			left:calc(50%);
 			background-color: $black;
@@ -293,9 +318,8 @@ html{
 									font-size:16px;
 									background-color: transparent;
 									padding:7px 20px;
-									border: 2px solid #fff;
+									border: 1px solid #fff;
 									color: #fff;
-									@include border-radius(7px);
 									@include transition(0.5s);
 									@media(max-width:700px){
 										width:120px;
@@ -912,10 +936,8 @@ html{
 							bottom:50px;
 							right:50px;
 							background-color: transparent;
-							border:2px solid #fff;
+							border:1px solid #fff;
 							color:#fff;
-							@include border-radius(7px);
-							border:2px solid #fff;
 							&:hover{
 								background-color: #fff;
 								color:$black;
@@ -1015,9 +1037,8 @@ html{
 					font-size:18px;
 					font-weight:lighter;
 					background-color: transparent;
-					border:2px solid #fff;
+					border:1px solid #595556;
 					padding:7px 20px;
-					@include border-radius(7px);
 					margin-left:80px;
 					@include transition(0.5s);
 					@media(max-width: $size4){

@@ -249,6 +249,7 @@
 </section>
 </div>
 <div class="loader">
+	<span></span>
 	<h1>THIS FAME</h1>
 	<hr/>
 </div>
