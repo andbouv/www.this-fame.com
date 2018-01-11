@@ -50,9 +50,7 @@ html{
 					@include transition(0.5s);
 					text-indent: -9999px;
 					border-bottom: 1px solid transparent;
-					&:hover{
-						border-bottom: 1px solid #fff;
-					}
+
 					&:nth-child(2){
 						border-top: 1px solid $grey;
 						border-bottom: 1px solid $grey;
@@ -63,16 +61,14 @@ html{
 						border-top: 1px solid transparent;
 						border-left: 1px solid transparent;
 						&:hover{
-							border-top: 1px solid #fff;
-							border-left: 1px solid #fff;
+							border-top: 1px solid transparent;
+							border-left: 1px solid transparent;
 						}
 					}
 					&.instagram{
 						background-image: url(./img/instagram-white.png);
 						background-size: 16px;
-						&:hover{
-							border-top: 1px solid #fff;
-						}
+
 					}
 					&.soundcloud{
 						background-image: url(./img/spotify-white.png);
@@ -80,8 +76,8 @@ html{
 						border-top: 1px solid transparent;
 						border-right: 1px solid transparent;
 						&:hover{
-							border-top: 1px solid #fff;
-							border-right: 1px solid #fff;
+							border-top: 1px solid transparent;
+							border-right: 1px solid transparent;
 						}
 					}
 				}
@@ -107,6 +103,7 @@ html{
 					height:100%;
 					border:none;
 					order:2;
+					top:-2px;
 				}
 			}
 			h1{
@@ -130,6 +127,9 @@ html{
 				@media(max-width:$size4){
 					display:block;
 					margin:0 auto;
+					position: relative;
+					top:11px;
+					background-size:26px;
 				}
 			}
 			.hamburger-menu {
@@ -151,7 +151,7 @@ html{
 				}
 				.bar{
 					width:20px;
-					height:2px;
+					height:1px;
 					@include transition(0.5s);
 					transform: translateY($bar-spacing);
 					background: rgba( #fff, 1);
@@ -173,7 +173,7 @@ html{
 			.bar:after,
 			.bar:before {
 			  width: $bar-width;
-				height: $bar-height;
+				height: 1px;
 			}
 
 
@@ -303,11 +303,11 @@ html{
 					a{
 						color:#fff;
 						text-transform: uppercase;
-						font-size:18px;
+						font-size:20px;
 						font-weight: lighter;
 						opacity: 0;
 						margin-top:10px;
-						@include transition(3.5s);
+						@include transition(0.5s);
 					}
 				}
 			}
@@ -325,10 +325,10 @@ html{
 						li{
 							margin:3px 20px;
 							opacity:1;
-							@include transition(5.5s);
+							@include transition(4.5s);
 							a{
 								opacity:1;
-								@include transition(3.5s);
+								@include transition(0.5s);
 								margin-top:0px;
 								&:hover{
 									background-color: #fff;
@@ -363,14 +363,14 @@ html{
 				@include flex-direction(column);
 			}
 			li{
-				width:50px;
-				height:50px;
+				width:40px;
+				height:40px;
 				&:nth-child(1){
 					a{
 						background-position: center;
 						background-repeat: no-repeat;
 						background-image: url(./img/fb.png) !important;
-						background-size: 13px;
+						background-size: 9px;
 						@include transition(0.5s);
 						border-bottom:2px solid $black !important;
 						&:hover{
@@ -383,7 +383,7 @@ html{
 						background-position: center;
 						background-repeat: no-repeat;
 						background-image: url(./img/twitter.png) !important;
-						background-size: 24px;
+						background-size: 19px;
 						@include transition(0.5s);
 						&:hover{
 							background-color: #595556!important;
@@ -394,8 +394,8 @@ html{
 					border:none!important;
 					@include border-radius(0px);
 					background-image: none !important;
-					height:50px;
-					width:50px;
+					height:40px;
+					width:40px;
 					box-shadow:none;
 					background-color: #fff !important;
 					span.juiz_sps_network_name{
@@ -535,7 +535,7 @@ html{
 						font-family: $font;
 						font-size:16px;
 						text-align: center;
-						padding-top:6px;
+						padding-top:15px;
 						@include transition(0.5s);
 						@media(max-width:700px){
 							display:none;
@@ -556,8 +556,10 @@ html{
 							@media(max-width:700px){
 								display:block;
 								width:100%;
-								padding-left: 0px;
-								font-size:20px;
+								padding-left: 80px;
+								font-size:15px;
+								background-position: 17% 50%;
+								background-size: 26px;
 							}
 						}
 					}

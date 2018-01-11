@@ -45,6 +45,9 @@ span.title{
 	padding-left:50px;
 	left:calc(50% - 105px);
 	background-size: 35px;
+	@media(max-width:$size4){
+		display:none;
+	}
 }
 
 .clearfix {

@@ -300,6 +300,7 @@ html{
 				width:100%;
 				border-top:1px solid $grey;
 				padding-top:70px;
+				padding-bottom:50px;
 				@media(max-width:700px){
 					@include flex-grow(1);
 					@include flex-direction(column);
@@ -431,7 +432,7 @@ html{
 					p{
 						position: absolute;
 						right:40px;
-						top:-90px;
+						top:-140px;
 						text-transform: uppercase;
 						font-family: $font;
 						font-size:16px;
