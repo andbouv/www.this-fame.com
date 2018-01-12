@@ -1,7 +1,7 @@
 <? get_header(); ?>
 <div class="page">
 <section class="top-page">
-	<h1>THIS FAME</h1>
+	<h2 class="logo"></h2>
 	<div class="slider">
 		<? $i = 0 ?>
 		<?

@@ -39,12 +39,14 @@ span.title{
 	width:auto;
 	display:block;
 	text-align: center;
-	background-image: url(./img/logo-tf.png);
+	background-image: url(./img/logo-this-fame.png);
 	background-repeat: no-repeat;
 	background-position: left;
-	padding-left:50px;
-	left:calc(50% - 105px);
-	background-size: 35px;
+	left:calc(50% - 100px);
+	background-size: contain;
+	width:180px;
+	height:50px;
+	display:inline-block;
 	@media(max-width:$size4){
 		display:none;
 	}

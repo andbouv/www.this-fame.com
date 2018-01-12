@@ -5,7 +5,7 @@
 	juiz_sps( $jsps_networks );
 ?>
 <div class="page">
-<span class="title">THIS FAME</span>
+<span class="title"></span>
 <section class="top-page" style="background-image:url(<? the_post_thumbnail_url('full') ?>)">
 	<div class="contain-top">
 		<div class="container">

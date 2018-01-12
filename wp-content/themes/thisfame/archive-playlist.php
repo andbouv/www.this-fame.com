@@ -1,6 +1,6 @@
 <? get_header(); ?>
 <div class="page">
-	<span class="title">THIS FAME</span>
+	<span class="title"></span>
 	<section class="top-page" >
 		<div class="contain-top">
 			<div class="container">
