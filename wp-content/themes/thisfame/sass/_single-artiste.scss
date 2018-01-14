@@ -26,6 +26,12 @@ html{
 					width:100%;
 					bottom:21%;
 					position: absolute;
+					@media(max-width:$size3){
+						padding:0px 20px;
+						font-size:50px;
+						bottom:24%;
+						text-align: center;
+					}
 				}
 			}
 		}
@@ -43,6 +49,10 @@ html{
 					height:400px;
 					padding:30px 0px;
 					@include border-radius(7px);
+					position: absolute;
+					@media(max-width:$size4){
+						left:10px;
+					}
 					div.social{
 						@include display-flex();
 						@include justify-content(center);
@@ -139,6 +149,12 @@ html{
 						padding-top:50px;
 						padding-bottom:50px;
 						border-left:1px solid #595556;
+						@media(max-width:$size4){
+							float:none;
+							width:100%;
+							padding-top:320px;
+							border:none;
+						}
 					}
 				}
 				div.titre{
@@ -149,19 +165,92 @@ html{
 					border-bottom:1px solid #595556;
 					@include display-flex();
 					padding-bottom:100px;
+					@media(max-width:$size4){
+						margin-top:0px;
+						padding:0px 20px;
+						border:none;
+						@include flex-direction(column);
+					}
 					div.contain{
 						width:50%;
 						@include display-flex();
+						@media(max-width:$size4){
+							width:100%;
+							padding-top:60px;
+							padding-bottom:60px;
+							border-top:1px solid #595556;
+							@include flex-direction(column);
+						}
 						&:nth-child(1){
 							padding-right:50px;
+							@media(max-width:$size4){
+								padding-right:0px;
+							}
 						}
 						&:nth-child(2){
 							padding-left:40px;
 							border-left:1px solid #595556;
+							@media(max-width:$size4){
+								border-left:none;
+								padding-left:0px;
+							}
 						}
 					}
 					div.contain-titre{
 						width:100%;
+						div.bloc{
+							width:calc(100%);
+							position: relative;
+							@include transition(0.5s);
+							overflow:hidden;
+							&:hover{
+								div.contain-link{
+									left:0px;
+								}
+							}
+							div.contain-link{
+								background-color: #fff;
+								position: absolute;
+								height:72px;
+								width:75%;
+								left:-75%;
+								top:0px;
+								z-index:20000;
+								@include border-left-radius(7px);
+								text-align: center;
+								@include transition(0.5s);
+								@include display-flex();
+								@include justify-content(center);
+								p{
+									height:100%;
+									padding-top:26px;
+									margin-bottom:0px;
+									margin-right:10px;
+									font-weight:bold;
+									font-size:14px;
+								}
+								a{
+									width:40px;
+									height:72px;
+									text-indent: -99999px;
+									background-repeat: no-repeat;
+									background-position: center;
+									margin:0px 8px;
+									&.spotify{
+										background-image: url(./img/spotify.png);
+										background-size: 24px;
+									}
+									&.soundcloud{
+										background-image: url(./img/soundcloud.png);
+										background-size: 34px;
+									}
+									&.youtube{
+										background-image: url(./img/youtube.png);
+										background-size: 24px;
+									}
+								}
+							}
+						}
 						.jSound{
 							background-color: transparent;
 						}
@@ -224,6 +313,9 @@ html{
 						@include flex-grow(2);
 						@include justify-content(space-between);
 						width:100%;
+						@media(max-width:$size4){
+							@include flex-direction(column);
+						}
 						div.bloc{
 							width:calc(50% - 20px);
 							height:200px;
@@ -233,6 +325,9 @@ html{
 							position: relative;
 							@include transition(0.5s);
 							@include border-radius(7px);
+							@media(max-width:$size4){
+								width:100%;
+							}
 							&:hover{
 								p{
 									opacity:1;
@@ -266,6 +361,9 @@ html{
 					padding-top:100px;
 					padding-bottom:60px;
 					@include display-flex();
+					@media(max-width:$size4){
+						@include flex-direction(column);
+					}
 					p.titre{
 						height:auto;
 						text-align: center;
@@ -277,6 +375,10 @@ html{
 						position: relative;
 						overflow:hidden;
 						@include transition(0.5s);
+						@media(max-width:$size4){
+							width:100%;
+							padding:0px 20px;
+						}
 						&:hover{
 							button{
 								bottom:0px;
@@ -396,12 +498,25 @@ html{
 					padding-top:80px;
 					margin-top:40px;
 					padding-bottom:80px;
+					@media(max-width:$size4){
+						@include flex-direction(column);
+						padding:0px 20px;
+						padding-bottom:50px;
+						border:none;
+					}
 					div.contain-title{
 						padding-top:0px;
+						@media(max-width:$size4){
+							border-top:1px solid $grey;
+							padding-top:50px;
+						}
 					}
 					div.contain-artistes{
 						@include display-flex();
 						width:100%;
+						@media(max-width:$size4){
+							@include flex-direction(column);
+						}
 						a.bloc{
 							width:calc(25% - 20px);
 							background-size: cover;
@@ -411,6 +526,9 @@ html{
 							margin:10px;
 							@include transition(0.5s);
 							@include border-radius(7px);
+							@media(max-width:$size4){
+								width:100%;
+							}
 							&:hover{
 								div.contain-info{
 									background-color: rgba(#000, 0.3);

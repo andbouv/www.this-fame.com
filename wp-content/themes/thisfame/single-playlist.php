@@ -30,7 +30,7 @@
 				<?setup_postdata($post); ?>
 				<div class="bloc">
 				<? the_field('titre') ?>
-				<?if(get_field('lien_soundcloud') || get_field('lien_spotify')):?>
+				<?if(get_field('lien_soundcloud') || get_field('lien_spotify') || get_field('lien_youtube')):?>
 					<div class="contain-link">
 						<p>Retrouvez ce titre sur : </p>
 						<?if(get_field('lien_soundcloud')):?>
@@ -38,6 +38,9 @@
 						<? endif; ?>
 						<?if(get_field('lien_spotify')):?>
 							<a href="<? the_field('lien_soundcloud') ?>" target="_blank" class="spotify">lien spotify</a>
+						<? endif; ?>
+						<?if(get_field('lien_youtube')):?>
+							<a href="<? the_field('lien_youtube') ?>" target="_blank" class="youtube">lien youtube</a>
 						<? endif; ?>
 					</div>
 				<? endif; ?>
