@@ -8,30 +8,26 @@
 			</div>
 		</div>
 	</section>
-	<section class="artciles">
+	<section class="articles">
 		<div class="container">
-			<?php if ( have_posts() ) { ?>
 
-					 <ul>
+		<?
+					if( have_posts() ){
+				    $types = array('artiste', 'video', 'playlist');
+				    foreach( $types as $type ){
+				        echo 'your container opens here for ' . $type;
+				        while( have_posts() ){
+				            the_post();
+				            if( $type == get_post_type() ){
+				                get_template_part('content', $type);
+				            }
+				        }
+				        rewind_posts();
+				        echo 'your container closes here for ' . $type;
+				    }
+				}
+		?>
 
-					 <?php while ( have_posts() ) { the_post(); ?>
-
-							<li>
-								<h3><a href="<?php echo get_permalink(); ?>">
-									<?php the_title();  ?>
-								</a></h3>
-								<?php  the_post_thumbnail('medium') ?>
-								<?php echo substr(get_the_excerpt(), 0,200); ?>
-								<div class="h-readmore"> <a href="<?php the_permalink(); ?>">Read More</a></div>
-							</li>
-
-					 <?php } ?>
-
-					 </ul>
-
-					<?php echo paginate_links(); ?>
-
-			 <?php } ?>
 		</div>
 	</section>
 </div>

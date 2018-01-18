@@ -62,6 +62,7 @@
 		<div class="container">
 			<form action="<?php bloginfo('url'); ?>" method="get" accept-charset="utf-8" class="recherche">
 				<input type="search-button" name="s" id="s" acceskey="s" placeholder="Votre recherche" />
+				<input type="hidden" name="post_type" value="post_type_name" />
 				<button type="submit" class="button-search-white"></button>
 			</form>
 		</div>

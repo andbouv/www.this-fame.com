@@ -24,7 +24,7 @@ function add_cnil() {
 
 function add_cnil(){
 
-  $couleurFondCookie     = "#222";
+  $couleurFondCookie     = "#0D0C0C";
   $couleurTexteCookie    = "#fff";
 
   $couleurBoutons        = "#0a5d91";
