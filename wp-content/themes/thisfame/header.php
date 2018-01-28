@@ -46,11 +46,11 @@
 		  <div class="bar"></div>
 		</div>
 		<a href="<?php bloginfo('url'); ?>/"><h1>THIS FAME</h1></a>
-		<button class="search">
+		<button class="search" id="search">
 		</button>
 		<div class="line-social">
 			<a href="" class="fb" target="_blank">fb</a>
-			<a href="" class="instagram" target="_blank">instagram</a>
+			<a href="https://www.instagram.com/this.fame/?hl=fr" class="instagram" target="_blank">instagram</a>
 			<a href="" class="soundcloud" target="_blank">soundcloud</a>
 		</div>
 	</header>
@@ -62,7 +62,6 @@
 		<div class="container">
 			<form action="<?php bloginfo('url'); ?>" method="get" accept-charset="utf-8" class="recherche">
 				<input type="search-button" name="s" id="s" acceskey="s" placeholder="Votre recherche" />
-				<input type="hidden" name="post_type" value="post_type_name" />
 				<button type="submit" class="button-search-white"></button>
 			</form>
 		</div>
@@ -79,7 +78,7 @@
 })();
 
 
-$( ".search" ).click(function() {
+$( "#search" ).click(function() {
   $( "header" ).animate({
     left: "-60",
   }, 100, function() {

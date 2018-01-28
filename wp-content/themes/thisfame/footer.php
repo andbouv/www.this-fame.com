@@ -9,7 +9,7 @@
 		</div>
 		<div class="line-social">
 			<a href="" class="fb">fb</a>
-			<a href="" class="instagram">instagram</a>
+			<a href="https://www.instagram.com/this.fame/?hl=fr" class="instagram">instagram</a>
 			<a href="" class="soundcloud">soundcloud</a>
 		</div>
 	</div>
