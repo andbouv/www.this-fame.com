@@ -3,7 +3,7 @@
 		<div class="line">
 			<a href="<?php bloginfo('url'); ?>/artistes/">Artistes</a>
 			<a href="<?php bloginfo('url'); ?>/playlists/">Playlists</a>
-			<a href="" class="home"></a>
+			<a href="<?php bloginfo('url'); ?>/" class="home"></a>
 			<a href="<?php bloginfo('url'); ?>/videos/">Vidéos</a>
 			<a href="<?php bloginfo('url'); ?>/actualites/">Actualités</a>
 		</div>
