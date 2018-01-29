@@ -205,15 +205,34 @@
 				<? $i = 0 ?>
 				<? if ( $the_query->have_posts() ) : ?>
 				<div class="contain-artistes">
-					<? while ( $the_query->have_posts() ) { $the_query->the_post();  ?>
-						<? $i++ ?>
-						<a href="<? the_permalink() ?>" class="bloc bloc-<?= $i ?>" style="background-image:url(<? the_post_thumbnail_url('large') ?>)">
-							<div class="contain-info">
-								<h3><? the_title() ?></h3>
-
-							</div>
-						</a>
-					<? }; ?>
+					<? while ( $the_query->have_posts() ) { $the_query->the_post(); ?>
+						<div class="bloc">
+							<a href="<? the_permalink() ?>">
+								<div class="contain-info">
+									<div class="contain-img" style="background-image:url(<? the_post_thumbnail_url('large') ?>)">
+									</div>
+									<h3><? the_title() ?></h3>
+									<?php
+										$posts = get_field('titre');
+										if($posts):
+									?>
+										<p>Nombre de titres : <?= count($posts) ?></p>
+									<? endif; ?>
+									<div class="social">
+										<? if(get_field('facebook')): ?>
+											<a href="<? the_field('facebook') ?>" target="_blank" class="fb">fb</a>
+										<? endif; ?>
+										<? if(get_field('spotify')): ?>
+											<a href="<? the_field('spotify') ?>" target="_blank" class="spotify">Spotify</a>
+										<? endif; ?>
+										<? if(get_field('instagram')): ?>
+											<a href="<? the_field('instagram') ?>" target="_blank" class="instagram">Instagram</a>
+										<? endif; ?>
+									</div>
+								</div>
+							</a>
+						</div>
+					<? } ?>
 				</div>
 				<? endif; ?>
 			</div>

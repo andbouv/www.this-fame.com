@@ -26,7 +26,7 @@
 			<? $j == 0 ?>
 			<? if (have_posts()) : while (have_posts()) : the_post(); ?>
 			<? $j++ ?>
-				<div href="<? the_permalink() ?>" class="bloc">
+				<div class="bloc">
 						<div class="contain-info">
 							<div class="video ci-<?= $j+1 ?>">
 								<? the_field('video') ?>

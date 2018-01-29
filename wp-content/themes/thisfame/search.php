@@ -1,9 +1,11 @@
 <? get_header(); ?>
 <div class="page">
+	<span class="title"></span>
 	<section class="top-page" >
 		<div class="contain-top">
 			<div class="container">
-				<h1>Votre recherche pour <?= get_post_type() ?></h1>
+				<? $titre = $_GET["s"]; ?>
+				<h1>Votre recherche pour <br/><span><?= $titre ?></span></h1>
 			</div>
 		</div>
 	</section>
@@ -22,7 +24,7 @@
             if ($last_type != $post->post_type){
                 $typecount = $typecount + 1;
                 if ($typecount > 1){
-                    echo '</div><!-- close type-container -->'; //close type container
+                    echo '</div></div><!-- close type-container -->'; //close type container
                 }
 
                 // save the post type.
@@ -30,6 +32,15 @@
 
 								//open type container
                 switch ($post->post_type) {
+
+									case 'video':
+											echo "<div class=\"videos\"><div class=\"contain-title\">
+												<p class=\"title-vert\">VIDÉOS</p>
+												<hr/>
+											</div><div class=\"contain-videos\">";
+
+									break;
+
                     case 'artiste':
 										echo "<div class=\"artiste\">
 											<div class=\"titres\">
@@ -41,12 +52,14 @@
                     break;
 
                     case 'titre':
-                        echo "<div class=\"contain-title\">
+                        echo "<div class=\"titres-song\"><div class=\"contain-title\">
 													<p class=\"title-vert\">TITRES</p>
 													<hr/>
-												</div><div class=\"contain-song\"><h2>";
+												</div><div class=\"contain-song\">";
 
                     break;
+
+
 
                     case 'playlist':
 										echo "</div><div class=\"container\">
@@ -61,7 +74,46 @@
             }
         ?>
 
-					<?php if('titre' == get_post_type()) : ?>
+
+			<?php if('video' == get_post_type()) : ?>
+
+				<div class="bloc">
+						<div class="contain-info">
+							<div class="video ci-<?= $j+1 ?>">
+								<? the_field('video') ?>
+								<span class="play-video pv-<?= $j+1 ?>"></span>
+								<h3><? the_title() ?></h3>
+								<? ?>
+								<? $date = get_the_date('Y-m-d') ?>
+								<?php
+								$birth = new DateTime($date);
+								$today = new DateTime();
+								$diff = $birth->diff($today);?>
+								<p class="publication">Publié il y a <?= $diff->format('%a'); ?> jours</p>
+								<?php get_template_part( 'html_includes/partials/social-share' ); ?>
+								<script>
+												$(document).ready(function() {
+														$('.pv-<?= $j+1 ?>').on('click', function(ev) {
+																$(".ci-<?= $j+1 ?> iframe")[0].src += "&autoplay=1";
+																$('.pv-<?= $j+1 ?>').addClass("hide");
+																$('.contain-<?= $j ?>').removeClass("show");
+																ev.preventDefault();
+														});
+
+														$('.contain-<?= $j ?>').on('click', function(ev) {
+															$('.contain-<?= $j ?>').toggleClass("show");
+														});
+														$('.contain-<?= $j ?> span').on('click', function(ev) {
+															$('.contain-<?= $j ?> span').toggleClass("show");
+														});
+												});
+								</script>
+
+							</div>
+						</div>
+				</div>
+
+			<?php elseif('titre' == get_post_type()) : ?>
 
 							<div class="bloc">
 							<? the_field('titre') ?>
@@ -80,6 +132,7 @@
 								</div>
 							<? endif; ?>
 						</div>
+
 
 					<?php elseif('artiste' == get_post_type()) : ?>
 
@@ -113,6 +166,8 @@
 									</div>
 								</div>
 							</a>
+
+
 
         	<?php endif; ?>
 

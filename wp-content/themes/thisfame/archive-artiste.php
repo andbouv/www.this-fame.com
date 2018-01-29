@@ -5,21 +5,36 @@
 		<div class="contain-top">
 			<div class="container">
 				<h1>ARTISTES</h1>
-				<p>Retrouvez toutes nos actualités vidéos du monde électro.<br/>En essayant de vous tenir au courant sur les news du moment.</p>
+				<p>Une multitude d'artistes vous sont proposés ici.</p>
 			</div>
 		</div>
 	</section>
 	<section class="artistes">
 		<div class="container">
 			<div class="contain-artistes">
-			<? if (have_posts()) : while (have_posts()) : the_post(); ?>
-				<div href="<? the_permalink() ?>" class="bloc">
+				<?
+      $args = array(
+        'post_type'=> 'artiste',
+        'posts_per_page' => -1,
+        'orderby' =>	'name',
+				'order' => 'asc'
+        );
+      ?>
+			<? $the_query  = new WP_Query($args);?>
+      <? if ( $the_query->have_posts() ) : ?>
+			<? while ( $the_query->have_posts() ) { $the_query->the_post(); ?>
+				<div class="bloc">
 					<a href="<? the_permalink() ?>">
 						<div class="contain-info">
 							<div class="contain-img" style="background-image:url(<? the_post_thumbnail_url('large') ?>)">
 							</div>
 							<h3><? the_title() ?></h3>
-							<p>Nombre de titres : <?  ?></p>
+							<?php
+								$posts = get_field('titre');
+								if($posts):
+							?>
+								<p>Nombre de titres : <?= count($posts) ?></p>
+							<? endif; ?>
 							<div class="social">
 								<? if(get_field('facebook')): ?>
 									<a href="<? the_field('facebook') ?>" target="_blank" class="fb">fb</a>
@@ -35,7 +50,7 @@
 					</a>
 				</div>
 
-			<? endwhile; endif; ?>
+			<? }; endif; ?>
 
 			</div>
 			<?  wp_pagenavi(); ?>
