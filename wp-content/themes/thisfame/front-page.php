@@ -276,7 +276,6 @@ sr.reveal('.bloc-2', { duration: 2000 });
 sr.reveal('.bloc-3', { duration: 3000 });
 sr.reveal('.bloc-4', { duration: 4000 });
 sr.reveal('.contain-video .contain-txt', { duration: 2000 });
-sr.reveal('.bloc-son', { duration: 1000 });
 </script>
 <script>
 $(".slider").slick({

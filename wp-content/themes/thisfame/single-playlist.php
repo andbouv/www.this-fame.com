@@ -37,7 +37,7 @@
 							<a href="<? the_field('lien_soundcloud') ?>" target="_blank" class="soundcloud">lien soundcloud</a>
 						<? endif; ?>
 						<?if(get_field('lien_spotify')):?>
-							<a href="<? the_field('lien_soundcloud') ?>" target="_blank" class="spotify">lien spotify</a>
+							<a href="<? the_field('lien_spotify') ?>" target="_blank" class="spotify">lien spotify</a>
 						<? endif; ?>
 						<?if(get_field('lien_youtube')):?>
 							<a href="<? the_field('lien_youtube') ?>" target="_blank" class="youtube">lien youtube</a>
@@ -165,7 +165,6 @@ $(function(){
 window.sr = ScrollReveal({ reset: true });
 
 // Customizing a reveal set
-sr.reveal('.jsound--mini', { duration: 3000 });
 sr.reveal('.artiste .bloc', { duration: 1500 });
 sr.reveal('.bloc-1', { duration: 1000 });
 sr.reveal('.bloc-2', { duration: 2000 });

@@ -56,9 +56,9 @@ html{
 						border-top: 1px solid $grey;
 						border-bottom: 1px solid $grey;
 					}
-					&.fb{
-						background-image: url(./img/facebook-white.png);
-						background-size: 8px;
+					&.soundcloud{
+						background-image: url(./img/soundcloud-white.png);
+						background-size: 25px;
 						border-top: 1px solid transparent;
 						border-left: 1px solid transparent;
 						&:hover{
@@ -69,15 +69,15 @@ html{
 					&.instagram{
 						background-image: url(./img/instagram-white.png);
 						background-size: 16px;
-
+						border-bottom: 1px solid $grey;
 					}
-					&.soundcloud{
+					&.spotify{
 						background-image: url(./img/spotify-white.png);
 						background-size: 18px;
 						border-top: 1px solid transparent;
 						border-right: 1px solid transparent;
 						&:hover{
-							border-top: 1px solid transparent;
+							border-bottom: 1px solid transparent;
 							border-right: 1px solid transparent;
 						}
 					}
@@ -595,9 +595,9 @@ html{
 							border-left: 1px solid $grey;
 							border-right: 1px solid $grey;
 						}
-						&.fb{
-							background-image: url(./img/facebook-white.png);
-							background-size: 8px;
+						&.soundcloud{
+							background-image: url(./img/soundcloud-white.png);
+							background-size: 32px;
 							border-top: 1px solid transparent;
 							border-left: 1px solid transparent;
 							&:hover{
@@ -613,7 +613,7 @@ html{
 								border-top: 1px solid #fff;
 							}
 						}
-						&.soundcloud{
+						&.spotify{
 							background-image: url(./img/spotify-white.png);
 							background-size: 20px;
 							border-top: 1px solid transparent;

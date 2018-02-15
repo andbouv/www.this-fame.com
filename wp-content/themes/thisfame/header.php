@@ -47,9 +47,9 @@
 		<button class="search" id="search">
 		</button>
 		<div class="line-social">
-			<a href="" class="fb" target="_blank">fb</a>
 			<a href="https://www.instagram.com/this.fame/?hl=fr" class="instagram" target="_blank">instagram</a>
-			<a href="" class="soundcloud" target="_blank">soundcloud</a>
+			<a href="" class="spotify" target="_blank">spotify</a>
+			<a href="https://soundcloud.com/this-fame" class="soundcloud" target="_blank">soundcloud</a>
 		</div>
 	</header>
 	<div class="menu">

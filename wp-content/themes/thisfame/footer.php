@@ -8,9 +8,9 @@
 			<a href="<?php bloginfo('url'); ?>/actualites/">Actualités</a>
 		</div>
 		<div class="line-social">
-			<a href="" class="fb">fb</a>
+			<a href="https://soundcloud.com/this-fame" class="soundcloud">soundcloud</a>
 			<a href="https://www.instagram.com/this.fame/?hl=fr" class="instagram">instagram</a>
-			<a href="" class="soundcloud">soundcloud</a>
+			<a href="" class="spotify">spotify</a>
 		</div>
 	</div>
 </footer>
