@@ -65,30 +65,51 @@
 			<? endwhile; endif; ?>
 
 			</div>
-			<?  wp_pagenavi(); ?>
+			<div class="load-more-manual">
+				<nav id="page-nav" role="navigation"><?php next_posts_link( __( '<span class="more btn btn-primary btn-lg btn-block">Load more posts</span>', 'wpc' ) ); ?></nav>
+			</div>
 		</div>
 	</section>
 </div>
 <script>
-$('.contain-videos').masonry({
-  // options
-  itemSelector: '.bloc',
-  gutter: 30
-});
+	$('.contain-videos').masonry({
+	  // options
+	  itemSelector: '.bloc',
+	  gutter: 30
+	});
 
-var fixmeTop = $('.contain-filtre').offset().top;       // get initial position of the element
+	var $grid = $('.contain-videos').masonry({
+							itemSelector: '.bloc',
+							gutter: 50,
+						});
+	// get Masonry instance
+	var msnry = $grid.data('masonry');
 
-$(window).scroll(function() {                  // assign scroll event listener
+	// init Infinite Scroll
+	$grid.infiniteScroll({
+		 // Infinite Scroll options...
+	  append: '.bloc',
+		outlayer: msnry,
+		history: false,
+		path: '#page-nav a',
+		hideNav: '#page-nav',
+		visibleStyle: { transform: 'translateY(0)', opacity: 1 },
+		hiddenStyle: { transform: 'translateY(100px)', opacity: 0 },
+	});
 
-    var currentScroll = $(window).scrollTop(); // get current position
+	var fixmeTop = $('.contain-filtre').offset().top;       // get initial position of the element
 
-    if (currentScroll >= fixmeTop) {           // apply position: fixed if you
-        $('.contain-filtre').addClass('fixe');
-    } else {                                   // apply position: static
-      	$('.contain-filtre').removeClass('fixe');
-    }
+	$(window).scroll(function() {                  // assign scroll event listener
 
-});
+	    var currentScroll = $(window).scrollTop(); // get current position
+
+	    if (currentScroll >= fixmeTop) {           // apply position: fixed if you
+	        $('.contain-filtre').addClass('fixe');
+	    } else {                                   // apply position: static
+	      	$('.contain-filtre').removeClass('fixe');
+	    }
+
+	});
 </script>
 <script>
 // Changing the defaults
