@@ -24,7 +24,16 @@
 			</div>
 			<div class="contain-videos">
 			<? $j == 0 ?>
-			<? if (have_posts()) : while (have_posts()) : the_post(); ?>
+			<?
+					$args = array(
+						'post_type' =>'video',
+			      'posts_per_page'	=> -1,
+						'paged'          => $paged,
+
+					);
+					$query = new WP_Query( $args );
+		?>
+			<? while ( $query->have_posts() ) : $query->the_post(); ?>
 			<? $j++ ?>
 				<div class="bloc">
 						<div class="contain-info">
@@ -62,11 +71,11 @@
 						</div>
 				</div>
 
-			<? endwhile; endif; ?>
+			<? endwhile; ?>
 
 			</div>
 			<div class="load-more-manual">
-				<nav id="page-nav" role="navigation"><?php next_posts_link( __( '<span class="more btn btn-primary btn-lg btn-block">Load more posts</span>', 'wpc' ) ); ?></nav>
+				<? wp_pagenavi( array( 'query' =>$query) ); ?>
 			</div>
 		</div>
 	</section>
@@ -80,7 +89,7 @@
 
 	var $grid = $('.contain-videos').masonry({
 							itemSelector: '.bloc',
-							gutter: 50,
+							gutter: 30,
 						});
 	// get Masonry instance
 	var msnry = $grid.data('masonry');
@@ -91,8 +100,8 @@
 	  append: '.bloc',
 		outlayer: msnry,
 		history: false,
-		path: '#page-nav a',
-		hideNav: '#page-nav',
+		path: '.wp-pagenavi a',
+		hideNav: '.wp-pagenavi',
 		visibleStyle: { transform: 'translateY(0)', opacity: 1 },
 		hiddenStyle: { transform: 'translateY(100px)', opacity: 0 },
 	});
@@ -117,12 +126,6 @@ window.sr = ScrollReveal({ reset: true });
 
 // Customizing a reveal set
 sr.reveal('.bloc', { duration: 2000 });
-$('.contain-artistes').infiniteScroll({
-// options
-path: '.wp-pagenavi .page',
-append: '.bloc',
-history: false,
-hide:'.wp-pagenavi',
-});
+
 </script>
 <? get_footer(); ?>
