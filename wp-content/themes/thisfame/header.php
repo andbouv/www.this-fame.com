@@ -43,7 +43,7 @@
 		<div class="hamburger-menu">
 		  <div class="bar"></div>
 		</div>
-		<a href="<?php bloginfo('url'); ?>/"><h1>THIS FAME</h1></a>
+		<a href="<?php bloginfo('url'); ?>/" class="logo"><? if (is_front_page()) : ?><h1>THIS FAME</h1><? else : ?><span class="logo"></span><? endif; ?></a>
 		<button class="search" id="search">
 		</button>
 		<div class="line-social">

@@ -246,6 +246,10 @@ html{
 							width:50%;
 							z-index:3;
 							font-size:26px;
+							@media(max-width:700px){
+								width:100%;
+								text-align: center;
+							}
 						}
 						hr{
 							width:35%;
@@ -257,6 +261,9 @@ html{
 							margin-left:-95px;
 							@include transform(rotate(0deg));
 							margin-top:20px;
+							@media(max-width:700px){
+								display:none;
+							}
 						}
 					}
 					a.bloc{
@@ -315,6 +322,7 @@ html{
 					padding-top:0px;
 					@media(max-width:700px){
 						padding-bottom:30px;
+						display:block;
 					}
 				}
 				div.contain-playlist{

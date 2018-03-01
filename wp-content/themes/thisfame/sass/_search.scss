@@ -30,8 +30,9 @@ html{
 					bottom:32%;
 					position: absolute;
 					@media(max-width:700px){
-						font-size:40px;
+						font-size:30px;
 						bottom:50%;
+						@include transform(translateY(50%));
 					}
 				}
 				p{

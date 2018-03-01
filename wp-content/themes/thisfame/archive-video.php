@@ -5,7 +5,7 @@
 		<div class="contain-top">
 			<div class="container">
 				<h1>VIDÉOS</h1>
-				<p>Retrouvez toutes nos actualités vidéos du monde électro.<br/>En essayant de vous tenir au courant sur les news du moment.</p>
+				<p>Retrouvez toutes nos actualités vidéos du monde électro.<br/></p>
 			</div>
 		</div>
 	</section>
