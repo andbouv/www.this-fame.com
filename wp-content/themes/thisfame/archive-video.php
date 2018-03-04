@@ -5,7 +5,7 @@
 		<div class="contain-top">
 			<div class="container">
 				<h1>VIDÉOS</h1>
-				<p>Retrouvez toutes nos actualités vidéos du monde électro.<br/>Nous vous présentons ici une multitude de clips, vidéos de festivals ou encore de concerts.</p>
+				<p>Retrouvez toutes nos actualités vidéos du monde électro.<br/></p>
 			</div>
 		</div>
 	</section>
@@ -24,7 +24,16 @@
 			</div>
 			<div class="contain-videos">
 			<? $j == 0 ?>
-			<? if (have_posts()) : while (have_posts()) : the_post(); ?>
+			<?
+					$args = array(
+						'post_type' =>'video',
+			      'posts_per_page'	=> -1,
+						'paged'          => $paged,
+
+					);
+					$query = new WP_Query( $args );
+		?>
+			<? while ( $query->have_posts() ) : $query->the_post(); ?>
 			<? $j++ ?>
 				<div class="bloc">
 						<div class="contain-info">
@@ -62,33 +71,54 @@
 						</div>
 				</div>
 
-			<? endwhile; endif; ?>
+			<? endwhile; ?>
 
 			</div>
-			<?  wp_pagenavi(); ?>
+			<div class="load-more-manual">
+				<? wp_pagenavi( array( 'query' =>$query) ); ?>
+			</div>
 		</div>
 	</section>
 </div>
 <script>
-$('.contain-videos').masonry({
-  // options
-  itemSelector: '.bloc',
-  gutter: 30
-});
+	$('.contain-videos').masonry({
+	  // options
+	  itemSelector: '.bloc',
+	  gutter: 30
+	});
 
-var fixmeTop = $('.contain-filtre').offset().top;       // get initial position of the element
+	var $grid = $('.contain-videos').masonry({
+							itemSelector: '.bloc',
+							gutter: 30,
+						});
+	// get Masonry instance
+	var msnry = $grid.data('masonry');
 
-$(window).scroll(function() {                  // assign scroll event listener
+	// init Infinite Scroll
+	$grid.infiniteScroll({
+		 // Infinite Scroll options...
+	  append: '.bloc',
+		outlayer: msnry,
+		history: false,
+		path: '.wp-pagenavi a',
+		hideNav: '.wp-pagenavi',
+		visibleStyle: { transform: 'translateY(0)', opacity: 1 },
+		hiddenStyle: { transform: 'translateY(100px)', opacity: 0 },
+	});
 
-    var currentScroll = $(window).scrollTop(); // get current position
+	var fixmeTop = $('.contain-filtre').offset().top;       // get initial position of the element
 
-    if (currentScroll >= fixmeTop) {           // apply position: fixed if you
-        $('.contain-filtre').addClass('fixe');
-    } else {                                   // apply position: static
-      	$('.contain-filtre').removeClass('fixe');
-    }
+	$(window).scroll(function() {                  // assign scroll event listener
 
-});
+	    var currentScroll = $(window).scrollTop(); // get current position
+
+	    if (currentScroll >= fixmeTop) {           // apply position: fixed if you
+	        $('.contain-filtre').addClass('fixe');
+	    } else {                                   // apply position: static
+	      	$('.contain-filtre').removeClass('fixe');
+	    }
+
+	});
 </script>
 <script>
 // Changing the defaults
@@ -96,12 +126,6 @@ window.sr = ScrollReveal({ reset: true });
 
 // Customizing a reveal set
 sr.reveal('.bloc', { duration: 2000 });
-$('.contain-artistes').infiniteScroll({
-// options
-path: '.wp-pagenavi .page',
-append: '.bloc',
-history: false,
-hide:'.wp-pagenavi',
-});
+
 </script>
 <? get_footer(); ?>

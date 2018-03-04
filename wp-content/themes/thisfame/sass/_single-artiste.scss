@@ -51,7 +51,8 @@ html{
 					@include border-radius(7px);
 					position: absolute;
 					@media(max-width:$size4){
-						left:10px;
+						left:50%;
+						@include transform(translateX(-50%));
 					}
 					div.social{
 						@include display-flex();
@@ -154,6 +155,8 @@ html{
 							width:100%;
 							padding-top:320px;
 							border:none;
+							padding-left:20px;
+							padding-right:20px;
 						}
 					}
 				}
@@ -363,6 +366,12 @@ html{
 					@include display-flex();
 					@media(max-width:$size4){
 						@include flex-direction(column);
+						padding-top:0px;
+					}
+					div.contain-title{
+						@media(max-width:$size4){
+							padding-bottom:20px;
+						}
 					}
 					p.titre{
 						height:auto;
@@ -384,6 +393,7 @@ html{
 								bottom:0px;
 							}
 						}
+
 						button{
 							position: absolute;
 							z-index:300;
@@ -443,6 +453,9 @@ html{
 										@include transition(0.5s);
 										@include border-top-right-radius(7px);
 										@include border-bottom-right-radius(7px);
+										@media(max-width:$size4){
+											display:none;
+										}
 										p.titre{
 											color:#fff;
 											font-size:22px;
@@ -501,7 +514,7 @@ html{
 					@media(max-width:$size4){
 						@include flex-direction(column);
 						padding:0px 20px;
-						padding-bottom:50px;
+						padding-bottom:0px;
 						border:none;
 					}
 					div.contain-title{
@@ -515,9 +528,10 @@ html{
 						@include display-flex();
 						@include flex-grow(4);
 						@include flex-wrap(wrap);
-						@media(max-width:700px){
+						@media(max-width:$size4){
 							@include flex-direction(column);
 							@include flex-grow(1);
+
 						}
 						div.bloc{
 							width:calc(100% / 4);

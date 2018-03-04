@@ -225,8 +225,10 @@ html{
 						width:100%;
 						@media(max-width:700px){
 							margin-left:0px;
-							padding-bottom:20px;
 							border-bottom:1px solid $grey;
+							border-top:1px solid $grey;
+							padding-top:40px;
+							padding-bottom:30px;
 						}
 					}
 					div.contain-title{
@@ -246,6 +248,10 @@ html{
 							width:50%;
 							z-index:3;
 							font-size:26px;
+							@media(max-width:700px){
+								width:100%;
+								text-align: center;
+							}
 						}
 						hr{
 							width:35%;
@@ -257,6 +263,9 @@ html{
 							margin-left:-95px;
 							@include transform(rotate(0deg));
 							margin-top:20px;
+							@media(max-width:700px){
+								display:none;
+							}
 						}
 					}
 					a.bloc{
@@ -315,6 +324,7 @@ html{
 					padding-top:0px;
 					@media(max-width:700px){
 						padding-bottom:30px;
+						display:block;
 					}
 				}
 				div.contain-playlist{
@@ -326,7 +336,6 @@ html{
 						@include flex-wrap(wrap);
 						padding:0px 20px;
 						padding-bottom:50px;
-						margin-bottom:50px;
 					}
 					@media(max-width:$size5){
 						@include flex-grow(1);

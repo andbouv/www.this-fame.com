@@ -35,22 +35,27 @@ html{
 						text-transform: uppercase;
 						margin-left:110px;
 						width:60%;
-						@media(max-width:700px){
+						@media(max-width:$size4){
 							margin-left:0px;
 							font-size:30px;
 							width: 100%;
 							text-align: center;
+							padding:0px 20px;
 						}
 					}
 					div.line{
 						@include display-flex();
+						@media(max-width:700px){
+							@include justify-content(center);
+						}
 						p{
 							color:#fff;
 							margin-left:110px;
 							width:auto;
 							display:inline-block;
 							@media(max-width:700px){
-								margin-left:30px;
+								margin-left:15px;
+								margin-right:15px;
 							}
 							&.time{
 								padding-left:30px;
@@ -89,8 +94,16 @@ html{
 					margin:0 auto;
 					section.texte{
 						width:80%;
+						margin-bottom:50px;
+						@media(max-width:$size4){
+							width:100%;
+							padding:0px 20px;
+						}
 						p{
 							color:#fff;
+						}
+						img{
+							margin-top:50px;
 						}
 					}
 					section.image_texte{

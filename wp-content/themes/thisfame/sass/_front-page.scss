@@ -406,6 +406,9 @@ html{
 						text-orientation: sideways-right;
 						padding-left: 51px;
 						margin-bottom:30px;
+						@media(max-width:700px){
+							padding-left:20px;
+						}
 					}
 					hr{
 						width:40px;
@@ -986,7 +989,7 @@ html{
 			background-color: $black;
 			padding:100px 0px;
 			@media(max-width: $size4){
-				padding:0px 15px;
+				padding:30px 15px;
 			}
 			div.other{
 				text-align: center;
@@ -994,6 +997,8 @@ html{
 				@include justify-content(center);
 				@media(max-width:$size4){
 					@include flex-direction(column);
+					height:250px;
+					padding-top:0px;
 				}
 			}
 			div.title-artistes{

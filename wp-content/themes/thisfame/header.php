@@ -7,7 +7,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-	<link rel="icon" type="image/png" href="http://www.this-fame.com/wp-content/themes/thisfame/img/favicon.png/">
+	<link rel="icon" type="image/png" href="http://www.this-fame.com/wp-content/themes/thisfame/img/favicon.ico">
 	<? if(get_field('ua', 'option')): ?>
 		<script>
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -43,7 +43,7 @@
 		<div class="hamburger-menu">
 		  <div class="bar"></div>
 		</div>
-		<a href="<?php bloginfo('url'); ?>/"><h1>THIS FAME</h1></a>
+		<a href="<?php bloginfo('url'); ?>/" class="logo"><? if (is_front_page()) : ?><h1>THIS FAME</h1><? else : ?><span class="logo"></span><? endif; ?></a>
 		<button class="search" id="search">
 		</button>
 		<div class="line-social">

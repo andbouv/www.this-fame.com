@@ -5,6 +5,7 @@
 		<div class="contain-top">
 			<div class="container">
 				<h1>PLAYLISTS</h1>
+				<p>This Fame vous propose une multitude de playlists pour vos soirées</p>
 			</div>
 		</div>
 	</section>
