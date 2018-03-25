@@ -38,6 +38,10 @@ function theme_scripts() {
 
     wp_enqueue_script('JSinfinite', get_template_directory_uri() . '/js/jquery.jscroll.js');
 
+    wp_enqueue_script('cookie', get_template_directory_uri() . '/js/jquery.cookie.js');
+
+    wp_enqueue_script('turbolinks', get_template_directory_uri() . '/js/turbolinks.js');
+
 
    // wp_enqueue_script('JSglobal', get_template_directory_uri() . '/js/global.js');
 }

@@ -270,7 +270,13 @@ if ( /^((?!chrome|android).)*safari/i.test(navigator.userAgent)) {
 	jQuery(".loader").hide();
 }
 else{
-	jQuery(".loader").delay(10500).fadeToggle(600)
+	if (!$.cookie('executed')) {
+	jQuery(".loader").delay(10500).fadeToggle(600);
+	$.cookie('executed', true, {expire: 1});
+	}
+	else{
+		jQuery(".loader").hide();
+	}
 }
 
 // Changing the defaults

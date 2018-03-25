@@ -33,13 +33,6 @@
 <body <? body_class(); ?>>
 
 	<header>
-
-			<? /* if (is_front_page()) :
-				<h1 class="logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?= esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<? else : ?>
-				<span class="logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?= esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span>
-			<? endif; */?>
-
 		<div class="hamburger-menu">
 		  <div class="bar"></div>
 		</div>
